@@ -1,75 +1,51 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="~/css/normalize.css">
-    <link rel="stylesheet" href="~/css/style.css">
-    <title>SkillProfi</title>
-</head>
-<body>
-    <header class="header flex">
-        <nav class="header__nav flex">
-            <ul class="list__reset nav__list flex">
-                <li class="nav__item"><a href="#" class="nav__link">Главная</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Услуги</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Проекты</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Блог</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
-            </ul>
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "SkillProfi";
+}
 
-            <div class="header__descr">"РАСШИРЯЕМ ВОЗМОЖНОСТИ"</div>
-        </nav>
-    </header>
+<main>
+    <section class="section hero">
+        <div class="container container__hero">
+            <h1 class="hero__title"><span class="hero__title__span">IT</span>-КОНСАЛТИНГ БЕЗ РЕГИСТРАЦИИ И СМС</h1>
 
-    <main>
-        <section class="section hero">
-            <div class="container container__hero">
-                <h1 class="hero__title"><span class="hero__title__span">IT</span>-КОНСАЛТИНГ БЕЗ РЕГИСТРАЦИИ И СМС</h1>
+            <button class="btn btn__reset hero__btn">ОСТАВИТЬ ЗАЯВКУ</button>
+        </div>
+    </section>
 
-                <button class="btn btn__reset hero__btn">ОСТАВИТЬ ЗАЯВКУ</button>
-            </div>
-        </section>
+    <section class="section inquiry">
+        <div class="container">
+            <a href="#" class="inquiry__link">Главная</a>
 
-        <section class="section inquiry">
-            <div class="container">
-                <a href="#" class="inquiry__link">Главная</a>
+            <h2 class="inquiry__title">Оставить заявку или задать вопрос</h2>
 
-                <h2 class="inquiry__title">Оставить заявку или задать вопрос</h2>
+            <form class="form flex" action="https://jsonplaceholder.typicode.com/posts" method="post">
 
-                <form class="form flex" action="https://jsonplaceholder.typicode.com/posts" method="post">
-
-                    <div class="form-top flex">
-                        <div class="form__full-name flex">
-                            <label for="full-name" class="label__full-name">
-                                Имя
-                            </label>
-                            <input type="text" name="full-name" id="full-name" class="input__full-name"
-                                   placeholder="Козлов Иван Петрович" required>
-                        </div>
-
-                        <div class="form__email flex">
-                            <label for="email" class="label__email">
-                                Email
-                            </label>
-                            <input type="email" name="email" id="email" class="input__email"
-                                   placeholder="example@gmail.com" required>
-                        </div>
+                <div class="form-top flex">
+                    <div class="form__full-name flex">
+                        <label for="full-name" class="label__full-name">
+                            Имя
+                        </label>
+                        <input type="text" name="full-name" id="full-name" class="input__full-name"
+                                placeholder="Козлов Иван Петрович" required>
                     </div>
 
-                    <div class="form-bottom flex">
-                        <label for="message">Текст сообщения</label>
-                        <textarea class="message" name="message" id="message"
-                                  cols="30" rows="10" required></textarea>
+                    <div class="form__email flex">
+                        <label for="email" class="label__email">
+                            Email
+                        </label>
+                        <input type="email" name="email" id="email" class="input__email"
+                                placeholder="example@gmail.com" required>
                     </div>
+                </div>
 
-                    <button class="btn btn__reset form__btn">Отправить</button>
-                </form>
-            </div>
-        </section>
-    </main>
+                <div class="form-bottom flex">
+                    <label for="message">Текст сообщения</label>
+                    <textarea class="message" name="message" id="message"
+                                cols="30" rows="10" required></textarea>
+                </div>
 
-    <script src="~/js/script.js"></script>
-</body>
-</html>
+                <button class="btn btn__reset form__btn">Отправить</button>
+            </form>
+        </div>
+    </section>
+</main>
