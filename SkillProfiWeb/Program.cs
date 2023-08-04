@@ -1,6 +1,11 @@
+using SkillProfiWeb.Data;
+using SkillProfiWeb.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddMvc();
+builder.Services.AddControllersWithViews();
+
+builder.Services.AddTransient<IRequestData, RequestDataApi>();
 
 var app = builder.Build();
 

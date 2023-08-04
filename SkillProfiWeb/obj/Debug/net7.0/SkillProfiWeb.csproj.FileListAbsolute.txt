@@ -27,3 +27,5 @@ C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\obj\Debug\net7.0\ref\SkillP
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\bin\Debug\net7.0\SkillProfiWeb.staticwebassets.runtime.json
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\obj\Debug\net7.0\SkillProfiWeb.RazorAssemblyInfo.cache
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\obj\Debug\net7.0\SkillProfiWeb.RazorAssemblyInfo.cs
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\obj\Debug\net7.0\SkillProfiWeb.csproj.CopyComplete

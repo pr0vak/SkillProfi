@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "biVkS3BUzbLq+siwtV0UsSj+ypJtkesd9BFjKKxwPxvOqDCrhXdAmszow/2npq5iN7TDwwEnx520MPqxs72Xrg==",
+  "dgSpecHash": "NT+YTsNvcTDX4REJ/UmAaBFa7O1ILK5gg6/2ZvU9ucPbWKvfRFaYfBzqkt83cZVVtI8SvkgD9mJOiJXy6fHBJg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\SkillProfiWeb.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Vyacheslav\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
