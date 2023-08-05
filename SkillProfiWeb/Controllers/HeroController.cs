@@ -6,9 +6,9 @@ namespace SkillProfiWeb.Controllers
 {
     public class HeroController : Controller
     {
-        private IRequestData _requestData;
+        private IData<Request> _requestData;
 
-        public HeroController(IRequestData requestData)
+        public HeroController(IData<Request> requestData)
         {
             _requestData = requestData;
         }

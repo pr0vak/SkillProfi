@@ -1,12 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc.Formatters;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using SkillProfiWeb.Interfaces;
 using SkillProfiWeb.Models;
 using System.Text;
 
 namespace SkillProfiWeb.Data
 {
-    public class RequestDataApi : DataApi, IRequestData
+    public class RequestDataApi : DataApi, IData<Request>
     {
         public RequestDataApi()
         {
@@ -18,32 +17,38 @@ namespace SkillProfiWeb.Data
             await client.PostAsync(
                 requestUri: url,
                 content: new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8,
-                    mediaType: "application/json")
+                    "application/json")
                 );
         }
 
-        public async Task ChangeStatusRequest(Request request)
+        public async Task Delete(int? id)
         {
-            var putUrl = url + $"/{request.Id}";
-            await client.PutAsync(
-                    requestUri: putUrl,
-                    content: new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8,
-                        mediaType: "application/json")
-                );
+            var delUrl = url + $"/{id}";
+            await client.DeleteAsync(delUrl);
         }
 
-        public async Task<Request> GetRequestById(int? id)
+        public async Task<IEnumerable<Request>> GetAll()
+        {
+            string json = await client.GetStringAsync(url);
+
+            return JsonConvert.DeserializeObject<IEnumerable<Request>>(json);
+        }
+
+        public async Task<Request> GetById(int? id)
         {
             string json = await client.GetStringAsync(url + $"/{id}");
 
             return JsonConvert.DeserializeObject<Request>(json);
         }
 
-        public async Task<IEnumerable<Request>> Requests()
+        public async Task Update(Request request)
         {
-            string json = await client.GetStringAsync(url);
-
-            return JsonConvert.DeserializeObject<IEnumerable<Request>>(json);
+            var putUrl = url + $"/{request.Id}";
+            await client.PutAsync(
+                    requestUri: putUrl,
+                    content: new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8,
+                        "application/json")
+                );
         }
     }
 }

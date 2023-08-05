@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Service>
+@{
+    ViewData["Title"] = "SkillProfi - Услуги";
+    int i = 1;
+}
+
+<section class="section services">
+    <h1>Что мы можем?</h1>
+
+    <div class="acor-container">
+
+        @foreach(Service service in Model)
+        {
+            if (i == 1)
+            {
+                <input type="radio" name="acor" id="acor@(i)" checked="checked" />
+            }
+            else
+            {
+                <input type="radio" name="acor" id="acor@(i)" />
+            }
+            <label for="acor@(i++)" )">@service.Title</label>
+            <div class="acor-body">
+                <p>@service.Description</p>
+            </div>
+
+        }
+    </div>
+</section>

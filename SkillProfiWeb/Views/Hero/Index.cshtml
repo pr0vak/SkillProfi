@@ -1,51 +1,48 @@
 ﻿@model Request
 @{
-    Layout = "_Layout";
     ViewData["Title"] = "SkillProfi";
 }
 
-<main>
-    <section class="section hero">
-        <div class="container container__hero">
-            <h1 class="hero__title"><span class="hero__title__span">IT</span>-КОНСАЛТИНГ БЕЗ РЕГИСТРАЦИИ И СМС</h1>
+<section class="section hero">
+    <div class="container container__hero">
+        <h1 class="hero__title"><span class="hero__title__span">IT</span>-КОНСАЛТИНГ БЕЗ РЕГИСТРАЦИИ И СМС</h1>
 
-            <button class="btn btn__reset hero__btn">ОСТАВИТЬ ЗАЯВКУ</button>
-        </div>
-    </section>
+        <button class="btn btn__reset hero__btn">ОСТАВИТЬ ЗАЯВКУ</button>
+    </div>
+</section>
 
-    <section class="section inquiry">
-        <div class="container">
-            <a href="#" class="inquiry__link">Главная</a>
+<section class="section inquiry">
+    <div class="container">
+        <a href="#" class="inquiry__link">Главная</a>
 
-            <h2 class="inquiry__title">Оставить заявку или задать вопрос</h2>
+        <h2 class="inquiry__title">Оставить заявку или задать вопрос</h2>
 
-            <form class="form flex" asp-action="Index" method="post">
-                <div class="form-top flex">
-                    <div class="form__name flex">
-                        <label asp-for="Name" class="label__name">
-                            Имя
-                        </label>
-                        <input type="text" name="name" asp-for="Name" id="name" class="input__name"
-                                placeholder="Козлов Иван Петрович" required>
-                    </div>
-
-                    <div class="form__email flex">
-                        <label asp-for="Email" class="label__email">
-                            Email
-                        </label>
-                        <input type="email" name="email" asp-for="Email" id="email" class="input__email"
-                                placeholder="example@gmail.com" required>
-                    </div>
+        <form class="form flex" asp-action="Index" method="post">
+            <div class="form-top flex">
+                <div class="form__name flex">
+                    <label asp-for="Name" class="label__name">
+                        Имя
+                    </label>
+                    <input type="text" name="name" asp-for="Name" id="name" class="input__name"
+                            placeholder="Козлов Иван Петрович" required>
                 </div>
 
-                <div class="form-bottom flex">
-                    <label asp-for="Message">Текст сообщения</label>
-                    <textarea class="message" name="message" asp-for="Message" id="message"
-                                cols="30" rows="10" required></textarea>
+                <div class="form__email flex">
+                    <label asp-for="Email" class="label__email">
+                        Email
+                    </label>
+                    <input type="email" name="email" asp-for="Email" id="email" class="input__email"
+                            placeholder="example@gmail.com" required>
                 </div>
+            </div>
 
-                <button class="btn btn__reset form__btn" type="submit">Отправить</button>
-            </form>
-        </div>
-    </section>
-</main>
+            <div class="form-bottom flex">
+                <label asp-for="Message">Текст сообщения</label>
+                <textarea class="message" name="message" asp-for="Message" id="message"
+                            cols="30" rows="10" required></textarea>
+            </div>
+
+            <button class="btn btn__reset form__btn" type="submit">Отправить</button>
+        </form>
+    </div>
+</section>
