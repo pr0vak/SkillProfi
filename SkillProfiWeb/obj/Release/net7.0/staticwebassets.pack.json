@@ -13,8 +13,28 @@
       "PackagePath": "staticwebassets\\img\\HERO.svg"
     },
     {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\chitay-gorod.jpg",
+      "PackagePath": "staticwebassets\\img\\chitay-gorod.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\default.jpg",
+      "PackagePath": "staticwebassets\\img\\default.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\dobrynya.JPG",
+      "PackagePath": "staticwebassets\\img\\dobrynya.JPG"
+    },
+    {
       "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\inquiry-logo.png",
       "PackagePath": "staticwebassets\\img\\inquiry-logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\sber.jpg",
+      "PackagePath": "staticwebassets\\img\\sber.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\terra.JPG",
+      "PackagePath": "staticwebassets\\img\\terra.JPG"
     },
     {
       "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\js\\script.js",

@@ -5,3 +5,4 @@ C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\obj\Release\net7.0\PubTmp\O
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\obj\Release\net7.0\PubTmp\Out\SkillProfiWeb.deps.json
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\obj\Release\net7.0\PubTmp\Out\SkillProfiWeb.runtimeconfig.json
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\obj\Release\net7.0\PubTmp\Out\SkillProfiWeb.pdb
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\obj\Release\net7.0\PubTmp\Out\Newtonsoft.Json.dll

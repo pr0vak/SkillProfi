@@ -27,3 +27,5 @@ C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\obj\Release\net7.0\refint\S
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\obj\Release\net7.0\SkillProfiWeb.pdb
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\obj\Release\net7.0\SkillProfiWeb.genruntimeconfig.cache
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\obj\Release\net7.0\ref\SkillProfiWeb.dll
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\bin\Release\net7.0\Newtonsoft.Json.dll
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\obj\Release\net7.0\SkillProfiWeb.csproj.CopyComplete

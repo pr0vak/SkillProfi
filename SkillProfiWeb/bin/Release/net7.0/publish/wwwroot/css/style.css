@@ -263,3 +263,121 @@ header {
   align-self: flex-end;
   text-transform: uppercase;
 }
+
+
+/* Services */
+.acor-container {
+    margin: 20px 0;
+}
+
+.acor-container .acor-body {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    height: 0;
+    color: rgba(0, 0, 0, 0);
+    background-color: #BFE2FF;
+    line-height: 18px;
+    padding: 0 30px;
+    box-sizing: border-box;
+    transition: color 0.5s, padding 0.5s;
+    overflow: hidden;
+    font-family: Verdana, sans-serif;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 10px 16px rgba(0,0,0,0.2);
+}
+
+.acor-container .acor-body p {
+    margin: 0 0 10px;
+}
+
+    .acor-container label {
+        cursor: pointer;
+        background-color: #137ffa;
+        display: block;
+        padding: 15px 20px;
+        width: 100%;
+        color: #BFE2FF;
+        font-weight: 300;
+        box-sizing: border-box;
+        z-index: 100;
+        font-family: Verdana, sans-serif;
+        font-size: 18px;
+        margin: 0 0 5px;
+        transition: color .35s;
+    }
+
+.acor-container label:hover {
+    color: #FFF;
+}
+
+.acor-container input {
+    display: none;
+}
+
+.acor-container label:before {
+    content: '\276F';
+    float: right;
+}
+
+.acor-container input:checked + label {
+    background-color: #034ea4;
+    color: #FFF;
+    box-shadow: 0 8px 26px rgba(0,0,0,0.4), 0 28px 30px rgba(0,0,0,0.3);
+}
+
+.acor-container input:checked + label:before {
+    transition: transform .35s;
+    transform: rotate(90deg);
+}
+
+.acor-container input:checked + label + .acor-body {
+    height: auto;
+    margin-top: -5px;
+    color: #000;
+    padding: 20px 30px 10px;
+}
+
+
+/* Projects */
+.projects__list {
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.projects__item {
+    width: 360px;
+    height: 195px;
+    margin-bottom: 45px;
+    font-size: 0px;
+}
+
+.projects__item:not(:nth-child(3n)) {
+    margin-right: 45px;
+}
+
+.projects__img {
+    width: 360px;
+    height: 152px;
+}
+
+.projects__block__title {
+    padding: 10px 0 10px 20px;
+    font-size: 20px;
+    background-color: #ccc;
+}
+
+/* Project */
+.project__head {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: solid 2px #ddd;
+}
+
+.project__img {
+    width: 200px;
+}
+
+.project__description {
+    font-size: 20px;
+}

@@ -1,0 +1,15 @@
+﻿@model Project
+
+<section class="section project">
+    <div class="project__head flex">
+        <h1>
+            @Model.Title
+        </h1>
+
+        <img class="project__img" src=".@Model.ImageUrl" />
+    </div>
+
+    <div class="project__description">
+        @Html.Raw(Model.Description.Replace("\n", "</br></br>"));
+    </div>
+</section>

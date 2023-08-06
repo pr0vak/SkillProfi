@@ -8,10 +8,13 @@ namespace SkillProfiWebApi.Data
         public DataContext (DbContextOptions<DataContext> options)
             : base(options)
         {
+
         }
 
         public DbSet<Request> Requests { get; set; } = default!;
 
         public DbSet<Service> Services { get; set; } = default!;
+
+        public DbSet<Project> Projects { get; set; } = default!;
     }
 }

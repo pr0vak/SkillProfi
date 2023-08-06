@@ -336,3 +336,48 @@ header {
     color: #000;
     padding: 20px 30px 10px;
 }
+
+
+/* Projects */
+.projects__list {
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.projects__item {
+    width: 360px;
+    height: 195px;
+    margin-bottom: 45px;
+    font-size: 0px;
+}
+
+.projects__item:not(:nth-child(3n)) {
+    margin-right: 45px;
+}
+
+.projects__img {
+    width: 360px;
+    height: 152px;
+}
+
+.projects__block__title {
+    padding: 10px 0 10px 20px;
+    font-size: 20px;
+    background-color: #ccc;
+}
+
+/* Project */
+.project__head {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: solid 2px #ddd;
+}
+
+.project__img {
+    width: 200px;
+}
+
+.project__description {
+    font-size: 20px;
+}
