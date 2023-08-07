@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Blog>
+
+<section class="section blogs">
+    <h1 class="blogs__title">Блог</h1>
+
+    <ul class="blogs__list list__reset flex">
+        @foreach(Blog blog in Model)
+        {
+            <li class="blogs__item">
+                <a class="flex blogs__item__link" asp-action="Details" asp-route-id="@blog.Id">
+                    <p class="blogs__item__data">@blog.Created.ToString("dd.MMMM.yyyy")</p>
+
+                    <img class="blogs__item__img" src="@blog.ImageUrl" />
+
+                    <p class="blogs__item__title">@blog.Title</p>
+
+                    <p class="blogs__item__shortdescr">
+                        @blog.ShortDescription
+                    </p>
+                </a>
+            </li>
+        }
+    </ul>
+</section>

@@ -29,6 +29,22 @@
       "PackagePath": "staticwebassets\\img\\inquiry-logo.png"
     },
     {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\pb_1.jpg",
+      "PackagePath": "staticwebassets\\img\\pb_1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\pb_2.jpg",
+      "PackagePath": "staticwebassets\\img\\pb_2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\pb_3.jpg",
+      "PackagePath": "staticwebassets\\img\\pb_3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\pb_4.jpg",
+      "PackagePath": "staticwebassets\\img\\pb_4.jpg"
+    },
+    {
       "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\sber.jpg",
       "PackagePath": "staticwebassets\\img\\sber.jpg"
     },

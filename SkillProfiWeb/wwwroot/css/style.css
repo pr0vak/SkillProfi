@@ -355,6 +355,9 @@ header {
     margin-right: 45px;
 }
 
+
+
+
 .projects__img {
     width: 360px;
     height: 152px;
@@ -364,6 +367,15 @@ header {
     padding: 10px 0 10px 20px;
     font-size: 20px;
     background-color: #ccc;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.projects__link:hover .projects__block__title {
+    background-color: #eee;
+}
+
+.projects__link:active .projects__block__title {
+    background-color: #999;
 }
 
 /* Project */
@@ -380,4 +392,121 @@ header {
 
 .project__description {
     font-size: 20px;
+}
+
+/* blogs */
+.blogs__title {
+    margin-bottom: 20px;
+    border-bottom: solid 2px #ddd;
+}
+
+.blogs__item {
+    width: 276px;
+}
+
+.blogs__item:not(:nth-child(4n)) {
+    margin-right: 22px;
+}
+
+.blogs__item__link {
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.blogs__item__link:hover {
+    background-color: rgb(19, 127, 250);
+}
+
+.blogs__item__link:focus {
+    outline: solid 2px rgb(19, 127, 250);
+}
+
+.blogs__item__link:active {
+    background-color: #034ea4;
+    outline: none;
+}
+
+.blogs__item__link:hover .blogs__item__data{
+    color: #fff;
+}
+
+.blogs__item__link:hover .blogs__item__title {
+    color: #fff;
+}
+
+.blogs__item__link:hover .blogs__item__shortdescr {
+    color: #fff;
+}
+
+.blogs__item__data {
+    color: #999;
+    font-size: 12px;
+    margin-bottom: 5px;
+    transition: color 0.3s ease-in-out;
+}
+
+.blogs__item__img {
+    height: 185px;
+    margin-bottom: 10px;
+}
+
+.blogs__item__title {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.blogs__item__shortdescr {
+    text-align: justify;
+    font-size: 14px;
+    color: #666;
+    transition: color 0.3s ease-in-out;
+}
+
+/* blog */
+.blog {
+    margin-bottom: 20px;
+}
+
+.blog__title {
+    margin-bottom: 20px;
+    border-bottom: solid 2px #ddd;
+}
+
+.blog__descr {
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.blog__img {
+    margin-right: 20px;
+}
+
+.blog__btn {
+    font-size: 18px;
+    background-color: #137ffa;
+}
+
+.blog__btn:hover {
+    background-color: #4298fb;
+}
+
+.blog__btn:focus {
+    background-color: #137ffa;
+
+}
+
+.blog__btn:active {
+    background-color: #0f65c8;
+    outline: none;
+    border: none;
+}
+
+.blog__btn__back {
+    justify-content: flex-end;
 }

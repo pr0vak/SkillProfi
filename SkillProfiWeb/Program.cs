@@ -9,6 +9,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<IData<Request>, RequestDataApi>();
 builder.Services.AddTransient<IData<Service>, ServiceDataApi>();
 builder.Services.AddTransient<IData<Project>, ProjectDataApi>();
+builder.Services.AddTransient<IData<Blog>, BlogDataApi>();
 
 var app = builder.Build();
 

@@ -1,0 +1,21 @@
+﻿@model Blog
+
+<section class="section blog" >
+    <h1 class="blog__title">
+        @Model.Title
+    </h1>
+
+    <p class="blogs__item__data">@Model.Created.ToString("dd.MMMM.yyyy")</p>
+
+    <div class="blog__descr flex">
+        <img class="blogs__item__img blog__img" src=".@Model.ImageUrl" />
+
+        <p class="blog__descr">
+            @Html.Raw(@Model.Description);
+        </p>
+    </div>
+
+    <div class="flex blog__btn__back">
+        <a class="btn btn__reset blog__btn" asp-controller="Blogs" asp-action="Index">Назад</a>
+    </div>
+</section>

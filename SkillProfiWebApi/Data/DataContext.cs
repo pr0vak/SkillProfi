@@ -16,5 +16,7 @@ namespace SkillProfiWebApi.Data
         public DbSet<Service> Services { get; set; } = default!;
 
         public DbSet<Project> Projects { get; set; } = default!;
+
+        public DbSet<Blog> Blogs{ get; set; } = default!;
     }
 }
