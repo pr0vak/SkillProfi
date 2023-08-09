@@ -25,8 +25,24 @@
       "PackagePath": "staticwebassets\\img\\dobrynya.JPG"
     },
     {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\email.png",
+      "PackagePath": "staticwebassets\\img\\email.png"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\facebook.png",
+      "PackagePath": "staticwebassets\\img\\facebook.png"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\fax.png",
+      "PackagePath": "staticwebassets\\img\\fax.png"
+    },
+    {
       "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\inquiry-logo.png",
       "PackagePath": "staticwebassets\\img\\inquiry-logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\inst.png",
+      "PackagePath": "staticwebassets\\img\\inst.png"
     },
     {
       "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\pb_1.jpg",
@@ -49,8 +65,28 @@
       "PackagePath": "staticwebassets\\img\\sber.jpg"
     },
     {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\tel.png",
+      "PackagePath": "staticwebassets\\img\\tel.png"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\telegram.png",
+      "PackagePath": "staticwebassets\\img\\telegram.png"
+    },
+    {
       "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\terra.JPG",
       "PackagePath": "staticwebassets\\img\\terra.JPG"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\tw.png",
+      "PackagePath": "staticwebassets\\img\\tw.png"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\vk.png",
+      "PackagePath": "staticwebassets\\img\\vk.png"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\youtube.png",
+      "PackagePath": "staticwebassets\\img\\youtube.png"
     },
     {
       "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\js\\script.js",

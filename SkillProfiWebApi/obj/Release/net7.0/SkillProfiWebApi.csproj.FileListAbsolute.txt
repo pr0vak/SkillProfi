@@ -252,3 +252,4 @@ C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWebApi\obj\Release\net7.0\refin
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWebApi\obj\Release\net7.0\SkillProfiWebApi.pdb
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWebApi\obj\Release\net7.0\SkillProfiWebApi.genruntimeconfig.cache
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWebApi\obj\Release\net7.0\ref\SkillProfiWebApi.dll
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWebApi\bin\Release\net7.0\config.json

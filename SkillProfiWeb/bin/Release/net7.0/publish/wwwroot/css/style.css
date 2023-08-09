@@ -266,6 +266,11 @@ header {
 
 
 /* Services */
+.services__title {
+    margin-bottom: 20px;
+    border-bottom: solid 2px #ddd;
+}
+
 .acor-container {
     margin: 20px 0;
 }
@@ -339,6 +344,10 @@ header {
 
 
 /* Projects */
+.projects__title {
+    border-bottom: solid 2px #ddd;
+}
+
 .projects__list {
     align-content: center;
     flex-wrap: wrap;
@@ -509,4 +518,56 @@ header {
 
 .blog__btn__back {
     justify-content: flex-end;
+}
+
+/* Contacts */
+.contacts__title {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.contacts__info {
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.container__info {
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.tel__emails {
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.address {
+    margin-bottom: 40px;
+}
+
+.info__ico {
+    vertical-align: middle;
+}
+
+.info__ico img {
+    max-height: 32px;
+}
+
+.socials__link {
+    display: flex;
+}
+
+.link__ico img {
+    max-height: 32px;
+}
+
+.socials__item:not(:last-child) {
+    margin-right: 20px;
+}
+
+.container__map iframe {
+    width: 500px;
+    height: 400px;
 }
