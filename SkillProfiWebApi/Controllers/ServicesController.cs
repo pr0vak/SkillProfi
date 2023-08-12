@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SkillProfiWebApi.Data;
-using SkillProfiWebApi.Models;
+using SkillProfi.DAL.Models;
 
 namespace SkillProfiWebApi.Controllers
 {

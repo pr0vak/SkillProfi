@@ -1,14 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SkillProfiWeb.Models;
+using SkillProfi.DAL.Models;
 
 namespace SkillProfiWeb.Controllers
 {
     public class ContactsController : Controller
     {
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             ViewData["Title"] = "SkillProfi - Контакты";
-            var config = await SiteConfig.GetInstance();
+            var config = SiteConfig.GetInstance();
             return View(config);
         }
     }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SkillProfiWebApi.Data;
-using SkillProfiWebApi.Models;
+using SkillProfi.DAL.Models;
+using DAL = SkillProfi.DAL.Models;
 
 namespace SkillProfiWebApi.Controllers
 {
@@ -26,7 +27,7 @@ namespace SkillProfiWebApi.Controllers
         [HttpGet("{id}")]
         public async Task<Request> Get(int id)
         {
-            return await _db.Requests.FindAsync(id) ?? Models.Request.CreateNullRequest();
+            return await _db.Requests.FindAsync(id) ?? DAL.Request.CreateNullRequest();
         }
 
         // POST api/<RequestsController>

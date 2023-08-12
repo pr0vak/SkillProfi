@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
+using SkillProfi.DAL.Models;
 using SkillProfiWeb.Interfaces;
-using SkillProfiWeb.Models;
+using System.Net.Http.Headers;
 using System.Text;
 
 namespace SkillProfiWeb.Data
@@ -10,6 +11,8 @@ namespace SkillProfiWeb.Data
         public RequestDataApi()
         {
             url += "Requests";
+
+            client.DefaultRequestHeaders.Add("Authorization", $"Bearer {Token}");
         }
 
         public async Task Add(Request request)

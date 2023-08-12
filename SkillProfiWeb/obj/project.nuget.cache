@@ -1,10 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "NT+YTsNvcTDX4REJ/UmAaBFa7O1ILK5gg6/2ZvU9ucPbWKvfRFaYfBzqkt83cZVVtI8SvkgD9mJOiJXy6fHBJg==",
+  "dgSpecHash": "rUsx43nuaPNhB3P883xprmTzW7N+Cm4Ne7UaRsVlJUCyS6/VcxpY/L92uyDnL7gKqGUfxyhyJFoM21+nhtxkVw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\SkillProfiWeb.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Vyacheslav\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\Vyacheslav\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.10\\microsoft.aspnetcore.authentication.jwtbearer.7.0.10.nupkg.sha512",
+    "C:\\Users\\Vyacheslav\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\Vyacheslav\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.15.1\\microsoft.identitymodel.jsonwebtokens.6.15.1.nupkg.sha512",
+    "C:\\Users\\Vyacheslav\\.nuget\\packages\\microsoft.identitymodel.logging\\6.15.1\\microsoft.identitymodel.logging.6.15.1.nupkg.sha512",
+    "C:\\Users\\Vyacheslav\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.15.1\\microsoft.identitymodel.protocols.6.15.1.nupkg.sha512",
+    "C:\\Users\\Vyacheslav\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.15.1\\microsoft.identitymodel.protocols.openidconnect.6.15.1.nupkg.sha512",
+    "C:\\Users\\Vyacheslav\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.15.1\\microsoft.identitymodel.tokens.6.15.1.nupkg.sha512",
+    "C:\\Users\\Vyacheslav\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Vyacheslav\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.15.1\\system.identitymodel.tokens.jwt.6.15.1.nupkg.sha512",
+    "C:\\Users\\Vyacheslav\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }

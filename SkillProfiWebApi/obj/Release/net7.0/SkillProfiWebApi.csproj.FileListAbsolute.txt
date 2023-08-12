@@ -253,3 +253,6 @@ C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWebApi\obj\Release\net7.0\Skill
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWebApi\obj\Release\net7.0\SkillProfiWebApi.genruntimeconfig.cache
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWebApi\obj\Release\net7.0\ref\SkillProfiWebApi.dll
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWebApi\bin\Release\net7.0\config.json
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWebApi\bin\Release\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWebApi\bin\Release\net7.0\SkillProfi.DAL.dll
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWebApi\bin\Release\net7.0\SkillProfi.DAL.pdb

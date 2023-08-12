@@ -1,0 +1,20 @@
+﻿@if (User.Identity.IsAuthenticated)
+{
+    <li class="nav__item">
+        <form method="post" asp-controller="Account" asp-action="Logout" id="logoutform" asp-antiforgery="true">
+            <a class="nav__link" href="#" onclick="document.getElementById('logoutform').submit()">
+                Выход
+            </a>
+        </form>
+    </li>
+}
+else
+{
+    <li class="nav__item">
+        <form method="get" asp-controller="Account" asp-action="Index" id="loginform">
+            <a class="nav__link" href="#" onclick="document.getElementById('loginform').submit()">
+                Вход
+            </a>
+        </form>
+    </li>
+}

@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using SkillProfi.DAL.Models;
+using SkillProfiWeb.Data;
 using SkillProfiWeb.Interfaces;
-using SkillProfiWeb.Models;
 
 namespace SkillProfiWeb.Controllers
 {
@@ -16,6 +18,8 @@ namespace SkillProfiWeb.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
+            ViewData["Title"] = "SkillProfi - Проекты";
+
             return View(await _data.GetAll());
         }
 

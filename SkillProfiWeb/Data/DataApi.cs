@@ -2,7 +2,8 @@
 {
     public abstract class DataApi
     {
-        protected HttpClient client { get; set; } = new HttpClient();
-        protected string url { get; set; } = "http://localhost:5000/api/";
+        internal HttpClient client { get; set; } = new HttpClient();
+        internal string url { get; set; } = "http://localhost:5000/api/";
+        internal static string Token { get; set; }
     }
 }

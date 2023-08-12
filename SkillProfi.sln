@@ -5,7 +5,9 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkillProfiWeb", "SkillProfiWeb\SkillProfiWeb.csproj", "{D45921CC-9CF7-4A33-9E20-C5DD10C8D7B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkillProfiWebApi", "SkillProfiWebApi\SkillProfiWebApi.csproj", "{ED3B28E4-C256-4CBE-BE45-C53116C244C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkillProfiWebApi", "SkillProfiWebApi\SkillProfiWebApi.csproj", "{ED3B28E4-C256-4CBE-BE45-C53116C244C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkillProfi.DAL", "SkillProfi.DAL\SkillProfi.DAL.csproj", "{AE7ADBAA-2EB1-4510-A71E-BE8CA0792AA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{ED3B28E4-C256-4CBE-BE45-C53116C244C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED3B28E4-C256-4CBE-BE45-C53116C244C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED3B28E4-C256-4CBE-BE45-C53116C244C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE7ADBAA-2EB1-4510-A71E-BE8CA0792AA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE7ADBAA-2EB1-4510-A71E-BE8CA0792AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE7ADBAA-2EB1-4510-A71E-BE8CA0792AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE7ADBAA-2EB1-4510-A71E-BE8CA0792AA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

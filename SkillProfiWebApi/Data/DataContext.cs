@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SkillProfiWebApi.Models;
+using SkillProfi.DAL.Auth;
+using SkillProfi.DAL.Models;
 
 namespace SkillProfiWebApi.Data
 {
@@ -18,5 +19,7 @@ namespace SkillProfiWebApi.Data
         public DbSet<Project> Projects { get; set; } = default!;
 
         public DbSet<Blog> Blogs{ get; set; } = default!;
+
+        public DbSet<Account> Accounts { get; set; } = default!;
     }
 }

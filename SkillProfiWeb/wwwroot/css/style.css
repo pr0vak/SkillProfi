@@ -571,3 +571,33 @@ header {
     width: 500px;
     height: 400px;
 }
+
+/* account */
+.login {
+    text-align: center;
+}
+
+.user__username {
+    margin-bottom: 10px;
+}
+
+.user__password {
+    margin-bottom: 10px;
+}
+
+.login__btn {
+    background-color: #137ffa;
+}
+
+.btn__guest {
+    background-color: #137ffa;
+}
+
+.form__btns {
+    align-items: center;
+    justify-content: center;
+}
+
+.form__button {
+    margin-right: 20px;
+}

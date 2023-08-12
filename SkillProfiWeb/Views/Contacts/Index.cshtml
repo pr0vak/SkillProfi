@@ -1,36 +1,31 @@
 ﻿@model SiteConfig
 
-@{
-    string GetTelWithouFormat(string tel)
-            => tel.Replace(" ", "").Replace("(", "").Replace(")", "").Replace("-", "");
-}
-
 <section class="section contacts">
     <h1 class="contacts__title">Контакты</h1>
 
     <div class="contacts__info flex">
         <div class="container__info flex">
             <address class="address">
-                @Model.Address
+                168956, г. Москва ул. Симоновский Вал д.34
             </address>
 
             <div class="tel__emails flex">
-                <a href="tel:@GetTelWithouFormat(Model.Phone)">
+                <a href="tel:+12345678910">
                     <span class="info__ico">
                         <img src="~/img/tel.png" alt="tel">
-                    </span>&nbsp;@Model.Phone
+                    </span>&nbsp;+1 (234) 567-8910
                 </a>
 
-                <a href="tel:@GetTelWithouFormat(Model.Phone)">
+                <a href="tel:+12345678910">
                     <span class="info__ico">
                         <img src="~/img/fax.png" alt="fax">
-                    </span>&nbsp;@Model.Phone
+                    </span>&nbsp;+1 (234) 567-8910
                 </a>
 
                 <a href="mailto:example@mail.ru">
                     <span class="info__ico">
                         <img src="~/img/email.png" alt="email">
-                    </span>&nbsp;@Model.Email
+                    </span>&nbsp;example@mail.ru
                 </a>
             </div>
 
