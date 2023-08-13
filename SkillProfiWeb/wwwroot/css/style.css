@@ -264,6 +264,33 @@ header {
   text-transform: uppercase;
 }
 
+.block__btn__edit {
+    margin-top: 20px;
+    margin-bottom: 30px; 
+    text-align: right;
+}
+
+.btn__hero__edit {
+    display: inline-block;
+}
+
+.edit__hero dl {
+    margin: 0 0 5px 0;
+}
+
+.edit__hero dt {
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+.edit__hero dd {
+    margin: 0 0 15px 0;
+}
+
+.hero__edit__input {
+    width: 400px;
+}
+
 
 /* Services */
 .services__title {

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace SkillProfi.DAL.Models
 {
@@ -7,15 +8,15 @@ namespace SkillProfi.DAL.Models
         private static SiteConfig _instance;
 
         // Главная страница
-        public string Motto { get; set; } = "\"РАСШИРЯЕМ ВОЗМОЖНОСТИ\"";
-        public string HeroTitle { get; set; } = "IT-КОНСАЛТИНГ БЕЗ РЕГИСТРАЦИИ И СМС";
-        public string HeroBtnToSend { get; set; } = "Оставить заявку";
-        public string HeroSecondTitle { get; set; } = "Оставить заявку или задать вопрос";
+        public string Motto { get; set; }
+        public string HeroTitle { get; set; }
+        public string HeroBtnToSend { get; set; }
+        public string HeroSecondTitle { get; set; }
 
         // Контакты
-        public string UrlTelegram { get; set; } = "https://telegram.com";
-        public string UrlVk { get; set; } = "https://vk.com";
-        public string UrlYoutube { get; set; } = "https://youtube.com";
+        public string UrlTelegram { get; set; }
+        public string UrlVk { get; set; }
+        public string UrlYoutube { get; set; }
 
         
         private SiteConfig()
@@ -58,7 +59,7 @@ namespace SkillProfi.DAL.Models
             {
                 var json = File.ReadAllText("config.json");
 
-                JObject config = new JObject(json);
+                JObject config = JObject.Parse(json);
                 Motto = config["motto"]?.ToString() ?? String.Empty;
                 HeroTitle = config["hero_title"]?.ToString() ?? String.Empty;
                 HeroBtnToSend = config["hero_btn_send"]?.ToString() ?? String.Empty;

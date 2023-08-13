@@ -1,0 +1,26 @@
+﻿@model SiteConfigViewModel
+
+<section class="section edit__hero">
+	<form method="post" asp-action="Edit">
+		<dl>
+			<dt>Девиз</dt>
+			<dd>
+				<input class="hero__edit__input" type="text" asp-for="@Model.Motto" placeholder="@Model.Motto" />
+			</dd>
+			<dt>Заголовок на баннере</dt>
+			<dd>
+				<input class="hero__edit__input" type="text" asp-for="@Model.HeroTitle" placeholder="@Model.HeroTitle" />
+			</dd>
+			<dt>Надпись кнопки на баннере</dt>
+			<dd>
+				<input class="hero__edit__input" type="text" asp-for="@Model.HeroBtnToSend" placeholder="@Model.HeroBtnToSend" />
+			</dd>
+			<dt>Заголовок формы подачи заявки</dt>
+			<dd>
+				<input class="hero__edit__input" type="text" asp-for="@Model.HeroSecondTitle" placeholder="@Model.HeroSecondTitle" />
+			</dd>
+			
+			<button class="btn btn__reset" type="submit">Изменить</button>
+		</dl>
+	</form>
+</section>

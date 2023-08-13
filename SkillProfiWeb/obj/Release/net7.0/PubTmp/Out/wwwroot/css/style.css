@@ -99,7 +99,7 @@ header {
 }
 
 .nav__item:not(:last-child) {
-  margin-right: 35px;
+  margin-right: 15px;
 }
 
 .nav__link {
@@ -600,4 +600,120 @@ header {
 
 .form__button {
     margin-right: 20px;
+}
+
+/* itservice */
+.count__requests {
+    margin-bottom: 20px;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 5px solid #fff;
+    border-top: 5px solid #fff;
+    border-bottom: 3px solid #fff;
+    border-collapse: collapse;
+    outline: 3px solid #137ffa;
+    font-size: 15px;
+    background: #fff !important;
+}
+.table th {
+	font-weight: bold;
+	padding: 7px;
+	background: #137ffa;
+	border: none;
+	text-align: left;
+	font-size: 15px;
+    color: white;
+	border-top: 3px solid #fff;
+	border-bottom: 3px solid #137ffa;
+}
+.table td {
+	padding: 7px;
+	border: none;
+	border-top: 3px solid #fff;
+	border-bottom: 3px solid #fff;
+	font-size: 15px;
+}
+.table tbody tr:nth-child(even){
+	background: #f8f8f8!important;
+}
+
+.table__id {
+    width: 70px;
+    text-align: center !important;
+}
+
+.table__created {
+    width: 100px;
+}
+
+.table__name {
+    width: 150px;
+}
+
+.table__contacts {
+    word-break: break-all;
+    width: 200px;
+}
+
+.table__status {
+    width: 100px;
+    text-align: center !important;
+}
+
+.table__action {
+    width: 90px;
+    vertical-align: middle;
+    text-align: center !important;
+}
+
+.table__id,
+.table__created,
+.table__name,
+.table__contacts,
+.table__status,
+.table__msg,
+.table__action {
+    font-size: 14px;
+}
+
+.r__btn {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #137ffa;
+}
+
+.r__btn:hover {
+    background-color: #4298fb;
+    border: none;
+}
+
+.r__btn:focus {
+    background-color: #137ffa;
+    outline: 1px solid #333;
+    border: none;
+}
+
+.r__btn:active {
+    background-color: #0f65c8;
+    border: none;
+}
+
+/* itservice - request */
+.attrs {
+	margin: 0 0 20px 0;
+	overflow: hidden;    
+}
+.attrs dt {
+	float: left;
+	margin: 0 10px 0 0;
+	padding: 5px 0;
+	color: #137ffa;   
+}
+.attrs dd  {
+	padding: 5px 0;
 }

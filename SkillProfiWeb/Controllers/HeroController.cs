@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SkillProfi.DAL.Models;
 using SkillProfiWeb.Interfaces;
 
@@ -32,5 +33,28 @@ namespace SkillProfiWeb.Controllers
         {
             return View();
         }
-    }
+
+        [HttpGet]
+        [Authorize]
+        public IActionResult Edit()
+        {
+            var model = new SiteConfigViewModel(SiteConfig.GetInstance());
+
+			return View(model);
+		}
+
+		[HttpPost]
+        [Authorize]
+		public IActionResult Edit(SiteConfigViewModel config)
+		{
+            var siteConfig = SiteConfig.GetInstance();
+			siteConfig.Motto = config.Motto;
+			siteConfig.HeroTitle = config.HeroTitle;
+            siteConfig.HeroBtnToSend = config.HeroBtnToSend;
+            siteConfig.HeroSecondTitle = config.HeroSecondTitle;
+            siteConfig.Save();
+
+			return RedirectToAction("Index");
+		}
+	}
 }
