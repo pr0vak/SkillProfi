@@ -1,0 +1,71 @@
+﻿@model SkillProfi.DAL.Models.Request
+
+<form method="post" asp-action="Edit">
+    <div>
+        <h4>Заявка</h4>
+        <hr />
+
+            <dl class="attrs">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Id)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Id)
+                    <input asp-for="@Model.Id" hidden />
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Created)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Created)
+                    <input asp-for="@Model.Created" hidden />
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                    <input asp-for="@Model.Name" hidden />
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Message)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Message)
+                    <input asp-for="@Model.Message" hidden />
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Status)
+                </dt>
+                <dd>
+                    <select asp-for="@Model.Status">
+                        @foreach(var opt in ViewBag.Statuses)
+                        {
+                            if (opt.Equals(Model.Status))
+                            {
+                                <option value="@opt" selected disabled>@opt</option>
+                            }
+                            else
+                            {
+                                <option value="@opt">@opt</option>
+                            }
+                        }
+                    </select>
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Email)
+                    <input asp-for="@Model.Email" hidden />
+                </dd>
+            </dl>
+    </div>
+    <div>
+        <button class="r__btn request__edit btn btn__reset" type="submit">
+            Изменить
+        </button>
+        @*<a class="r__btn request__edit btn btn__reset" asp-action="Edit">Изменить</a>*@
+        <a class="r__btn request__back btn btn__reset" asp-action="Index">Назад</a>
+    </div>
+</form>

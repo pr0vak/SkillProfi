@@ -1,0 +1,65 @@
+﻿@model IEnumerable<SkillProfi.DAL.Models.Request>
+
+<section class="section itservice">
+    <p class="count__requests">
+        Всего заявок: @Model.Count()
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="table__id">
+                    Номер заявки
+                </th>
+                <th class="table__created">
+                    Время заявки
+                </th>
+                <th class="table__name">
+                    Имя
+                </th>
+                <th class="table__msg">
+                    Текст заявки
+                </th>
+                <th class="table__contacts">
+                    Контакты
+                </th>
+                <th class="table__status">
+                    Статус
+                </th>
+                <th class="table__action">
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="table__id">
+                        @item.Id
+                    </td>
+                    <td class="table__created">
+                        @item.Created.ToString("dd.MM.yy HH:mm")
+                    </td>
+                    <td class="table__name">
+                        @item.Name
+                    </td>
+                    <td class="table__msg">
+                        @item.Message
+                    </td>
+                    <td class="table__contacts">
+                        @item.Email
+                    </td>
+                    <td class="table__status">
+                        @item.Status
+                    </td>
+                    <td class="table__action">
+                        <a class="r__btn request__details btn btn__reset" 
+                            asp-action="Details"
+                            asp-route-id="@item.Id">
+                            Детали
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</section>

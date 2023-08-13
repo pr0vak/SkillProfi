@@ -1,0 +1,10 @@
+﻿@if (User.Identity.IsAuthenticated)
+{
+    <li class="nav__item">
+        <form method="post" asp-controller="ITService" asp-action="Index" id="itservice" asp-antiforgery="true">
+            <a class="nav__link" href="#" onclick="document.getElementById('itservice').submit()">
+                IT Service
+            </a>
+        </form>
+    </li>
+}

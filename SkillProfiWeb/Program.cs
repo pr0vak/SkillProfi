@@ -4,6 +4,8 @@ using Microsoft.IdentityModel.Tokens;
 using SkillProfi.DAL.Models;
 using SkillProfiWeb.Data;
 using SkillProfiWeb.Interfaces;
+using SkillProfiWeb.Middlewares;
+using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,17 +35,23 @@ builder.Services.AddTransient<IData<Blog>, BlogDataApi>();
 
 var app = builder.Build();
 
-app.Use((ctx, next) =>
-{
-    var headers = ctx.Request.Headers;
-
-    headers.Add("Authorization", $"Bearer {DataApi.Token}");
-
-    return next();
-});
 
 app.UseStaticFiles();
+
 app.UseRouting();
+
+app.UseMiddleware<JwtMiddleware>();
+app.UseStatusCodePages(async context =>
+{
+    var request = context.HttpContext.Request;
+    var response = context.HttpContext.Response;
+
+    if (response.StatusCode == (int)HttpStatusCode.Unauthorized)
+    {
+        response.Redirect("/Account");
+    }
+});
+
 app.UseAuthentication();
 app.UseAuthorization();
 
