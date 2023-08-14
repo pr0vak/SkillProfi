@@ -404,8 +404,8 @@ header {
 
 .projects__item {
     width: 360px;
-    height: 195px;
-    margin-bottom: 45px;
+    min-height: 195px;
+    margin-bottom: 25px;
     font-size: 0px;
 }
 
@@ -413,28 +413,72 @@ header {
     margin-right: 45px;
 }
 
-
-
-
 .projects__img {
     width: 360px;
     height: 152px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .projects__block__title {
-    padding: 10px 0 10px 20px;
+    margin-bottom: 5px;
+    padding: 10px 20px 10px 20px;
+    height: 66px;
     font-size: 20px;
-    background-color: #ccc;
+    color: white;
+    background-color: #137ffa;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     transition: background-color 0.3s ease-in-out;
 }
 
 .projects__link:hover .projects__block__title {
-    background-color: #eee;
+    background-color: #4298fb;
 }
 
 .projects__link:active .projects__block__title {
-    background-color: #999;
+    background-color: #034ea4;
 }
+
+.projects__ico {
+    display: inline-block;
+}
+
+.projects__ico a:hover .projects__ico__edit,
+.projects__ico a:hover .projects__ico__del {
+    background-color: #4298fb;
+}
+
+.projects__ico a:active .projects__ico__edit,
+.projects__ico a:active .projects__ico__del {
+    background-color: #034ea4;
+}
+
+.projects__ico__edit,
+.projects__ico__del {
+    display: inline-block;
+    padding: 4px;
+    width: 24px;
+    height: 24px;
+    background-color: #137ffa;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.projects__ico__edit {
+    margin-right: 10px;
+}
+
+.projects__btn__add {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.projects__btn__add a {
+    padding: 8px 15px;
+    font-size: 16px;
+}
+
 
 /* Project */
 .project__head {
@@ -450,7 +494,75 @@ header {
 
 .project__description {
     font-size: 20px;
+    margin-bottom: 20px;
 }
+
+
+/* project - create */
+.project__create {
+    display: flex;
+}
+
+.form__project__title {
+    width: 500px;
+}
+
+.upload {
+    margin-right: 40px;
+}
+
+.upload img {
+    width: 200px;
+    margin-bottom: 30px;
+}
+
+.upload p {
+    text-align: center;
+    font-weight: bold;
+}
+
+.upload .form-group {
+    padding: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+.upload input[type=file] {
+    outline: 0;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+}
+.upload .label {
+    width: 120px;
+    border: 2px dashed grey;
+    border-radius: 5px;
+    display: block;
+    padding: 1.2em;
+    transition: border 300ms ease;
+    cursor: pointer;
+    text-align: center;
+}
+.upload .label i {
+    display:block;
+    font-size:42px;
+    padding-bottom:16px;
+}
+.upload .label i,.example-1 .label .title {
+    color:grey; 
+    transition:200ms color;
+}
+.upload .label:hover {
+    border:2px solid #000;
+}
+.upload .label:hover i,.example-1 .label:hover .title {
+    color:#000;
+}
+
+.upload__img__preview img {
+    width: 168px;
+}
+
 
 /* blogs */
 .blogs__title {
@@ -734,6 +846,7 @@ header {
     border-radius: 5px;
     border: none;
     background-color: #137ffa;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .r__btn:hover {

@@ -34,14 +34,15 @@ namespace SkillProfiWeb.Data
         {
             string json = await client.GetStringAsync(url);
 
-            return JsonConvert.DeserializeObject<IEnumerable<Request>>(json);
+            return JsonConvert.DeserializeObject<IEnumerable<Request>>(json)
+                ?? new List<Request> { Request.CreateNullRequest() };
         }
 
         public async Task<Request> GetById(int? id)
         {
             string json = await client.GetStringAsync(url + $"/{id}");
 
-            return JsonConvert.DeserializeObject<Request>(json);
+            return JsonConvert.DeserializeObject<Request>(json) ?? Request.CreateNullRequest();
         }
 
         public async Task Update(Request request)

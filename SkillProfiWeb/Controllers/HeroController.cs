@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using SkillProfi.DAL.Models;
 using SkillProfiWeb.Interfaces;
+using SkillProfiWeb.ViewModels;
 
 namespace SkillProfiWeb.Controllers
 {

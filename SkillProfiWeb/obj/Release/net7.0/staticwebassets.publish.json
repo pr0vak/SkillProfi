@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HkePj1hE6Rt6O8P6R8BjVaEhVMZd9MQVRns6dsiuCFI=",
+  "Hash": "dW5S2bJia0gUWNA3GairAdi7Zc7V5388JdB9s8KSX20=",
   "Source": "SkillProfiWeb",
   "BasePath": "_content/SkillProfiWeb",
   "Mode": "Default",
@@ -117,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\dobrynya.JPG"
+    },
+    {
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\dobrynya_2.JPG",
+      "SourceId": "SkillProfiWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\",
+      "BasePath": "_content/SkillProfiWeb",
+      "RelativePath": "img/dobrynya_2.JPG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\dobrynya_2.JPG"
     },
     {
       "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\email.png",

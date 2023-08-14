@@ -17,7 +17,7 @@ namespace SkillProfiWeb.Data
 
         public async Task Add(Project model)
         {
-            await client.PutAsync(
+            await client.PostAsync(
                     url,
                     new StringContent(JsonConvert.SerializeObject(model), Encoding.UTF8, 
                         "application/json")
@@ -34,14 +34,15 @@ namespace SkillProfiWeb.Data
         {
             string json = await client.GetStringAsync(url);
 
-            return JsonConvert.DeserializeObject<IEnumerable<Project>>(json);
+            return JsonConvert.DeserializeObject<IEnumerable<Project>>(json)
+                ?? new List<Project> { Project.CreateNullProject() };
         }
 
         public async Task<Project> GetById(int? id)
         {
             string json = await client.GetStringAsync(url + $"/{id}");
 
-            return JsonConvert.DeserializeObject<Project>(json);
+            return JsonConvert.DeserializeObject<Project>(json) ?? Project.CreateNullProject();
         }
 
         public async Task Update(Project model)

@@ -33,14 +33,15 @@ namespace SkillProfiWeb.Data
         {
             string json = await client.GetStringAsync(url);
 
-            return JsonConvert.DeserializeObject<IEnumerable<Blog>>(json);
+            return JsonConvert.DeserializeObject<IEnumerable<Blog>>(json)
+                ?? new List<Blog> { Blog.CreateNullBlog() };
         }
 
         public async Task<Blog> GetById(int? id)
         {
             var json = await client.GetStringAsync(url + $"/{id}");
 
-            return JsonConvert.DeserializeObject<Blog>(json);
+            return JsonConvert.DeserializeObject<Blog>(json) ?? Blog.CreateNullBlog();
         }
 
         public async Task Update(Blog model)

@@ -11,16 +11,38 @@
         @foreach(Project project in @Model)
         {
             <li class="projects__item">
-                <a class="projects__link" asp-controller="Projects" asp-action="Details" asp-route-id="@project.Id">
+                <a class="projects__link" 
+                    asp-controller="Projects" 
+                    asp-action="Details" 
+                    asp-route-id="@project.Id">
                     <div class="projects__item__block">
                         <img class="projects__img" src="@project.ImageUrl" />
 
                         <div class="projects__block__title">
                             <p>@project.Title</p>
                         </div>
+
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <div class="projects__ico">
+                                <a asp-controller="Projects" asp-action="Edit" asp-route-id="@project.Id">
+                                    <img class="projects__ico__edit" src="~/img/ico-edit.png" />
+                                </a>
+                                <a asp-controller="Projects" asp-action="Delete" asp-route-id="@project.Id">
+                                    <img class="projects__ico__del" src="~/img/ico-del.png" />
+                                </a>
+                            </div>
+                        }
                     </div>
                 </a>
             </li>
         }
     </ul>
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <div class="projects__btn__add">
+            <a class="btn btn__reset r__btn" asp-controller="Projects" asp-action="Create">Добавить проект</a>
+        </div>
+    }
 </section>

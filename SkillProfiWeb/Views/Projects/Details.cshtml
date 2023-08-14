@@ -10,6 +10,6 @@
     </div>
 
     <div class="project__description">
-        @Html.Raw(Model.Description.Replace("\n", "</br></br>"));
+        @Html.Raw(Model.Description.Replace("\n", "<br>"))
     </div>
 </section>

@@ -9,7 +9,7 @@ namespace SkillProfiWebApi.Data
         public DataContext (DbContextOptions<DataContext> options)
             : base(options)
         {
-
+            Database.EnsureCreated();
         }
 
         public DbSet<Request> Requests { get; set; } = default!;
