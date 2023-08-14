@@ -17,7 +17,7 @@ namespace SkillProfiWeb.Data
 
         public async Task Add(Service service)
         {
-            await client.PutAsync(
+            await client.PostAsync(
                     requestUri: url,
                     content: new StringContent(JsonConvert.SerializeObject(service), Encoding.UTF8,
                      "application/json")                    

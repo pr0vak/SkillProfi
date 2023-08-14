@@ -7,7 +7,7 @@ namespace SkillProfi.DAL.Models
         [Key, Display(Name = "Номер заявки")]
         public int Id { get; set; }
 
-        [Required, Display(Name = "Время заявки")]
+        [Required, Display(Name = "Заявка получена")]
         public DateTime Created { get; set; } = DateTime.Now;
 
         [Required, Display(Name = "Имя")]

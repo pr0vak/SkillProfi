@@ -11,14 +11,6 @@ namespace SkillProfiWeb.Controllers
     public class ITServiceController : Controller
     {
         private IData<Request> _requestData;
-        //private IEnumerable<SelectListItem> statuses = new List<SelectListItem>()
-        //    {
-        //        new SelectListItem { Text = "Получена", Value = "Получена" },
-        //        new SelectListItem { Text = "В работе", Value = "В работе" },
-        //        new SelectListItem { Text = "Выполнена", Value = "Выполнена" },
-        //        new SelectListItem { Text = "Отклонена", Value = "Отклонена" },
-        //        new SelectListItem { Text = "Отменена", Value = "Отменена" }
-        //    };
         private IEnumerable<string> statuses = new List<string>()
             {
                 new string("Получена"),

@@ -1,6 +1,5 @@
 ﻿@model IEnumerable<Service>
 @{
-    ViewData["Title"] = "SkillProfi - Услуги";
     int i = 1;
 }
 
@@ -19,11 +18,30 @@
             {
                 <input type="radio" name="acor" id="acor@(i)" />
             }
-            <label for="acor@(i++)" )">@service.Title</label>
+            <label for="acor@(i++)" )" class="services__label__title">
+                @service.Title
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div class="services__ico">
+                        <a asp-controller="Services" asp-action="Edit" asp-route-id="@service.Id">
+                            <img class="services__ico__edit" src="~/img/ico-edit.png" />
+                        </a>
+                        <a asp-controller="Services" asp-action="Delete" asp-route-id="@service.Id">
+                            <img class="services__ico__del" src="~/img/ico-del.png" />
+                        </a>
+                    </div>
+                }
+            </label>
             <div class="acor-body">
                 <p>@service.Description</p>
             </div>
-
         }
     </div>
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <div>
+            <a class="r__btn btn btn__reset" asp-action="Create">Добавить услугу</a>
+        </div>
+    }
 </section>

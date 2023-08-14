@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
       "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\HERO.svg",
       "PackagePath": "staticwebassets\\img\\HERO.svg"
     },
@@ -35,6 +39,14 @@
     {
       "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\fax.png",
       "PackagePath": "staticwebassets\\img\\fax.png"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\ico-del.png",
+      "PackagePath": "staticwebassets\\img\\ico-del.png"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\ico-edit.png",
+      "PackagePath": "staticwebassets\\img\\ico-edit.png"
     },
     {
       "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\inquiry-logo.png",

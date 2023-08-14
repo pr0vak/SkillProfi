@@ -322,21 +322,21 @@ header {
     margin: 0 0 10px;
 }
 
-    .acor-container label {
-        cursor: pointer;
-        background-color: #137ffa;
-        display: block;
-        padding: 15px 20px;
-        width: 100%;
-        color: #BFE2FF;
-        font-weight: 300;
-        box-sizing: border-box;
-        z-index: 100;
-        font-family: Verdana, sans-serif;
-        font-size: 18px;
-        margin: 0 0 5px;
-        transition: color .35s;
-    }
+.acor-container label {
+    cursor: pointer;
+    background-color: #137ffa;
+    display: block;
+    padding: 15px 20px;
+    width: 100%;
+    color: #BFE2FF;
+    font-weight: 300;
+    box-sizing: border-box;
+    z-index: 100;
+    font-family: Verdana, sans-serif;
+    font-size: 18px;
+    margin: 0 0 5px;
+    transition: color .35s;
+}
 
 .acor-container label:hover {
     color: #FFF;
@@ -367,6 +367,28 @@ header {
     margin-top: -5px;
     color: #000;
     padding: 20px 30px 10px;
+}
+
+.services__label__title {
+    position: relative;
+}
+
+.services__ico {
+    display: inline-block;
+    position: absolute;
+    right: 50px;
+}
+
+.services__ico__edit {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+
+.services__ico__del {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
 }
 
 
@@ -743,4 +765,12 @@ header {
 }
 .attrs dd  {
 	padding: 5px 0;
+}
+
+
+/* Services - edit */
+.textarea__descr {
+    min-width: 500px;
+    min-height: 135px;
+    resize: none;
 }

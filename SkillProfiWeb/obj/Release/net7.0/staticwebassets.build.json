@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JQGSt/rF8McnBm9uM5JbGn6j5haW0Xg1C/Bx5DfmE3M=",
+  "Hash": "xOrxQrNVw0NhwBvbG9wtHV03xmre0GPnwXV7ut40PFE=",
   "Source": "SkillProfiWeb",
   "BasePath": "_content/SkillProfiWeb",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\style.css"
+    },
+    {
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\favicon.ico",
+      "SourceId": "SkillProfiWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\",
+      "BasePath": "_content/SkillProfiWeb",
+      "RelativePath": "favicon.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
       "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\chitay-gorod.jpg",
@@ -168,6 +185,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\HERO.svg"
+    },
+    {
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\ico-del.png",
+      "SourceId": "SkillProfiWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\",
+      "BasePath": "_content/SkillProfiWeb",
+      "RelativePath": "img/ico-del.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\ico-del.png"
+    },
+    {
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\ico-edit.png",
+      "SourceId": "SkillProfiWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\",
+      "BasePath": "_content/SkillProfiWeb",
+      "RelativePath": "img/ico-edit.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\ico-edit.png"
     },
     {
       "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\inquiry-logo.png",

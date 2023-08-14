@@ -5,12 +5,15 @@ namespace SkillProfi.DAL.Models
     public class Service
     {
         [Key]
+        [Display(Name = "ID услуги")]
         public int Id { get; set; }
 
         [Required]
+        [Display(Name = "Название услуги")]
         public string Title { get; set; }
 
         [Required]
+        [Display(Name = "Описание услуги")]
         public string Description { get; set; }
 
 

@@ -1,0 +1,31 @@
+﻿@model SkillProfi.DAL.Models.Service
+
+<h4>Услуга</h4>
+<hr />
+<section class="section service">
+    <form method="post" asp-action="Delete">
+        <input asp-for="@Model.Id" hidden />
+        <div>
+            <dl class="attrs">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Title)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Title)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Description)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Description)
+                </dd>
+            </dl>
+        </div>
+        <div>
+            <button class="r__btn request__edit btn btn__reset" type="submit">
+                Удалить
+            </button>
+            <a class="r__btn request__back btn btn__reset" asp-action="Index">Назад</a>
+        </div>
+    </form>
+</section>
