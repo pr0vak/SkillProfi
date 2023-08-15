@@ -1,4 +1,5 @@
-﻿@model SiteConfig
+﻿@model SiteConfigViewModel
+
 
 <section class="section contacts">
     <h1 class="contacts__title">Контакты</h1>
@@ -61,4 +62,61 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.3335516153816!2d37.660704016045294!3d55.71795530214646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54b2ebc47c587%3A0x503a90d53553bd11!2z0YPQuy4g0KHQuNC80L7QvdC-0LLRgdC60LjQuSDQktCw0LssIDM0LCDQnNC-0YHQutCy0LAsIDExNTA4OA!5e0!3m2!1sru!2sru!4v1667555387242!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
+
+    <!-- Button trigger modal -->
+    @if (User.Identity.IsAuthenticated)
+    {
+        <button type="button" class="btn btn__reset r__btn" data-toggle="modal" data-target="#exampleModal">
+            Редактировать
+        </button>
+    }
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" 
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form method="post" asp-action="Edit">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ссылки на страницы соцсетей</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="modal-body-telegram flex">
+                            <span class="link__ico">
+                                <img src="~/img/telegram.png" alt="telegram">
+                            </span>
+
+                            <input asp-for="@Model.UrlTelegram" required type="url"/>
+                        </div>
+
+                        <div class="modal-body-vk flex">
+                            <span class="link__ico">
+                                <img src="~/img/vk.png" alt="vk">
+                            </span>
+
+                            <input asp-for="@Model.UrlVk" required type="url" />
+                        </div>
+
+                        <div class="modal-body-youtube flex">
+                            <span class="link__ico">
+                                <img src="~/img/youtube.png" alt="youtube">
+                            </span>
+
+                            <input asp-for="@Model.UrlYoutube" required type="url" />
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn__reset r__btn" data-dismiss="modal">Выход</button>
+                        <button type="submit" class="btn btn__reset r__btn">Сохранить изменения</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
 </section>

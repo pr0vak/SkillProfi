@@ -38,7 +38,6 @@ C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\bin\Release\net7.0\Microsof
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\bin\Release\net7.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\bin\Release\net7.0\SkillProfi.DAL.dll
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\bin\Release\net7.0\SkillProfi.DAL.pdb
-C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\bin\Release\net7.0\config.json
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\bin\Release\net7.0\Humanizer.dll
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\bin\Release\net7.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\bin\Release\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -229,3 +228,4 @@ C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\bin\Release\net7.0\runtimes
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\bin\Release\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\bin\Release\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\bin\Release\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\bin\Release\net7.0\config.json

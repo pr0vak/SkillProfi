@@ -46,7 +46,7 @@ namespace SkillProfiWebApi.Controllers
                     issuer: AuthOptions.ISSUER,
                     audience: AuthOptions.AUDIENCE,
                     claims: claims,
-                    expires: DateTime.UtcNow.Add(TimeSpan.FromMinutes(2)),
+                    expires: DateTime.UtcNow.Add(TimeSpan.FromMinutes(10)),
                     signingCredentials: new SigningCredentials(AuthOptions.GetSymmetricSecurityKey(), SecurityAlgorithms.HmacSha256));
             var encodedJwt = new JwtSecurityTokenHandler().WriteToken(jwt);
 
@@ -62,6 +62,7 @@ namespace SkillProfiWebApi.Controllers
 
         // GET api/<AccountController>/5
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<Account> Get(int id)
         {
             return await _db.Accounts.FindAsync(id);

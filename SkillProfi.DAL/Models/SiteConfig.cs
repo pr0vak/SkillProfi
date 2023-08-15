@@ -27,7 +27,7 @@ namespace SkillProfi.DAL.Models
                 HeroTitle = "IT-КОНСАЛТИНГ БЕЗ РЕГИСТРАЦИИ И СМС";
                 HeroBtnToSend = "Оставить заявку";
                 HeroSecondTitle = "Оставить заявку или задать вопрос";
-                UrlTelegram = "https://telegram.com";
+                UrlTelegram = "https://telegram.org";
                 UrlVk = "https://vk.com";
                 UrlYoutube = "https://youtube.com";
 

@@ -1,0 +1,27 @@
+﻿@model Blog
+
+<section class="section blog">    
+    <form method="post" asp-action="Delete">
+        <input asp-for="@Model.Id" hidden />
+        <input asp-for="@Model.ImageUrl" hidden />
+
+        <div class="blog__head flex">
+            <h1>
+                @Model.Title
+            </h1>
+
+            <img class="blog__img" src="@Model.ImageUrl.Remove(0, 1)" />
+        </div>
+
+        <div class="blog__description">
+            @Html.Raw(Model.Description.Replace("\n", "<br>"))
+        </div>
+
+        <div>
+            <button class="r__btn request__edit btn btn__reset" type="submit">
+                Удалить
+            </button>
+            <a class="r__btn request__back btn btn__reset" asp-action="Index">Назад</a>
+        </div>
+    </form>
+</section>

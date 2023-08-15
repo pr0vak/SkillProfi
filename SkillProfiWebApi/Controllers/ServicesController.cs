@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SkillProfiWebApi.Data;
 using SkillProfi.DAL.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SkillProfiWebApi.Controllers
 {
@@ -31,6 +32,7 @@ namespace SkillProfiWebApi.Controllers
 
         // POST api/<ServicesController>
         [HttpPost]
+        [Authorize]
         public async Task Post([FromBody] Service service)
         {
             await _db.Services.AddAsync(service);
@@ -39,6 +41,7 @@ namespace SkillProfiWebApi.Controllers
 
         // PUT api/<ServicesController>/5
         [HttpPut("{id}")]
+        [Authorize]
         public async Task Put(int id, [FromBody] Service service)
         {
             _db.Services.Update(service);
@@ -47,6 +50,7 @@ namespace SkillProfiWebApi.Controllers
 
         // DELETE api/<ServicesController>/5
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task Delete(int id)
         {
             _db.Services.Remove(await Get(id));

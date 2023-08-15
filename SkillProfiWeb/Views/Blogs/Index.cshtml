@@ -18,7 +18,26 @@
                         @blog.ShortDescription
                     </p>
                 </a>
+
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div class="blogs__ico">
+                        <a asp-controller="Blogs" asp-action="Edit" asp-route-id="@blog.Id">
+                            <img class="blogs__ico__edit" src="~/img/ico-edit.png" />
+                        </a>
+                        <a asp-controller="Blogs" asp-action="Delete" asp-route-id="@blog.Id">
+                            <img class="blogs__ico__del" src="~/img/ico-del.png" />
+                        </a>
+                    </div>
+                }
             </li>
         }
     </ul>
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <div class="blogs__btn__add">
+            <a class="btn btn__reset r__btn" asp-controller="Blogs" asp-action="Create">Добавить блог</a>
+        </div>
+    }
 </section>

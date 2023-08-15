@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SkillProfi.DAL.Models;
 using SkillProfiWebApi.Data;
 
@@ -31,6 +32,7 @@ namespace SkillProfiWebApi.Controllers
 
         // POST api/<BlogsController>
         [HttpPost]
+        [Authorize]
         public async Task Post([FromBody] Blog blog)
         {
             await _db.Blogs.AddAsync(blog);
@@ -39,6 +41,7 @@ namespace SkillProfiWebApi.Controllers
 
         // PUT api/<BlogsController>/5
         [HttpPut("{id}")]
+        [Authorize]
         public async Task Put(int id, [FromBody] Blog blog)
         {
             _db.Blogs.Update(blog);
@@ -47,6 +50,7 @@ namespace SkillProfiWebApi.Controllers
 
         // DELETE api/<BlogsController>/5
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task Delete(int id)
         {
             _db.Blogs.Remove(await Get(id));

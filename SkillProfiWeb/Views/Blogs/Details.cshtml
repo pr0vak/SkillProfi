@@ -11,7 +11,7 @@
         <img class="blogs__item__img blog__img" src=".@Model.ImageUrl" />
 
         <p class="blog__descr">
-            @Html.Raw(@Model.Description);
+            @Html.Raw(Model.Description.Replace("\n", "<br>"))
         </p>
     </div>
 

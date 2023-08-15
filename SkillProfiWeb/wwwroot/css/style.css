@@ -60,6 +60,10 @@ a {
   display: flex;
 }
 
+.section {
+  margin-bottom: 30px;
+}
+
 .container {
   margin: 0 auto;
   width: 100%;
@@ -150,7 +154,6 @@ header {
 
 /* hero */
 .hero {
-  margin-bottom: 30px;
   padding: 25px 50px;
   height: 500px;
   font-size: 30px;
@@ -570,7 +573,13 @@ header {
     border-bottom: solid 2px #ddd;
 }
 
+.blogs__list {
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
 .blogs__item {
+    margin-bottom: 20px;
     width: 276px;
 }
 
@@ -580,6 +589,7 @@ header {
 
 .blogs__item__link {
     flex-direction: column;
+    margin-bottom: 10px;
     padding: 5px;
     border-radius: 5px;
     transition: background-color 0.3s ease-in-out;
@@ -636,6 +646,50 @@ header {
     transition: color 0.3s ease-in-out;
 }
 
+.blogs__ico {
+    display: inline-block;
+}
+
+.blogs__ico__edit,
+.blogs__ico__del {
+    display: inline-block;
+    padding: 4px;
+    width: 24px;
+    height: 24px;
+    background-color: #137ffa;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.blogs__ico__edit {
+    margin-right: 10px;
+}
+
+.blogs__ico a:hover .blogs__ico__edit,
+.blogs__ico a:hover .blogs__ico__del {
+    background-color: #4298fb;
+}
+
+.blogs__ico a:active .blogs__ico__edit,
+.blogs__ico a:active .blogs__ico__del {
+    background-color: #034ea4;
+}
+
+.blogs__btn__add {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.blogs__btn__add a {
+    padding: 8px 15px;
+    font-size: 16px;
+}
+
+/* blog - create */
+.blog__create {
+    display: flex;
+}
+
 /* blog */
 .blog {
     margin-bottom: 20px;
@@ -679,6 +733,23 @@ header {
 
 .blog__btn__back {
     justify-content: flex-end;
+}
+
+.blog__head {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: solid 2px #ddd;
+}
+
+.blog__head .blog__img {
+    margin-right: 0;
+    width: 200px;
+}
+
+.blog__description {
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 
 /* Contacts */
@@ -731,6 +802,22 @@ header {
 .container__map iframe {
     width: 500px;
     height: 400px;
+}
+
+.modal-body span {
+    margin-right: 20px;
+}
+
+.modal-body-telegram,
+.modal-body-vk {
+    margin-bottom: 15px;
+}
+
+.modal-body-telegram input,
+.modal-body-vk input,
+.modal-body-youtube input {
+    padding: 5px;
+    border-radius: 5px;
 }
 
 /* account */
@@ -883,6 +970,14 @@ header {
 
 /* Services - edit */
 .textarea__descr {
+    padding: 5px;
+    min-width: 500px;
+    min-height: 300px;
+    resize: none;
+}
+
+.textarea__shortdescr {
+    padding: 5px;
     min-width: 500px;
     min-height: 135px;
     resize: none;

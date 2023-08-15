@@ -26,12 +26,14 @@ namespace SkillProfiWeb.Controllers
             request.Status = "Получена";
             request.Created = DateTime.Now;
             _requestData.Add(request);
+
             return RedirectToAction("RequestSent");
         }
 
         [HttpGet]
-        public IActionResult RequestSent() 
+        public IActionResult RequestSent()
         {
+            ViewData["Title"] = "SkillProfi - Заявка отправлена";
             return View();
         }
 
@@ -39,6 +41,8 @@ namespace SkillProfiWeb.Controllers
         [Authorize]
         public IActionResult Edit()
         {
+            ViewData["Title"] = "SkillProfi - Редактирование";
+
             var model = new SiteConfigViewModel(SiteConfig.GetInstance());
 
 			return View(model);
