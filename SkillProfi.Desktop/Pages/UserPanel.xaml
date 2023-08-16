@@ -1,0 +1,48 @@
+﻿<Page x:Class="SkillProfi.Desktop.Pages.UserPanel"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SkillProfi.Desktop.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="850">
+
+    <GroupBox Header="Отправка заявки" Margin="20px 10px"
+              FontSize="20px">
+        <StackPanel Orientation="Vertical" Margin="70px 0">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical" Margin="10px 0 5px 0" Width="300px">
+                    <TextBlock Text="Имя" Margin="0 5px" FontSize="16px"/>
+
+                    <TextBox x:Name="tbName" Margin="0 5px" FontSize="16px"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Margin="10px 0" Width="305px">
+                    <TextBlock Text="Почтовый ящик" Margin="0 5px" FontSize="16px"/>
+
+                    <TextBox x:Name="tbContact" Margin="0 5px" FontSize="16px"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Margin="10px 0">
+                <TextBlock Text="Описание проблемы" Margin="0 5px"
+                           FontSize="16px"/>
+
+                <TextBox x:Name="tbMessage" TextWrapping="Wrap"
+                         Margin="0 5px" FontSize="16px" MaxLines="8"
+                         Height="180px"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="10px">
+                <Button Content="Отправить заявку"  FontSize="16px"
+                        Width="150px" Height="30px" Margin="0 0 100px 0" Click="ToSendRequest"/>
+
+                <Button Content="Авторизоваться"  FontSize="16px"
+                        Width="150px" Height="30px" Margin="0 0 70px 0" Click="Authorize"/>
+
+                <Button Content="Выход"  FontSize="16px"
+                        Width="150px" Height="30px" Margin="0 0 100px 0" Click="ToCloseWindow"/>
+            </StackPanel>
+        </StackPanel>
+    </GroupBox>
+</Page>

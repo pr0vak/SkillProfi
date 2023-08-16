@@ -1,0 +1,6 @@
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\bin\Release\net7.0-windows\publish\SkillProfi.Desktop.exe
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\bin\Release\net7.0-windows\publish\SkillProfi.Desktop.dll
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\bin\Release\net7.0-windows\publish\SkillProfi.Desktop.deps.json
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\bin\Release\net7.0-windows\publish\SkillProfi.Desktop.runtimeconfig.json
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\bin\Release\net7.0-windows\publish\SkillProfi.Desktop.pdb
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\bin\Release\net7.0-windows\publish\Newtonsoft.Json.dll

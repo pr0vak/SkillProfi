@@ -33,7 +33,6 @@ namespace SkillProfiWebApi.Controllers
 
         // POST api/<RequestsController>
         [HttpPost]
-        [Authorize]
         public async Task Post([FromBody] Request request)
         {
             await _db.Requests.AddAsync(request);
