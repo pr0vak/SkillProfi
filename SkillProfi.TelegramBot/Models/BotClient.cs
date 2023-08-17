@@ -304,6 +304,9 @@ namespace SkillProfi.TelegramBot.Models
 
         private void SendMessageWithMenuBack(long id, string msg)
         {
+            isName = false;
+            isEmail = false; 
+            isMessage = false;
             InlineKeyboardMarkup exit = new(new[]
                     {
                         new[]
