@@ -1,0 +1,7 @@
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.TelegramBot\bin\Release\net7.0\publish\SkillProfi.TelegramBot.exe
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.TelegramBot\bin\Release\net7.0\publish\SkillProfi.TelegramBot.dll
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.TelegramBot\bin\Release\net7.0\publish\SkillProfi.TelegramBot.deps.json
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.TelegramBot\bin\Release\net7.0\publish\SkillProfi.TelegramBot.runtimeconfig.json
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.TelegramBot\bin\Release\net7.0\publish\SkillProfi.TelegramBot.pdb
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.TelegramBot\bin\Release\net7.0\publish\Newtonsoft.Json.dll
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.TelegramBot\bin\Release\net7.0\publish\Telegram.Bot.dll
