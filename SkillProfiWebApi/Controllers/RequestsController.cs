@@ -19,6 +19,7 @@ namespace SkillProfiWebApi.Controllers
 
         // GET: api/<RequestController>
         [HttpGet]
+        [Authorize]
         public IEnumerable<Request> Get()
         {
             return _db.Requests;
@@ -26,6 +27,7 @@ namespace SkillProfiWebApi.Controllers
 
         // GET api/<RequestsController>/5
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<Request> Get(int id)
         {
             return await _db.Requests.FindAsync(id) ?? DAL.Request.CreateNullRequest();

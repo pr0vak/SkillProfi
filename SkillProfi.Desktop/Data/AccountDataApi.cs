@@ -12,12 +12,12 @@ namespace SkillProfi.Desktop.Data
             _url += "Account/";
         }
 
-        public bool Athorization(string login, string password)
+        public async Task<bool> Athorization(string login, string password)
         {
             try
             {
                 var url = _url + $"login={login}&password={password}";
-                var json = Task.Run(() => _client.GetStringAsync(url)).Result;
+                var json = await _client.GetStringAsync(url);
                 Token = JObject.Parse(json)["access_token"]?.ToString();
 
                 return true;
@@ -34,8 +34,8 @@ namespace SkillProfi.Desktop.Data
                 else
                 {
                     MessageBox.Show(
-                        "Неверно заданы параметры подключения к Web API серверу!\nПроверьте ссылку.",
-                        "Ошибка соединения",
+                        "Неверно заданы параметры подключения к Web API серверу.\nИли сервер недоступен.",
+                        "Ошибка подключения",
                         MessageBoxButton.OK,
                         MessageBoxImage.Warning);
                 }

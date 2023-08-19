@@ -24,6 +24,7 @@ namespace SkillProfi.Desktop.ViewModel
         private string name;
         private string email;
         private string message;
+        private bool isEnable = true;
         private Visibility authoziationVisibility = Visibility.Visible;
         private Visibility userPanelVisibility = Visibility.Hidden;
         private Visibility adminPanelVisibility = Visibility.Hidden;
@@ -87,6 +88,12 @@ namespace SkillProfi.Desktop.ViewModel
             set => Set(ref currentRequest, value);
         }
 
+        public bool IsEnable
+        {
+            get => isEnable;
+            set => Set(ref isEnable, value);
+        }
+
         
         public RelayCommand AuthorizationCommand { get; set; }
         public RelayCommand GuestCommand { get; set; }
@@ -99,10 +106,10 @@ namespace SkillProfi.Desktop.ViewModel
 
         public MainViewModel()
         {
-            Initialize();
+            Task.Run(Initialize);
         }
 
-        private void Initialize()
+        private async Task Initialize()
         {
             accountDataApi = new AccountDataApi();
             requestDataApi = new RequestDataApi();
@@ -110,14 +117,27 @@ namespace SkillProfi.Desktop.ViewModel
             email = string.Empty;
             message = string.Empty;
 
-            AuthorizationCommand = new RelayCommand(o =>
+            AuthorizationCommand = new RelayCommand(async o =>
             {
-                if (accountDataApi.Athorization(login, password))
+                if (string.IsNullOrEmpty(login.Trim()) || string.IsNullOrEmpty(password.Trim())) 
+                {
+                    MessageBox.Show("Введите логин и пароль.\nВ логине и пароле не должно быть пробелов!", "Авторизация");
+                    return;
+                }
+                IsEnable = false;
+                var _login = login;
+                var _password = password;
+                Login = "Идет проверка подключения...";
+
+                if (await accountDataApi.Athorization(_login, _password))
                 {
                     AuthoziationVisibility = Visibility.Hidden;
                     AdminPanelVisibility = Visibility.Visible;
                     Requests = new ObservableCollection<Request>(requestDataApi.GetAll().Reverse());
                 }
+
+                Login = string.Empty;
+                IsEnable = true;
             });
 
             GuestCommand = new RelayCommand(o =>
