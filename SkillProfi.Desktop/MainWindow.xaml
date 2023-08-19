@@ -3,20 +3,188 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" mc:Ignorable="d"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SkillProfi.Desktop"
+        xmlns:local="clr-namespace:SkillProfi.Desktop" 
+        xmlns:viewmodel="clr-namespace:SkillProfi.Desktop.ViewModel" 
         WindowStartupLocation="CenterScreen"
-        Title="SkillProfi Desktop" 
+        Title="SkillProfi - IT Service" 
         Height="450" Width="850"
         ResizeMode="NoResize">
-        <!--xmlns:viewModel="clr-namespace:SkillProfi.Desktop.ViewModel"-->
-    
-    <!--<Window.DataContext>
-        <viewModel:MainViewModel />
-    </Window.DataContext>-->
-    
+
+    <Window.DataContext>
+        <viewmodel:MainViewModel />
+    </Window.DataContext>
+
     <Grid>
-        <Frame x:Name="frame" NavigationUIVisibility="Hidden">
-            
-        </Frame>
+        <Grid x:Name="Authorization" Visibility="{Binding AuthoziationVisibility}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150px"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="50px"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="150px"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100px" />
+                <RowDefinition Height="60px" />
+                <RowDefinition Height="30px" />
+                <RowDefinition Height="60px" />
+                <RowDefinition Height="30px" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5"
+                       FontSize="50px" Margin="80px 0 0 0" Text="SkillProfi - IT Service"
+                       VerticalAlignment="Bottom"/>
+
+            <Label Grid.Row="1" Grid.Column="1"
+               Content="Введите логин:"
+               FontSize="16px"
+               VerticalAlignment="Bottom"
+               Margin="50px 0 0 0"/>
+            <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" 
+                 Padding="10px 0 10px 0"
+                 Margin="50px 0 50px 0"
+                 Text="{Binding Login}"
+                 FontSize="16px"/>
+
+            <Label Grid.Row="3" Grid.Column="1"
+               Content="Введите пароль:"
+               FontSize="16px"
+               VerticalAlignment="Bottom"
+               Margin="50px 0 0 0"/>
+            <PasswordBox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" x:Name="pbPassword"
+                 Padding="10px 0 10px 0"
+                 PasswordChanged="Password_PasswordChanged"
+                 Margin="50px 0 50px 0"
+                 FontSize="16px" />
+
+            <Button Grid.Column="1" Grid.Row="5"
+                Command="{Binding AuthorizationCommand}"
+                Margin="50px 20px"
+                Content="Войти"
+                FontSize="16px"/>
+
+            <Button Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2"
+                    Command="{Binding GuestCommand}"
+                    Margin="30px 20px 50px 20px"
+                    Content="Продолжить как гость"
+                    FontSize="16px"/>
+        </Grid>
+
+        <GroupBox x:Name="UserPanel" Visibility="{Binding UserPanelVisibility}"
+                  Header="Отправка заявки" 
+                  Margin="20px 10px"
+                  FontSize="20px">
+            <StackPanel Orientation="Vertical" Margin="70px 0">
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Vertical" Margin="10px 0 6px 0" Width="300px">
+                        <TextBlock Text="Имя" Margin="0 5px" FontSize="16px"/>
+
+                        <TextBox Text="{Binding Name}" Margin="0 5px" FontSize="16px" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Margin="10px 0" Width="305px">
+                        <TextBlock Text="Почтовый ящик" Margin="0 5px" FontSize="16px"/>
+
+                        <TextBox Text="{Binding Email}" Margin="0 5px" FontSize="16px"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Margin="10px 0">
+                    <TextBlock Text="Описание проблемы" Margin="0 5px"
+                           FontSize="16px"/>
+
+                    <TextBox Text="{Binding Message}"  TextWrapping="Wrap"
+                         Margin="0 5px" FontSize="16px" MaxLines="8"
+                         Height="180px"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="10px" HorizontalAlignment="Left">
+                    <Button Content="Отправить заявку"  FontSize="16px"
+                        Width="150px" Height="30px" Margin="0 0 322px 0" 
+                            Command="{Binding SendRequestCommand}"/>
+                    <Button Content="Авторизоваться"  FontSize="16px"
+                            Command="{Binding GetAuthorizationViewCommand}"
+                        Width="150px" Height="30px" />
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+
+        <Grid x:Name="AdminPanel" Visibility="{Binding AdminPanelVisibility}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="50px" />
+            </Grid.RowDefinitions>
+
+            <ListView VerticalAlignment="Top" x:Name="lvRequests"
+                  Margin="15px" Height="340px" Grid.Row="0"
+                  ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                  ItemsSource="{Binding Requests}"
+                  SelectedItem="{Binding CurrentRequest, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                  SelectionMode="Single">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Id}" 
+                                    Width="40px"/>
+                        <GridViewColumn Header="Заявка получена" 
+                                    DisplayMemberBinding="{Binding Created, StringFormat=dd.MM.yy HH:mm}"
+                                    Width="110px"/>
+                        <GridViewColumn Header="Имя" Width="135px">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Name}"
+                                           TextWrapping="Wrap"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Текст заявки"  
+                                    Width="260px">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Message}"
+                                           TextWrapping="Wrap"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Контакты" Width="150px">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Email}"
+                                           TextWrapping="Wrap" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Статус" DisplayMemberBinding="{Binding Status}" 
+                                    Width="85px"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="1"
+                    Margin="15px 5px">
+                <Button Content="Создать заявку" 
+                        Command="{Binding CreateRequestCommand}"
+                    Margin="0 0 50px 0"
+                    Padding="20px 0"
+                    FontSize="14px"
+                    Height="30px"/>
+
+                <Button Content="Информация по заявке" 
+                    Margin="0 0 50px 0"
+                    Padding="20px 0"
+                    FontSize="14px"
+                    Command="{Binding GetInfoCommand}"
+                    Height="30px"/>
+
+                <Button Content="Обновить заявки" 
+                    Margin="0 0 50px 0"
+                    Padding="20px 0"
+                    FontSize="14px"
+                    Command="{Binding UpdateCommand}"
+                    Height="30px"/>
+            </StackPanel>
+        </Grid>
     </Grid>
+    
 </Window>

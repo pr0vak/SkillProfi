@@ -23,6 +23,11 @@ namespace SkillProfiWebApi.Migrations
                 {
                     table.PrimaryKey("PK_Accounts", x => x.Id);
                 });
+//            migrationBuilder.Sql(
+//@"
+//    UPDATE Customer
+//    SET FullName = FirstName + ' ' + LastName;
+//");
         }
 
         /// <inheritdoc />

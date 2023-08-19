@@ -9,15 +9,6 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Pages\AdminPanel.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Pages\AuthPage.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Pages\UserPanel.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="View\CreateRequestWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -27,15 +18,6 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\AdminPanel.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\AuthPage.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\UserPanel.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\CreateRequestWindow.xaml">

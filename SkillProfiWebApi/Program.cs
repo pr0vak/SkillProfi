@@ -1,12 +1,21 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json.Linq;
 using SkillProfi.DAL.Models;
 using SkillProfiWebApi.Data;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var dataConnection = JObject.Parse(File.ReadAllText(@".\connection.json"));
+var stringCon = $"Data source={dataConnection["server_address"]};" +
+    $"Database={dataConnection["database"]};" +
+    $"User Id={dataConnection["user"]};" +
+    $"password={dataConnection["password"]};" +
+    $"TrustServerCertificate=True;";
+
 builder.Services.AddDbContext<DataContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection") 
+    options.UseSqlServer(stringCon
     ?? throw new InvalidOperationException("Connection string 'DataContext' not found.")));
 
 builder.Services.AddAuthorization();

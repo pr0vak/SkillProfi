@@ -1,6 +1,5 @@
 ﻿using SkillProfi.Desktop.Data;
 using SkillProfi.Desktop.Models;
-using SkillProfi.Desktop.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,16 +22,14 @@ namespace SkillProfi.Desktop.View
     public partial class CreateRequestWindow : Window
     {
         private RequestDataApi _dataApi;
-        private AdminPanel _panel;
 
-        public CreateRequestWindow(AdminPanel panel, RequestDataApi dataApi)
+        public CreateRequestWindow(RequestDataApi dataApi)
         {
             InitializeComponent();
             _dataApi = dataApi;
-            _panel = panel;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void SendRequest(object sender, RoutedEventArgs e)
         {
             if (IsChecked()) 
             {
@@ -68,7 +65,7 @@ namespace SkillProfi.Desktop.View
             return true;
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Exit(object sender, RoutedEventArgs e)
         {
             this.Close();
         }

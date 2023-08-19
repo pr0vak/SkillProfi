@@ -10,11 +10,11 @@ none
 false
 TRACE;RELEASE;NET;NET7_0;NETCOREAPP
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\App.xaml
-6-1298989922
+31050796420
 1-913308027
-13-1924811609
+13-651598782
 1992132065378
-MainWindow.xaml;Pages\AdminPanel.xaml;Pages\AuthPage.xaml;Pages\UserPanel.xaml;View\CreateRequestWindow.xaml;View\DetailsRequestWindow.xaml;
+MainWindow.xaml;View\CreateRequestWindow.xaml;View\DetailsRequestWindow.xaml;
 
 False
 

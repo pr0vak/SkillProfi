@@ -1,6 +1,6 @@
 ﻿using SkillProfi.Desktop.Data;
-using SkillProfi.Desktop.Pages;
 using SkillProfi.Desktop.View;
+using SkillProfi.Desktop.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +26,14 @@ namespace SkillProfi.Desktop
         public MainWindow()
         {
             InitializeComponent();
-            frame.Content = new AuthPage(this);
+        }
+
+        private void Password_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            if (this.DataContext != null)
+            { 
+                (DataContext as MainViewModel).Password = ((PasswordBox)sender).Password; 
+            }
         }
     }
 }
