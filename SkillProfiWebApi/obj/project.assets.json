@@ -11858,11 +11858,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi — копия\\SkillProfiWebApi\\SkillProfiWebApi.csproj",
+      "projectUniqueName": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWebApi\\SkillProfiWebApi.csproj",
       "projectName": "SkillProfiWebApi",
-      "projectPath": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi — копия\\SkillProfiWebApi\\SkillProfiWebApi.csproj",
+      "projectPath": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWebApi\\SkillProfiWebApi.csproj",
       "packagesPath": "C:\\Users\\Vyacheslav\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi — копия\\SkillProfiWebApi\\obj\\",
+      "outputPath": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -11884,8 +11884,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi — копия\\SkillProfi.DAL\\SkillProfi.DAL.csproj": {
-              "projectPath": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi — копия\\SkillProfi.DAL\\SkillProfi.DAL.csproj"
+            "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.DAL\\SkillProfi.DAL.csproj": {
+              "projectPath": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.DAL\\SkillProfi.DAL.csproj"
             }
           }
         }

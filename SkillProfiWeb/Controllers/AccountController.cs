@@ -21,6 +21,7 @@ namespace SkillProfiWeb.Controllers
         [HttpGet]
         public IActionResult Index()
         {
+            ViewData["Title"] = "SkillProfi - Авторизация";
             return View(new UserLogin());
         }
 
