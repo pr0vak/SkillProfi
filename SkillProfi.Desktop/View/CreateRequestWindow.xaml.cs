@@ -40,7 +40,7 @@ namespace SkillProfi.Desktop.View
                     Message = tbMessage.Text
                 };
 
-                _dataApi.Create(request);
+                Task.Run(() => _dataApi.Create(request));
                 MessageBox.Show("Заявка успешно отправлена!", "Заявка", 
                     MessageBoxButton.OK, MessageBoxImage.Information);
                 this.Close();

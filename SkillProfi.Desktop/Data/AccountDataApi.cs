@@ -17,8 +17,7 @@ namespace SkillProfi.Desktop.Data
             try
             {
                 var url = _url + $"login={login}&password={password}";
-                var json = await _client.GetStringAsync(url);
-                Token = JObject.Parse(json)["access_token"]?.ToString();
+                Token = JObject.Parse(await _client.GetStringAsync(url))["access_token"]?.ToString();
 
                 return true;
             }

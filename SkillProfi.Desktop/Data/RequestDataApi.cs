@@ -4,9 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace SkillProfi.Desktop.Data
 {
@@ -15,32 +17,38 @@ namespace SkillProfi.Desktop.Data
         public RequestDataApi()
         {
             _url += "Requests/";
-            _client.DefaultRequestHeaders.Add("Authorization", $"Bearer {Token}");
         }
 
-        public IEnumerable<Request> GetAll()
+        public async Task<IEnumerable<Request>> GetAll()
         {
-            var json = Task.Run(() => _client.GetStringAsync(_url)).Result;
-            return JsonConvert.DeserializeObject<IEnumerable<Request>>(json);
+            using (var requestMessage = new HttpRequestMessage(HttpMethod.Get, _url))
+            {
+                requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", Token);
+                var response = await _client.SendAsync(requestMessage);
+                var json = await response.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<IEnumerable<Request>>(json);
+            }
         }
 
-        public void Update(Request request)
+        public async Task Update(Request request)
         {
-            var url = _url + request.Id;
-            Task.Run(() => _client.PutAsync(
-                url,
-                new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8,
-                    "application/json")
-                ));
+            using (var requestMessage = new HttpRequestMessage(HttpMethod.Put, _url + request.Id))
+            {
+                requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", Token);
+                requestMessage.Content = new StringContent(JsonConvert.SerializeObject(request), 
+                    Encoding.UTF8, "application/json");
+                await _client.SendAsync(requestMessage);
+            }
         }
 
-        public void Create(Request request)
+        public async Task Create(Request request)
         {
-            Task.Run(() => _client.PostAsync(
-                _url,
-                new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8,
-                    "application/json")
-                ));
+            using (var requestMessage = new HttpRequestMessage(HttpMethod.Post, _url))
+            {
+                requestMessage.Content = new StringContent(JsonConvert.SerializeObject(request),
+                    Encoding.UTF8, "application/json");
+                var message = await _client.SendAsync(requestMessage);
+            }
         }
     }
 }

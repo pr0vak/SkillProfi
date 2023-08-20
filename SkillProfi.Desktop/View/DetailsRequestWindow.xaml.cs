@@ -61,7 +61,7 @@ namespace SkillProfi.Desktop.View
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             _request.Status = cbStatus.SelectedValue.ToString();
-            _dataApi.Update(_request);
+            Task.Run(() => _dataApi.Update(_request));
             this.Close();
         }
 

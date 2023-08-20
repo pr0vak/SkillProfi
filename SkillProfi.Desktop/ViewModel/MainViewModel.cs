@@ -119,7 +119,7 @@ namespace SkillProfi.Desktop.ViewModel
 
             AuthorizationCommand = new RelayCommand(async o =>
             {
-                if (string.IsNullOrEmpty(login.Trim()) || string.IsNullOrEmpty(password.Trim())) 
+                if (string.IsNullOrEmpty(login) || string.IsNullOrEmpty(password)) 
                 {
                     MessageBox.Show("Введите логин и пароль.\nВ логине и пароле не должно быть пробелов!", "Авторизация");
                     return;
@@ -133,7 +133,7 @@ namespace SkillProfi.Desktop.ViewModel
                 {
                     AuthoziationVisibility = Visibility.Hidden;
                     AdminPanelVisibility = Visibility.Visible;
-                    Requests = new ObservableCollection<Request>(requestDataApi.GetAll().Reverse());
+                    Requests = new ObservableCollection<Request>((await requestDataApi.GetAll()).Reverse());
                 }
                 else
                 {
@@ -159,12 +159,14 @@ namespace SkillProfi.Desktop.ViewModel
             {
                 if (name.Split(' ').Length == 3 && email.Contains('@') && message.Length > 10)
                 {
-                    requestDataApi.Create(new Request
+                    var request = new Request
                     {
                         Name = name,
                         Email = email,
                         Message = message
-                    });
+                    };
+
+                    Task.Run(() => requestDataApi.Create(request));
 
                     Name = string.Empty;
                     Email = string.Empty;
@@ -187,7 +189,7 @@ namespace SkillProfi.Desktop.ViewModel
 
             UpdateCommand = new RelayCommand(o =>
             {
-                Requests = new ObservableCollection<Request>(requestDataApi.GetAll());
+                Task.Run(UpdateRequests);
             });
 
             DetailsCommand = new RelayCommand(o =>
@@ -205,6 +207,11 @@ namespace SkillProfi.Desktop.ViewModel
                     new DetailsRequestWindow(requestDataApi, currentRequest).ShowDialog();
                 }
             });
+        }
+
+        private async Task UpdateRequests()
+        {
+            Requests = new ObservableCollection<Request>((await requestDataApi.GetAll()).Reverse());
         }
     }
 }
