@@ -135,9 +135,12 @@ namespace SkillProfi.Desktop.ViewModel
                     AdminPanelVisibility = Visibility.Visible;
                     Requests = new ObservableCollection<Request>(requestDataApi.GetAll().Reverse());
                 }
+                else
+                {
+                    Login = _login;
+                    IsEnable = true;
+                }
 
-                Login = string.Empty;
-                IsEnable = true;
             });
 
             GuestCommand = new RelayCommand(o =>

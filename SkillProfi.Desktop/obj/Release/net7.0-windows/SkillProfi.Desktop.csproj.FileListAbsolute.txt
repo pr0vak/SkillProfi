@@ -27,7 +27,6 @@ C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\obj\Release\net7.0-win
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\obj\Release\net7.0-windows\View\CreateRequestWindow.baml
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\obj\Release\net7.0-windows\SkillProfi.Desktop.Properties.Resources.resources
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\obj\Release\net7.0-windows\SkillProfi.Desktop.csproj.GenerateResource.cache
-C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\obj\Release\net7.0-windows\SkillProfi.Desktop_Content.g.cs
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\obj\Release\net7.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\Vyacheslav\Desktop\SkillProfi.Desktop\bin\Release\net7.0-windows\SkillProfi.Desktop.exe
 C:\Users\Vyacheslav\Desktop\SkillProfi.Desktop\bin\Release\net7.0-windows\SkillProfi.Desktop.deps.json
