@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "I6dQn5Rtm2dr6gbGi0f4EC6K4EgvxWKVk2RMQSJT7I7l0GQ63Xb8B1TbIGEXyZx9wakyLl8kG994SJYggexgpg==",
+  "dgSpecHash": "QhkooLzKQpBqIXiAeb8e6viRjIDuP3z9T8GTdFMkDHtOcTeAAKTRl5ilGfDF8lq9iDRep2hTLodTwj502QaxyA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.TelegramBot\\SkillProfi.TelegramBot.csproj",
+  "projectFilePath": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi — копия\\SkillProfi.TelegramBot\\SkillProfi.TelegramBot.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vyacheslav\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Vyacheslav\\.nuget\\packages\\telegram.bot\\19.0.0\\telegram.bot.19.0.0.nupkg.sha512"

@@ -51,6 +51,34 @@ body {
   transform: scale(95%);
 }
 
+.btn-blue {
+    display: inline-block;
+    padding: 5px 15px !important;
+    font-size: 14px;
+    color: white;
+    background-color: #137ffa;
+}
+
+.btn-blue-selected {
+    background-color: #4298fb;
+}
+
+.btn-blue:hover {
+    background-color: #4298fb;
+    border: none;
+}
+
+.btn-blue:focus {
+    background-color: #137ffa;
+    outline: 1px solid #333;
+    border: none;
+}
+
+.btn-blue:active {
+    background-color: #0f65c8;
+    border: none;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -853,6 +881,12 @@ header {
 /* itservice */
 .count__requests {
     margin-bottom: 20px;
+}
+
+.paging-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .table {

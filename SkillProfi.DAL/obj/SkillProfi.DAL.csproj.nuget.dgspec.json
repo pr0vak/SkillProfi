@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.DAL\\SkillProfi.DAL.csproj": {}
+    "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi — копия\\SkillProfi.DAL\\SkillProfi.DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.DAL\\SkillProfi.DAL.csproj": {
+    "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi — копия\\SkillProfi.DAL\\SkillProfi.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.DAL\\SkillProfi.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi — копия\\SkillProfi.DAL\\SkillProfi.DAL.csproj",
         "projectName": "SkillProfi.DAL",
-        "projectPath": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.DAL\\SkillProfi.DAL.csproj",
+        "projectPath": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi — копия\\SkillProfi.DAL\\SkillProfi.DAL.csproj",
         "packagesPath": "C:\\Users\\Vyacheslav\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.DAL\\obj\\",
+        "outputPath": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi — копия\\SkillProfi.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

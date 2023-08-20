@@ -1,0 +1,18 @@
+﻿@model IEnumerable<string>
+
+<a class="btn-blue navigation-menu-item" asp-action="Index" asp-controller="ITService"
+    asp-route-status="">
+    Очистить фильтр
+</a>
+
+@foreach (string status in Model)
+{
+    <a class="btn-blue navigation-menu-item 
+        @(status == ViewBag.SelectedStatus 
+            ? "btn-blue-selected" : "")"
+       asp-action="Index" asp-controller="ITService"
+        asp-route-status="@status"
+        asp-route-requestPage="1">
+        @status
+    </a>
+}

@@ -1,36 +1,48 @@
-﻿@model IEnumerable<SkillProfi.DAL.Models.Request>
+﻿@*@model IEnumerable<Request>*@
+@model RequestsListViewModel
 
 <section class="section itservice">
     <p class="count__requests">
-        Всего заявок: @Model.Count()
+        Всего заявок: @Model.PagingInfo.TotalItems
     </p>
+
+    <div class="navigation-menu">
+        <vc:navigation-menu/>
+    </div>
+
     <table class="table">
         <thead>
             <tr>
                 <th class="table__id">
-                    @Html.DisplayNameFor(model => model.Id)
+                    @*@Html.DisplayNameFor(model => model.Id)*@
+                    Номер заявки
                 </th>
                 <th class="table__created">
-                    @Html.DisplayNameFor(model => model.Created)
+                    @*@Html.DisplayNameFor(model => model.Created)*@
+                    Заявка получена
                 </th>
                 <th class="table__name">
-                    @Html.DisplayNameFor(model => model.Name)
+                    @*@Html.DisplayNameFor(model => model.Name)*@
+                    Имя
                 </th>
                 <th class="table__msg">
-                    @Html.DisplayNameFor(model => model.Message)
+                    @*@Html.DisplayNameFor(model => model.Message)*@
+                    Описание
                 </th>
                 <th class="table__contacts">
-                    @Html.DisplayNameFor(model => model.Email)
+                    @*@Html.DisplayNameFor(model => model.Email)*@
+                    Контакты
                 </th>
                 <th class="table__status">
-                    @Html.DisplayNameFor(model => model.Status)
+                    @*@Html.DisplayNameFor(model => model.Status)*@
+                    Статус
                 </th>
                 <th class="table__action">
                 </th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in Model)
+            @foreach (var item in Model.Requests)
             {
                 <tr>
                     <td class="table__id">
@@ -62,4 +74,12 @@
             }
         </tbody>
     </table>
+
+    <div page-model="@Model.PagingInfo" page-action="Index"
+        page-classed-enabled="true"
+         page-class="btn" page-class-normal="btn-blue"
+         page-class-selected="btn-blue-selected" 
+         page-url-status="@Model.CurrentStatus"
+         class="paging-info btn-group pull-right m-1">
+    </div>
 </section>

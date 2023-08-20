@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using SkillProfi.DAL.Models;
 using SkillProfiWeb.Data;
@@ -56,5 +57,14 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute("default", "{controller=Hero}/{action=Index}/{id?}");
+app.MapControllerRoute("statuspage2", "ITService/{status}/Page{requestPage:int}",
+        new { Controller = "ITService", action = "Index" });
+app.MapControllerRoute("page", "ITService/Page{requestPage:int}",
+        new { Controller = "ITService", action = "Index", requestPage = 1 });
+app.MapControllerRoute("status", "ITService/{status}",
+        new { Controller = "ITService", action = "Index", requestPage = 1 });
+app.MapControllerRoute("pagination",
+        "ITService/Page{requestPage}",
+        new { Controller = "ITService", action = "Index", requestPage = 1 });
 
 app.Run();

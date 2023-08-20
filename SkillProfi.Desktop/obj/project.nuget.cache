@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PHjkiW32TcmaqDIbEiueEINl+U62G8LueUHBq1qYfdZ5M/gdXAhWawRmThYEcFm0INMDzIzabTfRF0OGoihd8g==",
+  "dgSpecHash": "BhTss0aqf+ul67zPIMpRS1bofFm3pP8sOUWEeQNY5TrJYbYKJzJbmTObGOkGa5tPb8VyXa346jiRds7goyJD6g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Desktop\\SkillProfi.Desktop.csproj",
+  "projectFilePath": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi — копия\\SkillProfi.Desktop\\SkillProfi.Desktop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vyacheslav\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],

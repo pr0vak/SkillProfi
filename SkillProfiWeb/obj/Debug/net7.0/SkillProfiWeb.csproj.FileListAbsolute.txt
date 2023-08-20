@@ -29,3 +29,14 @@ C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\obj\Debug\net7.0\SkillProfi
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\obj\Debug\net7.0\SkillProfiWeb.RazorAssemblyInfo.cs
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWeb\obj\Debug\net7.0\SkillProfiWeb.csproj.CopyComplete
+C:\Users\Vyacheslav\Desktop\SkillProfiWeb\obj\Debug\net7.0\SkillProfiWeb.dll
+C:\Users\Vyacheslav\Desktop\SkillProfiWeb\obj\Debug\net7.0\refint\SkillProfiWeb.dll
+C:\Users\Vyacheslav\Desktop\SkillProfiWeb\obj\Debug\net7.0\SkillProfiWeb.pdb
+C:\Users\Vyacheslav\Desktop\SkillProfiWeb\obj\Debug\net7.0\SkillProfiWeb.csproj.AssemblyReference.cache
+C:\Users\Vyacheslav\Desktop\SkillProfiWeb\obj\Debug\net7.0\SkillProfiWeb.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vyacheslav\Desktop\SkillProfiWeb\obj\Debug\net7.0\SkillProfiWeb.AssemblyInfoInputs.cache
+C:\Users\Vyacheslav\Desktop\SkillProfiWeb\obj\Debug\net7.0\SkillProfiWeb.AssemblyInfo.cs
+C:\Users\Vyacheslav\Desktop\SkillProfiWeb\obj\Debug\net7.0\SkillProfiWeb.csproj.CoreCompileInputs.cache
+C:\Users\Vyacheslav\Desktop\SkillProfiWeb\obj\Debug\net7.0\SkillProfiWeb.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Vyacheslav\Desktop\SkillProfiWeb\obj\Debug\net7.0\SkillProfiWeb.RazorAssemblyInfo.cache
+C:\Users\Vyacheslav\Desktop\SkillProfiWeb\obj\Debug\net7.0\SkillProfiWeb.RazorAssemblyInfo.cs

@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
 using SkillProfi.DAL.Models;
 using SkillProfiWeb.Interfaces;
+using SkillProfiWeb.ViewModels;
+using System.Linq.Expressions;
 
 namespace SkillProfiWeb.Controllers
 {
@@ -20,16 +22,42 @@ namespace SkillProfiWeb.Controllers
                 new string ("Отменена")
             };
 
+        public int PageSize = 10;
+
         public ITServiceController(IData<Request> requestData)
         {
             _requestData = requestData;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string status, int requestPage = 1)
         {
             ViewData["Title"] = "IT Service";
 
-            return View(await _requestData.GetAll());
+            //return View(await _requestData.GetAll());
+            IEnumerable<Request> requests;
+            if (string.IsNullOrEmpty(status))
+            {
+                requests = await _requestData.GetAll();
+            }
+            else
+            {
+                requests = (await _requestData.GetAll()).Where(p => p.Status == status);
+            }
+            return View(new RequestsListViewModel
+            {
+                Requests = (requests)
+                        .Skip((requestPage - 1) * PageSize)
+                        .Take(PageSize),
+                PagingInfo = new PagingInfo
+                {
+                    CurrentPage = requestPage,
+                    ItemsPerPage = PageSize,
+                    TotalItems = status == null ?
+                        requests.Count() :
+                        requests.Where(e => e.Status == status).Count()
+                },
+                CurrentStatus = status
+            });
         }
 
         [HttpGet("Requests/{id}")]

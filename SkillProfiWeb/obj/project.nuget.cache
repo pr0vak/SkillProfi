@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "T7XoMSmbtxUATqoslJkfW/xw0CN+nbmX/X/ERekhyWyCprSqi9hvaaeTIhPBi3W+bH9JPrZTJPOHB5bbuwqyrg==",
+  "dgSpecHash": "o3pw4yMzpBkP9pqF1Nh9PzPHwJaNUIWz/Q0BjL4s5hgmM9cRaim+OUyPWLu0rPo/rrAFEAWuy7M703HNPl9nKg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\SkillProfiWeb.csproj",
+  "projectFilePath": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi — копия\\SkillProfiWeb\\SkillProfiWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vyacheslav\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Vyacheslav\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

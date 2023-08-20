@@ -19,4 +19,10 @@
     <ProjectReference Include="..\SkillProfi.DAL\SkillProfi.DAL.csproj" />
   </ItemGroup>
 
+  <!--<ItemGroup>
+    <Reference Include="SkillProfi.DAL">
+      <HintPath>..\SkillProfi\SkillProfi.DAL\bin\Release\net7.0\SkillProfi.DAL.dll</HintPath>
+    </Reference>
+  </ItemGroup>-->
+
 </Project>
