@@ -33,7 +33,6 @@ namespace SkillProfiWeb.Controllers
         {
             ViewData["Title"] = "IT Service";
 
-            //return View(await _requestData.GetAll());
             IEnumerable<Request> requests;
             if (string.IsNullOrEmpty(status))
             {
@@ -60,7 +59,7 @@ namespace SkillProfiWeb.Controllers
             });
         }
 
-        [HttpGet("Requests/{id}")]
+        [HttpGet("Requests/{id:int}")]
         public async Task<IActionResult> Details(int id)
         {
             ViewBag.Statuses = statuses;

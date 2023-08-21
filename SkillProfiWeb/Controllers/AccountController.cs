@@ -15,7 +15,7 @@ namespace SkillProfiWeb.Controllers
         public AccountController()
         {
             _client = new HttpClient();
-            _url = "http://46.50.174.117:5000/api/account/";
+            _url = "http://localhost:5000/api/account/";
         }
 
         [HttpGet]

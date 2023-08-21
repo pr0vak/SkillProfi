@@ -883,10 +883,41 @@ header {
     margin-bottom: 20px;
 }
 
+.paging__search__block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .paging-info {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+.pagination__threedots {
+    display: inline-block;
+    margin: 0;
+}
+
+.search__page form {
+    display: flex;
+    align-items: center;
+}
+
+.search__page label {
+    margin: 0;
+    margin-right: 10px;
+}
+
+.search__page input {
+    margin-right: 10px;
+}
+
+.search__page button {
+    border-radius: 5px;
 }
 
 .table {
