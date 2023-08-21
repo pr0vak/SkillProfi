@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using SkillProfi.DAL.Auth;
 using SkillProfi.DAL.Services;
 using SkillProfi.DAL.Models;
+using System.Linq;
 
 namespace SkillProfiWebApi.Controllers
 {
@@ -19,6 +20,18 @@ namespace SkillProfiWebApi.Controllers
         public AccountController(DataContext db)
         {
             _db = db;
+
+            if (db.Accounts.ToList()
+                .Where(acc => acc.Login.ToLower() == "admin")
+                .Count() == 0)
+            {
+                _db.Accounts.Add(new Account 
+                { 
+                    Login = "admin", 
+                    Password = Password.Hash("admin") 
+                });
+                _db.SaveChanges();
+            }
         }
 
         // GET: api/<AccountController>

@@ -23,11 +23,11 @@ namespace SkillProfiWebApi.Migrations
                 {
                     table.PrimaryKey("PK_Accounts", x => x.Id);
                 });
-//            migrationBuilder.Sql(
-//@"
-//    UPDATE Customer
-//    SET FullName = FirstName + ' ' + LastName;
-//");
+            migrationBuilder.Sql(
+@"
+    INSERT INTO Accounts (ProductName, Price, Manufacturer) 
+    VALUES ('iPhone 6S', 41000, 'Apple')
+");
         }
 
         /// <inheritdoc />

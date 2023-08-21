@@ -16,6 +16,7 @@ namespace SkillProfi.Desktop.Data
     {
         public RequestDataApi()
         {
+            base.Initialize();
             _url += "Requests/";
         }
 

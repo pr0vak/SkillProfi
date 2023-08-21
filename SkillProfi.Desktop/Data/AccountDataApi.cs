@@ -9,6 +9,7 @@ namespace SkillProfi.Desktop.Data
     {
         public AccountDataApi() 
         {
+            base.Initialize();
             _url += "Account/";
         }
 
