@@ -8,7 +8,6 @@ C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWebApi\bin\Release\net7.0\Skill
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWebApi\bin\Release\net7.0\Azure.Core.dll
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWebApi\bin\Release\net7.0\Azure.Identity.dll
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWebApi\bin\Release\net7.0\Humanizer.dll
-C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWebApi\bin\Release\net7.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWebApi\bin\Release\net7.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWebApi\bin\Release\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfiWebApi\bin\Release\net7.0\Microsoft.Build.dll
