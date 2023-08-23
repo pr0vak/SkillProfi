@@ -10,7 +10,7 @@ using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
@@ -57,14 +57,5 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute("default", "{controller=Hero}/{action=Index}/{id?}");
-app.MapControllerRoute("statuspage2", "ITService/{status}/Page{requestPage:int}",
-        new { Controller = "ITService", action = "Index" });
-app.MapControllerRoute("page", "ITService/Page{requestPage:int}",
-        new { Controller = "ITService", action = "Index", requestPage = 1 });
-app.MapControllerRoute("status", "ITService/{status}",
-        new { Controller = "ITService", action = "Index", requestPage = 1 });
-app.MapControllerRoute("pagination",
-        "ITService/Page{requestPage}",
-        new { Controller = "ITService", action = "Index", requestPage = 1 });
 
 app.Run();

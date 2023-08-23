@@ -10,8 +10,8 @@ namespace SkillProfiWeb.Data
     {
         public BlogDataApi() 
         {
+            Init();
             url += "Blogs";
-
             client.DefaultRequestHeaders.Add("Authorization", $"Bearer {Token}");
         }
 

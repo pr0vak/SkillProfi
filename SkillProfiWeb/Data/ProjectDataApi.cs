@@ -10,8 +10,8 @@ namespace SkillProfiWeb.Data
     {
         public ProjectDataApi()
         {
+            Init();
             url += "Projects";
-
             client.DefaultRequestHeaders.Add("Authorization", $"Bearer {Token}");
         }
 
