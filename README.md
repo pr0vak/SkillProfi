@@ -15,13 +15,13 @@
 - WPF проект (десктоп-приложение для подачи и обработки заявок). Приложение для пользователей и для сотрудников
 - Telegram Bot (отображает услуги, проекты, блог и соц. сети компании, также для получения заявок от пользователей)
 
-## _Свойства проекта_
-Проект реализован на версии .NET 7.0.
+## _Технология_
+Проект реализован на .NET 7.0 версии.
 Он включает в себя следующие дополнительные библиотеки:
-- Newtonsoft.Json
-- Telegram.Bot
-- Microsoft.AspNetCore.Authentication.JwtBearer
-- Microsoft.AspNetCore.OpenApi
-- Microsoft.EntityFrameworkCore
-- Microsoft.EntityFrameworkCore.SqlServer
-- Microsoft.EntityFrameworkCore.Tools
+- Newtonsoft.Json (для сериализации данных в текстовом формате JSON и отправки на сервер / для десериализации данных при получения ответа с сервера)
+- Telegram.Bot 13.0.3 (для создания бота, который будет взаимодействовать с клиентом в Telegram через Telegram API)
+- Microsoft.AspNetCore.Authentication.JwtBearer 7.0.10 (для аутентификации через Web API сервер)
+- Microsoft.EntityFrameworkCore 7.0.9 (для работы с базой данных с помощью объектов .NET)
+- Microsoft.EntityFrameworkCore.SqlServer 7.0.9 (позволяет использовать Entity Framework Core с Microsoft SQL Server)
+- Microsoft.EntityFrameworkCore.Tools 7.0.9 (для миграций и генерации классов по готовой бд)
+- Microsoft.VisualStudio.Web.CodeGeneration.Design 7.0.8 (создает шаблонный код для веб-приложений, что ускоряет разработку)
