@@ -13,7 +13,23 @@ namespace SkillProfi.TelegramBot.Data
         public DataApi()
         {
             _client = new HttpClient();
-            _url = "http://46.50.174.117:5000/api/";
+            InitUrl();
+        }
+
+        public void InitUrl()
+        {
+            var path = @".\connection.json";
+
+            if (!File.Exists(path))
+            {
+                JObject data = new JObject();
+                data["ip_address"] = "localhost";
+                data["port"] = "5000";
+                File.WriteAllText(path, data.ToString());
+            }
+
+            var json = JObject.Parse(File.ReadAllText(path));
+            _url = $"http://{json["ip_address"]}:{json["port"]}/api/";
         }
 
         public Service[] GetServices()

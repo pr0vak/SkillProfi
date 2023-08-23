@@ -59,3 +59,4 @@ C:\Users\Vyacheslav\Desktop\SkillProfi.Desktop\obj\Release\net7.0-windows\refint
 C:\Users\Vyacheslav\Desktop\SkillProfi.Desktop\obj\Release\net7.0-windows\SkillProfi.Desktop.pdb
 C:\Users\Vyacheslav\Desktop\SkillProfi.Desktop\obj\Release\net7.0-windows\SkillProfi.Desktop.genruntimeconfig.cache
 C:\Users\Vyacheslav\Desktop\SkillProfi.Desktop\obj\Release\net7.0-windows\ref\SkillProfi.Desktop.dll
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\bin\Release\net7.0-windows\connection.json

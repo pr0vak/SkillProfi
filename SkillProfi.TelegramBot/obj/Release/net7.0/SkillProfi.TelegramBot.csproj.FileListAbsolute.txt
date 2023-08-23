@@ -16,3 +16,5 @@ C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.TelegramBot\obj\Release\net7.0
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.TelegramBot\obj\Release\net7.0\SkillProfi.TelegramBot.pdb
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.TelegramBot\obj\Release\net7.0\SkillProfi.TelegramBot.genruntimeconfig.cache
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.TelegramBot\obj\Release\net7.0\ref\SkillProfi.TelegramBot.dll
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.TelegramBot\bin\Release\net7.0\connection.json
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.TelegramBot\bin\Release\net7.0\token.json

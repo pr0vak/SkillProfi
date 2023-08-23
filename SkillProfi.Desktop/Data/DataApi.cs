@@ -21,15 +21,10 @@ namespace SkillProfi.Desktop.Data
 
         protected void Initialize()
         {
+            _client = new HttpClient();
             var path = "./connection.json";
-            if (File.Exists(path))
-            {
-                var json = File.ReadAllText(path);
-                JObject data = JObject.Parse(json);
-                _ipAddress = data["ip_address"].ToString();
-                _port = data["port"].ToString();
-            }
-            else
+
+            if (!File.Exists(path))
             {
                 _ipAddress = "localhost";
                 _port = "5000";
@@ -39,7 +34,9 @@ namespace SkillProfi.Desktop.Data
                 File.WriteAllText(path, data.ToString());
             }
 
-            _client = new HttpClient();
+            var json = JObject.Parse(File.ReadAllText(path));
+            _ipAddress = json["ip_address"].ToString();
+            _port = json["port"].ToString();
             _url = $"http://{_ipAddress}:{_port}/api/";
         }
     }
