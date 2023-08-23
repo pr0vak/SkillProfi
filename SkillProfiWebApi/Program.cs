@@ -14,9 +14,11 @@ var stringCon = $"Data source={dataConnection["server_address"]};" +
     $"password={dataConnection["password"]};" +
     $"TrustServerCertificate=True;";
 
-builder.Services.AddDbContext<DataContext>(options =>
+builder.Services.AddDbContext<DataContext>(options => 
     options.UseSqlServer(stringCon
-    ?? throw new InvalidOperationException("Connection string 'DataContext' not found.")));
+    ?? throw new InvalidOperationException("Connection string 'DataContext' not found."))
+        );
+
 
 builder.Services.AddAuthorization();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -38,6 +40,21 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
 var app = builder.Build();
+
+bool isConnectedToSQL;
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    isConnectedToSQL = SeedData.Initialize(services);
+}
+
+if (!isConnectedToSQL)
+{
+    Console.ReadLine();
+    return;
+}
 
 app.UseDeveloperExceptionPage();
 app.UseHttpsRedirection();

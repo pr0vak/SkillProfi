@@ -21,6 +21,11 @@ namespace SkillProfiWebApi.Controllers
         {
             _db = db;
 
+            if (db.Database == null)
+            {
+                throw new Exception("Database is null");
+            }
+
             if (db.Accounts.ToList()
                 .Where(acc => acc.Login.ToLower() == "admin")
                 .Count() == 0)
