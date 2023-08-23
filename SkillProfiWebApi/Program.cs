@@ -7,7 +7,7 @@ using SkillProfiWebApi.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var dataConnection = JObject.Parse(File.ReadAllText(@".\connection.json"));
+var dataConnection = GetConnection(@".\connection.json");
 var stringCon = $"Data source={dataConnection["server_address"]};" +
     $"Database={dataConnection["database"]};" +
     $"User Id={dataConnection["user"]};" +
@@ -47,3 +47,19 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+
+JObject GetConnection(string path)
+{
+    if (!File.Exists(path))
+    {
+        var data = new JObject();
+        data["server_address"] = "localhost";
+        data["database"] = "skillprofi";
+        data["user"] = "admin";
+        data["password"] = "admin";
+        File.WriteAllText(path, data.ToString());
+    }
+
+    return JObject.Parse(File.ReadAllText(path));
+};
