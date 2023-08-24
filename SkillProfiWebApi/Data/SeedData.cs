@@ -27,7 +27,8 @@ namespace SkillProfiWebApi.Data
                         });
                         context.SaveChanges();
                     }
-                    Console.Clear();
+
+                    Console.WriteLine("Подключение установлено!");
                     return true;
                 }
             }
@@ -36,6 +37,7 @@ namespace SkillProfiWebApi.Data
                 Console.WriteLine("Запуск сервера приостановлен.");
                 Console.WriteLine($"{ex.Message}\n" +
                     "Проверьте файл connection.json на корректность.");
+                Console.WriteLine("\n" + ex.ToString());
                 return false;
             }
         }
