@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css"
+    },
+    {
       "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\css\\normalize.css",
       "PackagePath": "staticwebassets\\css\\normalize.css"
     },
@@ -9,12 +13,104 @@
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\8b54aa58-d2b9-460a-a0c3-ef65ea466bea.jpg",
+      "PackagePath": "staticwebassets\\img\\8b54aa58-d2b9-460a-a0c3-ef65ea466bea.jpg"
+    },
+    {
       "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\HERO.svg",
       "PackagePath": "staticwebassets\\img\\HERO.svg"
     },
     {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\chitay-gorod.jpg",
+      "PackagePath": "staticwebassets\\img\\chitay-gorod.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\default.jpg",
+      "PackagePath": "staticwebassets\\img\\default.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\dobrynya.JPG",
+      "PackagePath": "staticwebassets\\img\\dobrynya.JPG"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\dobrynya_2.JPG",
+      "PackagePath": "staticwebassets\\img\\dobrynya_2.JPG"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\email.png",
+      "PackagePath": "staticwebassets\\img\\email.png"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\facebook.png",
+      "PackagePath": "staticwebassets\\img\\facebook.png"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\fax.png",
+      "PackagePath": "staticwebassets\\img\\fax.png"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\ico-del.png",
+      "PackagePath": "staticwebassets\\img\\ico-del.png"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\ico-edit.png",
+      "PackagePath": "staticwebassets\\img\\ico-edit.png"
+    },
+    {
       "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\inquiry-logo.png",
       "PackagePath": "staticwebassets\\img\\inquiry-logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\inst.png",
+      "PackagePath": "staticwebassets\\img\\inst.png"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\pb_1.jpg",
+      "PackagePath": "staticwebassets\\img\\pb_1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\pb_2.jpg",
+      "PackagePath": "staticwebassets\\img\\pb_2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\pb_3.jpg",
+      "PackagePath": "staticwebassets\\img\\pb_3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\pb_4.jpg",
+      "PackagePath": "staticwebassets\\img\\pb_4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\sber.jpg",
+      "PackagePath": "staticwebassets\\img\\sber.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\tel.png",
+      "PackagePath": "staticwebassets\\img\\tel.png"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\telegram.png",
+      "PackagePath": "staticwebassets\\img\\telegram.png"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\terra.JPG",
+      "PackagePath": "staticwebassets\\img\\terra.JPG"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\tw.png",
+      "PackagePath": "staticwebassets\\img\\tw.png"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\vk.png",
+      "PackagePath": "staticwebassets\\img\\vk.png"
+    },
+    {
+      "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\img\\youtube.png",
+      "PackagePath": "staticwebassets\\img\\youtube.png"
     },
     {
       "Id": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfiWeb\\wwwroot\\js\\script.js",

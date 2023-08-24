@@ -33,31 +33,23 @@ namespace SkillProfiWeb.Infrastructure
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
             IUrlHelper urlHelper = urlHelperFactory.GetUrlHelper(ViewContext);
-            TagBuilder block = new TagBuilder("div");
-            block.AddCssClass("paging__search__block");
-            TagBuilder blockSearchPage = new TagBuilder("div");
             TagBuilder pagination = new TagBuilder("div");
-            pagination.AddCssClass("paging-info1");
-            pagination.AddCssClass("btn-group");
-            pagination.AddCssClass("pull-right");
+            pagination.AddCssClass("paging-info btn-group pull-right");
 
             if (PageModel.TotalPages <= 10)
             {
                 CreatePaginationLight(PageModel, urlHelper, pagination, PageAction, 
                     PageUrlValues, PageClassedEnabled, PageClass, PageClassNormal, PageClassSelected);
-                block.InnerHtml.AppendHtml(pagination);
+                output.Content.AppendHtml(pagination.InnerHtml);
             }
             else
             {
                 CreatePaginationFull(PageModel, urlHelper, pagination, PageAction,
                     PageUrlValues, PageClassedEnabled, PageClass, PageClassNormal, PageClassSelected);
-                CreateSearchPage(blockSearchPage);
-                block.InnerHtml.AppendHtml(pagination);
-                block.InnerHtml.AppendHtml(blockSearchPage);
+                output.Content.AppendHtml(pagination.InnerHtml);
             }
 
 
-            output.Content.AppendHtml(block.InnerHtml);
         }
 
         private void CreatePaginationLight(PagingInfo pageModel, IUrlHelper urlHelper, 
@@ -124,20 +116,40 @@ namespace SkillProfiWeb.Infrastructure
                         freeDots = false;
                     }
                 }
-
-                
             }
         }
+    }
 
+    [HtmlTargetElement("div", Attributes = "page-model-search")]
+    public class PageSearchTagHelper : TagHelper
+    {
+        private IUrlHelperFactory urlHelperFactory;
 
-        private void CreateSearchPage(TagBuilder blockSearchPage)
+        public PageSearchTagHelper(IUrlHelperFactory helperFactory)
         {
+            urlHelperFactory = helperFactory;
+        }
+
+        [ViewContext]
+        [HtmlAttributeNotBound]
+        public ViewContext ViewContext { get; set; }
+        public string PageModelSearch { get; set; }
+
+        public override void Process(TagHelperContext context, TagHelperOutput output)
+        {
+            IUrlHelper urlHelper = urlHelperFactory.GetUrlHelper(ViewContext);
+            TagBuilder block = new TagBuilder("div");
             TagBuilder form = new TagBuilder("form");
             form.Attributes["method"] = "get";
             form.Attributes["asp-action"] = "Index";
             form.AddCssClass("search__page");
             TagBuilder label = new TagBuilder("label");
             label.InnerHtml.Append("Поиск");
+            TagBuilder inputStatus = new TagBuilder("input");
+            inputStatus.Attributes["id"] = "status";
+            inputStatus.Attributes["name"] = "status";
+            inputStatus.Attributes["hidden"] = "hidden";
+            inputStatus.Attributes["value"] = PageModelSearch;
             TagBuilder input = new TagBuilder("input");
             input.Attributes["placeholder"] = "Номер страницы";
             input.Attributes["id"] = "requestPage";
@@ -148,9 +160,11 @@ namespace SkillProfiWeb.Infrastructure
             btn.AddCssClass("btn__reset");
             btn.InnerHtml.Append("Найти");
             form.InnerHtml.AppendHtml(label);
+            form.InnerHtml.AppendHtml(inputStatus);
             form.InnerHtml.AppendHtml(input);
             form.InnerHtml.AppendHtml(btn);
-            blockSearchPage.InnerHtml.AppendHtml(form); 
+            block.InnerHtml.AppendHtml(form);
+            output.Content.AppendHtml(block.InnerHtml);
         }
     }
 }

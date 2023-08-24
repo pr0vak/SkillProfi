@@ -68,11 +68,17 @@
         </tbody>
     </table>
 
-    <div page-model="@Model.PagingInfo" page-action="Index"
-         page-classed-enabled="true"
-         page-class="btn" page-class-normal="btn-blue"
-         page-class-selected="btn-blue-selected"
-         page-url-status="@Model.CurrentStatus"
-         class="paging__search__block">
+    <div class="paging__search__block">
+        <div page-model="@Model.PagingInfo" page-action="Index"
+             page-classed-enabled="true"
+             page-class="btn" page-class-normal="btn-blue"
+             page-class-selected="btn-blue-selected"
+             page-url-status="@Model.CurrentStatus"
+             class="paging-info btn-group pull-right">
+        </div>
+
+        <div page-model-search="@Model.CurrentStatus">
+
+        </div>
     </div>
 </section>
