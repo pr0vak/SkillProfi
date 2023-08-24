@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Linq;
 using SkillProfi.DAL.Auth;
 using SkillProfi.DAL.Services;
 
@@ -6,7 +7,7 @@ namespace SkillProfiWebApi.Data
 {
     public class SeedData
     {
-        public static bool Initialize(IServiceProvider serviceProvider)
+        public static bool Initialize(IServiceProvider serviceProvider, string pathToConfig)
         {
             try
             {
@@ -15,20 +16,14 @@ namespace SkillProfiWebApi.Data
            serviceProvider.GetRequiredService<
                DbContextOptions<DataContext>>()))
                 {
-                    if (context.Accounts.Any())
-                    {
-                        Console.Clear();
-                        return true;
-                    }
-
+                    var json = JObject.Parse(File.ReadAllText(pathToConfig));
                     if (context.Accounts.ToList()
-                    .Where(acc => acc.Login.ToLower() == "admin")
-                    .Count() == 0)
+                    .FirstOrDefault(acc => acc.Login.ToLower() == json["user_web"].ToString()) is null)
                     {
                         context.Accounts.Add(new Account
                         {
-                            Login = "admin",
-                            Password = Password.Hash("admin")
+                            Login = json["user_web"].ToString(),
+                            Password = Password.Hash(json["password_web"].ToString())
                         });
                         context.SaveChanges();
                     }

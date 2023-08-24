@@ -7,11 +7,12 @@ using SkillProfiWebApi.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var dataConnection = GetConnection(@".\connection.json");
+var pathToFile = @".\connection.json";
+var dataConnection = GetConnection(pathToFile);
 var stringCon = $"Data source={dataConnection["server_address"]};" +
     $"Database={dataConnection["database"]};" +
-    $"User Id={dataConnection["user"]};" +
-    $"password={dataConnection["password"]};" +
+    $"User Id={dataConnection["user_db"]};" +
+    $"password={dataConnection["password_db"]};" +
     $"TrustServerCertificate=True;";
 
 builder.Services.AddDbContext<DataContext>(options => 
@@ -47,7 +48,7 @@ using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
 
-    isConnectedToSQL = SeedData.Initialize(services);
+    isConnectedToSQL = SeedData.Initialize(services, pathToFile);
 }
 
 if (!isConnectedToSQL)
@@ -73,8 +74,10 @@ JObject GetConnection(string path)
         var data = new JObject();
         data["server_address"] = "localhost";
         data["database"] = "skillprofi";
-        data["user"] = "admin";
-        data["password"] = "admin";
+        data["user_db"] = "admin";
+        data["password_db"] = "admin";
+        data["user_web"] = "admin";
+        data["password_web"] = "admin";
         File.WriteAllText(path, data.ToString());
     }
 

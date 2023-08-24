@@ -20,23 +20,6 @@ namespace SkillProfiWebApi.Controllers
         public AccountController(DataContext db)
         {
             _db = db;
-
-            if (db.Database == null)
-            {
-                throw new Exception("Database is null");
-            }
-
-            if (db.Accounts.ToList()
-                .Where(acc => acc.Login.ToLower() == "admin")
-                .Count() == 0)
-            {
-                _db.Accounts.Add(new Account 
-                { 
-                    Login = "admin", 
-                    Password = Password.Hash("admin") 
-                });
-                _db.SaveChanges();
-            }
         }
 
         // GET: api/<AccountController>

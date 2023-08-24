@@ -1,6 +1,8 @@
 {
   "server_address": "localhost",
   "database": "skillprofi",
-  "user": "admin",
-  "password": "admin"
+  "user_db": "admin",
+  "password_db": "admin",
+  "user_web": "admin",
+  "password_web": "admin"
 }
