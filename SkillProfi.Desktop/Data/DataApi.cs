@@ -13,11 +13,7 @@ namespace SkillProfi.Desktop.Data
         protected string _port { get; set; }
 
         public static string Token { get; set; }
-
-        public DataApi()
-        {
-            Initialize();
-        }
+        
 
         protected void Initialize()
         {

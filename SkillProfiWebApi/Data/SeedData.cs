@@ -17,9 +17,13 @@ namespace SkillProfiWebApi.Data
                DbContextOptions<DataContext>>()))
                 {
                     var json = JObject.Parse(File.ReadAllText(pathToConfig));
+
+                    // Проверяем, нет ли в списках аккаунтов есть аккаунт с логином, как прописан
+                    // в файле conneciton.json.
                     if (context.Accounts.ToList()
                     .FirstOrDefault(acc => acc.Login.ToLower() == json["user_web"].ToString()) is null)
                     {
+                        // Если такого аккаунта нет, то создаем его.
                         context.Accounts.Add(new Account
                         {
                             Login = json["user_web"].ToString(),

@@ -12,6 +12,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
+var isConnected = DataApi.Init();
+
+// Настройка параметров аутентификации
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -47,9 +50,10 @@ app.UseStatusCodePages(async context =>
     var request = context.HttpContext.Request;
     var response = context.HttpContext.Response;
 
+    // Если пользователь не авторизован, то перекидываем на страницу авторизации
     if (response.StatusCode == (int)HttpStatusCode.Unauthorized)
     {
-        response.Redirect("/Account");
+        response.Redirect($"/Account?returnUrl={request.Path}");
     }
 });
 
@@ -57,5 +61,10 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute("default", "{controller=Hero}/{action=Index}/{id?}");
+
+if (!isConnected)
+{
+    return;
+}
 
 app.Run();

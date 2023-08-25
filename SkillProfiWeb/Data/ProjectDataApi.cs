@@ -10,49 +10,75 @@ namespace SkillProfiWeb.Data
     {
         public ProjectDataApi()
         {
-            Init();
-            url += "Projects";
-            client.DefaultRequestHeaders.Add("Authorization", $"Bearer {Token}");
+            url = baseUrl + "Projects/";
         }
 
         public async Task Add(Project model)
         {
-            await client.PostAsync(
-                    url,
-                    new StringContent(JsonConvert.SerializeObject(model), Encoding.UTF8, 
-                        "application/json")
-                );
+            using (var requestMessage = new HttpRequestMessage(HttpMethod.Post, url))
+            {
+                if (!string.IsNullOrEmpty(Token))
+                {
+                    requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", Token);
+                }
+                requestMessage.Content = new StringContent(JsonConvert.SerializeObject(model),
+                    Encoding.UTF8, "application/json");
+                await client.SendAsync(requestMessage);
+            }
         }
 
         public async Task Delete(int? id)
         {
-            var delUrl = url + $"/{id}";
-            await client.DeleteAsync(delUrl);
+            using (var requestMessage = new HttpRequestMessage(HttpMethod.Delete, url + id))
+            {
+                if (!string.IsNullOrEmpty(Token))
+                {
+                    requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", Token);
+                }
+                await client.SendAsync(requestMessage);
+            }
         }
 
         public async Task<IEnumerable<Project>> GetAll()
         {
-            string json = await client.GetStringAsync(url);
-
-            return JsonConvert.DeserializeObject<IEnumerable<Project>>(json)
-                ?? new List<Project> { Project.CreateNullProject() };
+            using (var requestMessage = new HttpRequestMessage(HttpMethod.Get, url))
+            {
+                if (!string.IsNullOrEmpty(Token))
+                {
+                    requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", Token);
+                }
+                var response = await client.SendAsync(requestMessage);
+                var json = await response.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<IEnumerable<Project>>(json);
+            }
         }
 
         public async Task<Project> GetById(int? id)
         {
-            string json = await client.GetStringAsync(url + $"/{id}");
-
-            return JsonConvert.DeserializeObject<Project>(json) ?? Project.CreateNullProject();
+            using (var requestMessage = new HttpRequestMessage(HttpMethod.Get, url + id))
+            {
+                if (!string.IsNullOrEmpty(Token))
+                {
+                    requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", Token);
+                }
+                var response = await client.SendAsync(requestMessage);
+                var json = await response.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<Project>(json);
+            }
         }
 
         public async Task Update(Project model)
         {
-            var putUrl = url + $"/{model.Id}";
-            await client.PutAsync(
-                    putUrl,
-                    new StringContent(JsonConvert.SerializeObject(model), Encoding.UTF8,
-                        "application/json")
-                );
+            using (var requestMessage = new HttpRequestMessage(HttpMethod.Put, url + model.Id))
+            {
+                if (!string.IsNullOrEmpty(Token))
+                {
+                    requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", Token);
+                }
+                requestMessage.Content = new StringContent(JsonConvert.SerializeObject(model),
+                    Encoding.UTF8, "application/json");
+                await client.SendAsync(requestMessage);
+            }
         }
     }
 }

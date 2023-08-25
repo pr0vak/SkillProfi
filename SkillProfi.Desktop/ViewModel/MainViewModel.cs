@@ -129,7 +129,7 @@ namespace SkillProfi.Desktop.ViewModel
                 var _password = password;
                 Login = "Идет проверка подключения...";
 
-                if (await accountDataApi.Athorization(_login, _password))
+                if (await accountDataApi.Authorization(_login, _password))
                 {
                     AuthoziationVisibility = Visibility.Hidden;
                     AdminPanelVisibility = Visibility.Visible;

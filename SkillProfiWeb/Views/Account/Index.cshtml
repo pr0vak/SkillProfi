@@ -4,14 +4,19 @@
 <section class="section login">
     <div class="login__form">
         <form method="post" asp-action="Login">
+            <div style="color: #ff0000" asp-validation-summary="ModelOnly"></div>
+            <input asp-for="@Model.ReturnUrl" hidden />
+
             <div class="user__username">
                 <label>Логин</label>
                 <input type="text" asp-for="@Model.UserName" placeholder="Ваш логин" required />
+                <span asp-validation-for="@Model.UserName"></span>
             </div>
 
             <div class="user__password">
                 <label>Логин</label>
                 <input type="password" asp-for="@Model.Password" placeholder="Ваш пароль" required />
+                <span asp-validation-for="@Model.Password"></span>
             </div>
 
             <div class="form__btns flex">

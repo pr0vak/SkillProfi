@@ -16,16 +16,62 @@ namespace SkillProfi.TelegramBot.Models
 {
     public class BotClient
     {
+        /// <summary>
+        /// Текущая услуга, которую просматривает пользователь.
+        /// </summary>
         private int currentService = 0;
+
+        /// <summary>
+        /// Текущй проект, который просматривает пользователь.
+        /// </summary>
         private int currentProject = 0;
+
+        /// <summary>
+        /// Текущий блог, который просматривает пользователь.
+        /// </summary>
         private int currentBlog = 0;
+
+        /// <summary>
+        /// Пользователь вводит имя?
+        /// </summary>
         private bool isName = false;
+
+        /// <summary>
+        /// Пользователь вводит почту?
+        /// </summary>
         private bool isEmail = false;
+
+        /// <summary>
+        /// Пользователь вводит описание проблемы?
+        /// </summary>
         private bool isMessage = false;
+
+        /// <summary>
+        /// Заявка, которую заполняет пользователь.
+        /// </summary>
         private Request request;
+
+        /// <summary>
+        /// Телеграм бот.
+        /// </summary>
         private ITelegramBotClient _botClient;
+
+        /// <summary>
+        /// Провайдер, связывающий Телеграм бота и сервер Web API.
+        /// </summary>
         private DataApi _dataApi;
+
+        /// <summary>
+        /// Последнее полученное сообщение.
+        /// </summary>
         private Message last;
+
+        /// <summary>
+        /// Имя Телеграм бота.
+        /// </summary>
+        public string Name { get; private set; }
+
+        // Кнопки
         private InlineKeyboardMarkup menu = new(new[]
             {
                         new[]
@@ -79,7 +125,7 @@ namespace SkillProfi.TelegramBot.Models
                         }
             });
 
-        InlineKeyboardMarkup prevNextService = new(new[]
+        private InlineKeyboardMarkup prevNextService = new(new[]
                     {
                         new[]
                         {
@@ -91,7 +137,7 @@ namespace SkillProfi.TelegramBot.Models
                             InlineKeyboardButton.WithCallbackData("Выход в меню", "/exit")
                         }
             });
-        InlineKeyboardMarkup nextService = new(new[]
+        private InlineKeyboardMarkup nextService = new(new[]
                     {
                         new[]
                         {
@@ -102,7 +148,7 @@ namespace SkillProfi.TelegramBot.Models
                             InlineKeyboardButton.WithCallbackData("Выход в меню", "/exit")
                         }
             });
-        InlineKeyboardMarkup prevService = new(new[]
+        private InlineKeyboardMarkup prevService = new(new[]
                     {
                         new[]
                         {
@@ -114,7 +160,7 @@ namespace SkillProfi.TelegramBot.Models
                         }
             });
 
-        InlineKeyboardMarkup prevNextBlog = new(new[]
+        private InlineKeyboardMarkup prevNextBlog = new(new[]
                 {
                         new[]
                         {
@@ -126,7 +172,7 @@ namespace SkillProfi.TelegramBot.Models
                             InlineKeyboardButton.WithCallbackData("Выход в меню", "/exit")
                         }
             });
-        InlineKeyboardMarkup nextBlog = new(new[]
+        private InlineKeyboardMarkup nextBlog = new(new[]
                 {
                         new[]
                         {
@@ -137,7 +183,7 @@ namespace SkillProfi.TelegramBot.Models
                             InlineKeyboardButton.WithCallbackData("Выход в меню", "/exit")
                         }
             });
-        InlineKeyboardMarkup prevBlog = new(new[]
+        private InlineKeyboardMarkup prevBlog = new(new[]
                 {
                         new[]
                         {
@@ -149,7 +195,6 @@ namespace SkillProfi.TelegramBot.Models
                         }
             });
 
-        public string Name { get; private set; }
 
         public BotClient(string token)
         {
@@ -186,78 +231,99 @@ namespace SkillProfi.TelegramBot.Models
         }
 
 
+        /// <summary>
+        /// Обработчик сообщений пользователя.
+        /// </summary>
         private async Task HandleUpdateAsync(ITelegramBotClient botClient,
             Update update, CancellationToken cancellationToken)
         {
-            ClearCallbackQueryMessage(cancellationToken);
+            // очищаем предыдущий Callback от Телеграм бота.
+            await ClearCallbackQueryMessage(cancellationToken);
 
+            // Если тип сообщения - текст...
             if (update.Type == UpdateType.Message)
             {
                 var message = update.Message;
 
+                // Если пользователь прислал '/start'
                 if (message.Text.ToLower() == "/start")
                 {
-                    SendMenu(message.Chat.Id);
+                    // Отправляем меню и удаляем сообщение пользователя.
+                    await SendMenu(message.Chat.Id);
                     await _botClient.DeleteMessageAsync(chatId: update.Message.Chat.Id,
                         messageId: update.Message.MessageId,
                         cancellationToken: cancellationToken);
                 }
 
 
+                // Если пользователь вводит имя...
                 if (isName)
                 {
+                    // Проверяем, что имя пользователя состоит из 3 частей (ФИО)
                     if (message.Text.Split(' ').Length == 3)
                     {
+                        // Сохраняем в заявке имя пользователя и переходим к почте
                         request.Name = message.Text;
                         isName = false;
                         GetEmail(message.Chat.Id);
                     }
                     else
                     {
-                        SendMessageWithMenuBack(message.Chat.Id,
+                        // иначе отправляем сообщение о некорректности заполнении имени
+                        await SendMessageWithMenuBack(message.Chat.Id,
                             "Некорректно введены ФИО. Введите ФИО еще раз.");
                     }
 
-                    ClearMessageInCreationRequest(update.Message.Chat.Id, update.Message.MessageId,
+                    // очищаем предыдущие сообщения
+                    await ClearMessageInCreationRequest(update.Message.Chat.Id, update.Message.MessageId,
                             cancellationToken);
                 }
-                else if (isEmail)
+                else if (isEmail) // если пользователь вводит почту
                 {
+                    // проверям, содержит ли почта значок '@'...
                     if (message.Text.Contains("@"))
                     {
+                        // сохраняем информацию о почте в заявке
                         request.Email = message.Text;
                         isEmail = false;
-                        GetMessage(message.Chat.Id);
+                        GetMessage(message.Chat.Id); // переходит к описанию проблемы
                     }
                     else
                     {
-                        SendMessageWithMenuBack(message.Chat.Id,
+                        // иначе отправляем сообщение о некорректности заполнении почты
+                        await SendMessageWithMenuBack(message.Chat.Id,
                             "Некорректно введен Email. Введите Email еще раз.");
                     }
 
-                    ClearMessageInCreationRequest(update.Message.Chat.Id, update.Message.MessageId,
+                    // очищаем предыдущие сообщения
+                    await ClearMessageInCreationRequest(update.Message.Chat.Id, update.Message.MessageId,
                             cancellationToken);
                 }
-                else if (isMessage)
+                else if (isMessage) // Если пользователь вводит описание проблемы
                 {
+                    // Проверяем, что сообщение не короткое...
                     if (message.Text.Length >= 10)
                     {
+                        // сохраняем информацию о проблеме в заявку
                         isMessage = false;
                         request.Message = message.Text;
-                        SendRequest(message.Chat.Id);
+                        await SendRequest(message.Chat.Id);  // отправляем заявку на сервер
                     }
                     else
                     {
-                        SendMessageWithMenuBack(message.Chat.Id,
-                            "Некорректно введено описание. Введите еще раз.");
+                        // иначе отправляем пользователю об ошибке заполнения
+                        await SendMessageWithMenuBack(message.Chat.Id,
+                            "Описание слишком короткое. Введите еще раз.");
                     }
 
-                    ClearMessageInCreationRequest(update.Message.Chat.Id, update.Message.MessageId,
+                    // очищаем предыдущие сообщения
+                    await ClearMessageInCreationRequest(update.Message.Chat.Id, update.Message.MessageId,
                             cancellationToken);
                 }
-                else if (!message.Text.StartsWith("/"))
+                else if (!message.Text.StartsWith("/")) // если пользователь вводит текст,
+                                                        // не начинающийся на '/'
                 {
-                    SendMessageWithMenuBack(message.Chat.Id,
+                    await SendMessageWithMenuBack(message.Chat.Id,
                             "Некорректно введна команда, воспользуйтесь меню для удобства.");
                     if (update.Message != null)
                     {
@@ -268,45 +334,59 @@ namespace SkillProfi.TelegramBot.Models
                 }
             }
 
+            // Если тип сообщение - кнопка, нажатая пользователем в меню
             if (update.Type == UpdateType.CallbackQuery)
             {
-                HandleCallbackQuery(update.CallbackQuery);
+                await HandleCallbackQuery(update.CallbackQuery);
             }
         }
 
-        private void ClearCallbackQueryMessage(CancellationToken token)
+        /// <summary>
+        /// Очистить последний Callback от Телеграм бота.
+        /// </summary>
+        private async Task ClearCallbackQueryMessage(CancellationToken token)
         {
             if (last != null)
             {
-                _botClient.DeleteMessageAsync(chatId: last.Chat.Id,
+                await _botClient.DeleteMessageAsync(chatId: last.Chat.Id,
                         messageId: last.MessageId,
                         cancellationToken: token);
                 last = null;
             }
         }
 
-        private void ClearMessageInCreationRequest(long chatId, int messageId, CancellationToken token)
+        /// <summary>
+        /// Очистка сообщений в чате во время создания заявки.
+        /// </summary>
+        private async Task ClearMessageInCreationRequest(long chatId, 
+            int messageId, CancellationToken token)
         {
-            Task.Run(() =>
-            {
-                _botClient.DeleteMessageAsync(chatId,
+            await _botClient.DeleteMessageAsync(chatId,
                             messageId - 1,
                             token);
-                _botClient.DeleteMessageAsync(chatId,
+            await _botClient.DeleteMessageAsync(chatId,
                                 messageId,
                                 token);
-            });
         }
 
-        private void SendRequest(long id)
+        /// <summary>
+        /// Отправка заявки.
+        /// </summary>
+        /// <param name="id">Id чата.</param>
+        private async Task SendRequest(long id)
         {
-            _dataApi.SendRequest(request);
+            await _dataApi.SendRequest(request);
             string msg = "Ваша заявка успешно отправлена! " +
                 "Для перехода в меню, нажмите кнопку Выход в меню.";
-            SendMessageWithMenuBack(id, msg);
+            await SendMessageWithMenuBack(id, msg);
         }
 
-        private void SendMessageWithMenuBack(long id, string msg)
+        /// <summary>
+        /// Отправить сообщение с кнопкой 'Выход в меню'
+        /// </summary>
+        /// <param name="id">Id чата.</param>
+        /// <param name="msg">Сообщение.</param>
+        private async Task SendMessageWithMenuBack(long id, string msg)
         {
             isName = false;
             isEmail = false; 
@@ -319,30 +399,40 @@ namespace SkillProfi.TelegramBot.Models
                         }
             });
 
-            last = _botClient.SendTextMessageAsync(id, msg,
-                replyMarkup: exit).Result;
+            last = await _botClient.SendTextMessageAsync(id, msg,
+                replyMarkup: exit);
         }
 
+        /// <summary>
+        /// Обработчик ошибок.
+        /// </summary>
         private async Task HandleErrorAsync(ITelegramBotClient botClient,
             Exception exception, CancellationToken cancellationToken)
         {
             Console.WriteLine(JsonConvert.SerializeObject(exception));
         }
 
-
-        private void SendMenu(long id)
+        /// <summary>
+        /// Отправить меню.
+        /// </summary>
+        /// <param name="id">Id чата.</param>
+        private async Task SendMenu(long id)
         {
-            last = _botClient.SendTextMessageAsync(id, "Выберите один из пунктов",
-                replyMarkup: menu).Result;
+            last = await _botClient.SendTextMessageAsync(id, "Выберите один из пунктов",
+                replyMarkup: menu);
         }
 
-        private void HandleCallbackQuery(CallbackQuery callbackQuery)
+        /// <summary>
+        /// Обаботка Callback меню.
+        /// </summary>
+        /// <param name="callbackQuery"></param>
+        private async Task HandleCallbackQuery(CallbackQuery callbackQuery)
         {
-            var socialLinks = Task.Run(_dataApi.GetSocialLinks).Result;
+            var socialLinks = await _dataApi.GetSocialLinks();
             var data = callbackQuery.Data;
-            var services = Task.Run(_dataApi.GetServices).Result;
-            var projects = Task.Run(_dataApi.GetProjects).Result;
-            var blogs = Task.Run(_dataApi.GetBlogs).Result;
+            var services = await _dataApi.GetServices();
+            var projects = await _dataApi.GetProjects();
+            var blogs = await _dataApi.GetBlogs();
 
             switch (data)
             {
@@ -393,7 +483,7 @@ namespace SkillProfi.TelegramBot.Models
             }
         }
 
-        private void SendProjects(Project[] projects, long id)
+        private async Task SendProjects(Project[] projects, long id)
         {
             var msg = $"{projects[currentProject].Title}\n\n{projects[currentProject].Description}";
             IReplyMarkup replyMarkup;
@@ -414,11 +504,11 @@ namespace SkillProfi.TelegramBot.Models
                 currentProject++;
             }
 
-            last = _botClient.SendTextMessageAsync(id, msg,
-                    replyMarkup: replyMarkup).Result;
+            last = await _botClient.SendTextMessageAsync(id, msg,
+                    replyMarkup: replyMarkup);
         }
 
-        private void SendServices(Service[] services, long id)
+        private async Task SendServices(Service[] services, long id)
         {
             var msg = $"{services[currentService].Title}\n\n{services[currentService].Description}";
             IReplyMarkup replyMarkup;
@@ -439,11 +529,11 @@ namespace SkillProfi.TelegramBot.Models
                 currentService++;
             }
 
-            last = _botClient.SendTextMessageAsync(id, msg,
-                replyMarkup: replyMarkup).Result;
+            last = await _botClient.SendTextMessageAsync(id, msg,
+                replyMarkup: replyMarkup);
         }
 
-        private void SendBlogs(Blog[] blogs, long id)
+        private async Task SendBlogs(Blog[] blogs, long id)
         {
 
             var msg = $"{blogs[currentBlog].Title}\n\n{blogs[currentBlog].Description}";
@@ -465,16 +555,16 @@ namespace SkillProfi.TelegramBot.Models
                 currentBlog++;
             }
 
-            last = _botClient.SendTextMessageAsync(id, msg,
-                replyMarkup: replyMarkup).Result;
+            last = await _botClient.SendTextMessageAsync(id, msg,
+                replyMarkup: replyMarkup);
         }
 
-        private void SendSocialLinks(SocialLinks links, long id)
+        private async Task SendSocialLinks(SocialLinks links, long id)
         {
             var msg = $"Youtube: {links.Youtube}\nTelegram: {links.Telegram}\nVK: {links.Vk}";
-            last = _botClient.SendTextMessageAsync(id, msg,
+            last = await _botClient.SendTextMessageAsync(id, msg,
                     disableWebPagePreview: true,
-                    replyMarkup: menu).Result;
+                    replyMarkup: menu);
         }
 
         private void CreateRequest(long id)

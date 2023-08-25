@@ -12,5 +12,17 @@ namespace SkillProfi.DAL.Auth
         [Required]
         [MaxLength(136)]
         public string Password { get; set; }
+
+
+
+        public static Account CreateNullAccount()
+        {
+            return new Account
+            {
+                Id = -1,
+                Login = "Null",
+                Password = "Null"
+            };
+        }
     }
 }

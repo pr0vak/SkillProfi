@@ -34,19 +34,22 @@ namespace SkillProfiWeb.Controllers
             ViewData["Title"] = "IT Service";
 
             IEnumerable<Request> requests;
-            if (string.IsNullOrEmpty(status))
+
+            if (string.IsNullOrEmpty(status)) // если статус не задан
             {
-                requests = await _requestData.GetAll();
+                requests = await _requestData.GetAll(); // получаем все заявки
             }
             else
             {
+                // иначе получаем заявки, согласно заданному статусу
                 requests = (await _requestData.GetAll()).Where(p => p.Status == status);
             }
+
             return View(new RequestsListViewModel
             {
                 Requests = (requests)
-                        .Skip((requestPage - 1) * PageSize)
-                        .Take(PageSize),
+                        .Skip((requestPage - 1) * PageSize) // пропускаем заявки до текущей страницы
+                        .Take(PageSize), 
                 PagingInfo = new PagingInfo
                 {
                     CurrentPage = requestPage,

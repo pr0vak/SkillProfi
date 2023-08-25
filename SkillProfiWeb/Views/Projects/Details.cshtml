@@ -12,4 +12,8 @@
     <div class="project__description">
         @Html.Raw(Model.Description.Replace("\n", "<br>"))
     </div>
+
+    <div class="flex blog__btn__back">
+        <a class="btn btn__reset blog__btn" asp-controller="Projects" asp-action="Index">Назад</a>
+    </div>
 </section>

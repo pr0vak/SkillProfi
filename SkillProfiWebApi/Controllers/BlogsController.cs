@@ -17,6 +17,10 @@ namespace SkillProfiWebApi.Controllers
         }
 
         // GET: api/<BlogsController>
+        /// <summary>
+        /// Получить список блогов.
+        /// </summary>
+        /// <returns>Список блогов.</returns>
         [HttpGet]
         public IEnumerable<Blog> Get()
         {
@@ -24,6 +28,11 @@ namespace SkillProfiWebApi.Controllers
         }
 
         // GET api/<BlogsController>/5
+        /// <summary>
+        /// Получить информацию о блоге по Id.
+        /// </summary>
+        /// <param name="id">Id блога.</param>
+        /// <returns>Информация о блоге.</returns>
         [HttpGet("{id}")]
         public async Task<Blog> Get(int id)
         {
@@ -31,6 +40,10 @@ namespace SkillProfiWebApi.Controllers
         }
 
         // POST api/<BlogsController>
+        /// <summary>
+        /// Добавить блог в базу данных.
+        /// </summary>
+        /// <param name="blog">Описание блога.</param>
         [HttpPost]
         [Authorize]
         public async Task Post([FromBody] Blog blog)
@@ -40,6 +53,11 @@ namespace SkillProfiWebApi.Controllers
         }
 
         // PUT api/<BlogsController>/5
+        /// <summary>
+        /// Обновить информацию о блоге.
+        /// </summary>
+        /// <param name="id">Id блога.</param>
+        /// <param name="blog">Обновленная информация о блоге.</param>
         [HttpPut("{id}")]
         [Authorize]
         public async Task Put(int id, [FromBody] Blog blog)
@@ -49,6 +67,10 @@ namespace SkillProfiWebApi.Controllers
         }
 
         // DELETE api/<BlogsController>/5
+        /// <summary>
+        /// Удалить блога по Id.
+        /// </summary>
+        /// <param name="id">Id блога.</param>
         [HttpDelete("{id}")]
         [Authorize]
         public async Task Delete(int id)

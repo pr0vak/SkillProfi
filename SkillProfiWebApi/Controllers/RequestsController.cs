@@ -18,6 +18,10 @@ namespace SkillProfiWebApi.Controllers
         }
 
         // GET: api/<RequestController>
+        /// <summary>
+        /// Получить список заявок.
+        /// </summary>
+        /// <returns>Список заявок.</returns>
         [HttpGet]
         [Authorize]
         public IEnumerable<Request> Get()
@@ -26,6 +30,11 @@ namespace SkillProfiWebApi.Controllers
         }
 
         // GET api/<RequestsController>/5
+        /// <summary>
+        /// Получить информацию о заявке по Id.
+        /// </summary>
+        /// <param name="id">Id заявки.</param>
+        /// <returns>Информация о заявке.</returns>
         [HttpGet("{id}")]
         [Authorize]
         public async Task<Request> Get(int id)
@@ -34,6 +43,10 @@ namespace SkillProfiWebApi.Controllers
         }
 
         // POST api/<RequestsController>
+        /// <summary>
+        /// Добавить заявку в базу данных.
+        /// </summary>
+        /// <param name="request">Описание заявки.</param>
         [HttpPost]
         public async Task Post([FromBody] Request request)
         {
@@ -42,6 +55,11 @@ namespace SkillProfiWebApi.Controllers
         }
 
         // PUT api/<RequestsController>/5
+        /// <summary>
+        /// Обновить информацию о заявке.
+        /// </summary>
+        /// <param name="id">Id заявки.</param>
+        /// <param name="request">Обновленная информация о заявке.</param>
         [HttpPut("{id}")]
         [Authorize]
         public async Task Put(int id, [FromBody] Request request)
@@ -51,6 +69,10 @@ namespace SkillProfiWebApi.Controllers
         }
 
         // DELETE api/<RequestsController>/5
+        /// <summary>
+        /// Удалить заявку по Id.
+        /// </summary>
+        /// <param name="id">Id заявки.</param>
         [HttpDelete("{id}")]
         [Authorize]
         public async Task Delete(int id)

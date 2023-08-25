@@ -1,5 +1,10 @@
-﻿@{
+﻿@model string
+@{
     ViewData["Title"] = "SkillProfi";
 }
 
-<h1>Ваша заявка успешно отправлена.</h1>
+<h2>@Model</h2>
+
+<div class="flex blog__btn__back">
+    <a class="btn btn__reset blog__btn" asp-controller="Hero" asp-action="Index">Назад</a>
+</div>

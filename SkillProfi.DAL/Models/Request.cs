@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using SkillProfi.DAL.Attributes;
+using System.ComponentModel.DataAnnotations;
 
 namespace SkillProfi.DAL.Models
 {
@@ -10,10 +11,12 @@ namespace SkillProfi.DAL.Models
         [Required, Display(Name = "Заявка получена")]
         public DateTime Created { get; set; } = DateTime.Now;
 
+        [CheckName]
         [Required, Display(Name = "Имя")]
         public string Name { get; set; }
 
         [Required, Display(Name = "Текст заявки")]
+        [MaxLength(220)]
         public string Message { get; set; }
 
         [Display(Name = "Статус заявки")]

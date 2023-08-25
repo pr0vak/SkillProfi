@@ -20,6 +20,7 @@
             <h2 class="inquiry__title">@SiteConfig.GetInstance().HeroSecondTitle</h2>
 
             <form class="form flex" asp-action="Index" method="post">
+                <div style="color: #ff0000" asp-validation-summary="ModelOnly"></div>
                 <div class="form-top flex">
                     <div class="form__name flex">
                         <label asp-for="Name" class="label__name">

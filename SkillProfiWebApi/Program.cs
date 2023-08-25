@@ -7,6 +7,7 @@ using SkillProfiWebApi.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Настраиваем подлючение к БД
 var pathToFile = @".\connection.json";
 var dataConnection = GetConnection(pathToFile);
 var stringCon = $"Data source={dataConnection["server_address"]};" +
@@ -44,6 +45,7 @@ var app = builder.Build();
 
 bool isConnectedToSQL;
 
+// Инициализируем и проверяем доступ к БД
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
@@ -51,6 +53,7 @@ using (var scope = app.Services.CreateScope())
     isConnectedToSQL = SeedData.Initialize(services, pathToFile);
 }
 
+// Если соединение с БД не было установлено, то завершаем работу приложения с описанием ошибки
 if (!isConnectedToSQL)
 {
     Console.ReadLine();

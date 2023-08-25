@@ -17,6 +17,10 @@ namespace SkillProfiWebApi.Controllers
         }
 
         // GET: api/<ProjectsController>
+        /// <summary>
+        /// Получить список проектов.
+        /// </summary>
+        /// <returns>Список проектов.</returns>
         [HttpGet]
         public IEnumerable<Project> Get()
         {
@@ -24,6 +28,11 @@ namespace SkillProfiWebApi.Controllers
         }
 
         // GET api/<ProjectsController>/5
+        /// <summary>
+        /// Получить информацию о проекте по Id.
+        /// </summary>
+        /// <param name="id">Id проекта.</param>
+        /// <returns>Информация о проекте.</returns>
         [HttpGet("{id}")]
         public async Task<Project> Get(int id)
         {
@@ -31,6 +40,10 @@ namespace SkillProfiWebApi.Controllers
         }
 
         // POST api/<ProjectsController>
+        /// <summary>
+        /// Добавить проект в базу данных.
+        /// </summary>
+        /// <param name="project">Описание проекта.</param>
         [HttpPost]
         [Authorize]
         public async Task Post([FromBody] Project project)
@@ -40,6 +53,11 @@ namespace SkillProfiWebApi.Controllers
         }
 
         // PUT api/<ProjectsController>/5
+        /// <summary>
+        /// Обновить информацию о проекте.
+        /// </summary>
+        /// <param name="id">Id проекта.</param>
+        /// <param name="project">Обновленная информация о проекте.</param>
         [HttpPut("{id}")]
         [Authorize]
         public async Task Put(int id, [FromBody] Project project)
@@ -49,6 +67,10 @@ namespace SkillProfiWebApi.Controllers
         }
 
         // DELETE api/<ProjectsController>/5
+        /// <summary>
+        /// Удалить проект по Id.
+        /// </summary>
+        /// <param name="id">Id проекта.</param>
         [HttpDelete("{id}")]
         [Authorize]
         public async Task Delete(int id)

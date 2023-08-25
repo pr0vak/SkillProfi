@@ -23,6 +23,10 @@ namespace SkillProfiWebApi.Controllers
         }
 
         // GET: api/<AccountController>
+        /// <summary>
+        /// Получить список аккаунтов.
+        /// </summary>
+        /// <returns>Список аккаунтов.</returns>
         [HttpGet]
         [Authorize]
         public IEnumerable<Account> Get()
@@ -31,6 +35,12 @@ namespace SkillProfiWebApi.Controllers
         }
 
         // GET api/<AccountController>/User
+        /// <summary>
+        /// Получить результат авторизации по имени и паролю пользователя.
+        /// </summary>
+        /// <param name="login">Имя пользователя.</param>
+        /// <param name="password">Пароль пользователя.</param>
+        /// <returns>Результат авторизации.</returns>
         [HttpGet("login={login}&password={password}")]
         public async Task<IResult> Get(string login, string password)
         {
@@ -62,14 +72,23 @@ namespace SkillProfiWebApi.Controllers
         }
 
         // GET api/<AccountController>/5
+        /// <summary>
+        /// Получить информацию о пользователе по Id.
+        /// </summary>
+        /// <param name="id">Id пользователя.</param>
+        /// <returns>Информация о пользователе.</returns>
         [HttpGet("{id}")]
         [Authorize]
         public async Task<Account> Get(int id)
         {
-            return await _db.Accounts.FindAsync(id);
+            return await _db.Accounts.FindAsync(id) ?? Account.CreateNullAccount();
         }
 
         // POST api/<AccountController>
+        /// <summary>
+        /// Добавить пользователя в базу данных.
+        /// </summary>
+        /// <param name="account">Описание пользователя.</param>
         [HttpPost]
         public async Task Post([FromBody] Account account)
         {
@@ -79,6 +98,11 @@ namespace SkillProfiWebApi.Controllers
         }
 
         // PUT api/<AccountController>/5
+        /// <summary>
+        /// Обновить данные пользователя.
+        /// </summary>
+        /// <param name="id">Id пользователя.</param>
+        /// <param name="account">Обновленная информация о пользователе.</param>
         [HttpPut("{id}")]
         [Authorize]
         public async Task Put(int id, [FromBody] Account account)
@@ -89,6 +113,10 @@ namespace SkillProfiWebApi.Controllers
         }
 
         // DELETE api/<AccountController>/5
+        /// <summary>
+        /// Удалить польозвателя по Id.
+        /// </summary>
+        /// <param name="id">Id пользователя.</param>
         [HttpDelete("{id}")]
         [Authorize]
         public async Task Delete(int id)

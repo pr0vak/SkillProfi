@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using SkillProfi.DAL.Models;
 using SkillProfiWeb.Interfaces;
 using SkillProfiWeb.ViewModels;
@@ -9,6 +10,7 @@ namespace SkillProfiWeb.Controllers
     public class HeroController : Controller
     {
         private IData<Request> _requestData;
+        private static string status;
 
         public HeroController(IData<Request> requestData)
         {
@@ -23,9 +25,17 @@ namespace SkillProfiWeb.Controllers
         [HttpPost]
         public IActionResult Index(Request request)
         {
-            request.Status = "Получена";
-            request.Created = DateTime.Now;
-            _requestData.Add(request);
+            if (ModelState.IsValid)
+            {
+                request.Status = "Получена";
+                request.Created = DateTime.Now;
+                _requestData.Add(request);
+                status = "Заявка успешно отправлена!";
+            }
+            else
+            {
+                status = "Некорректно заполнены данные!";
+            }
 
             return RedirectToAction("RequestSent");
         }
@@ -33,8 +43,9 @@ namespace SkillProfiWeb.Controllers
         [HttpGet]
         public IActionResult RequestSent()
         {
-            ViewData["Title"] = "SkillProfi - Заявка отправлена";
-            return View();
+            ViewData["Title"] = "SkillProfi";
+
+            return View((object)status);
         }
 
         [HttpGet]

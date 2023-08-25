@@ -9,6 +9,10 @@ namespace SkillProfiWebApi.Controllers
     public class ConfigController : ControllerBase
     {
         // GET: api/<ConfigController>
+        /// <summary>
+        /// Получить данные файла конфигурации сайта.
+        /// </summary>
+        /// <returns>Конфигурация сайта.</returns>
         [HttpGet]
         public string Get()
         {

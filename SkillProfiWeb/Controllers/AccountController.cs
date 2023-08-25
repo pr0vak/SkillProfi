@@ -16,6 +16,8 @@ namespace SkillProfiWeb.Controllers
 
         public AccountController()
         {
+            // Инициализируем переменные для подключения к серверу
+            // и авторизовывания
             var path = "./connection.json";
             _client = new HttpClient();
             var json = JObject.Parse(System.IO.File.ReadAllText(path));
@@ -25,27 +27,32 @@ namespace SkillProfiWeb.Controllers
         }
 
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult Index(string returnUrl)
         {
             ViewData["Title"] = "SkillProfi - Авторизация";
-            return View(new UserLogin());
+            return View(new UserLogin() { ReturnUrl = returnUrl });
         }
 
         [HttpPost]
         public async Task<IActionResult> Login(UserLogin model)
         {
+            // Подготовка запроса и отправление
             var url = _url + $"login={model.UserName}&password={model.Password}";
             var result = await _client.GetAsync(url);
+            // Если логин и пароль ввели корректно...
             if (result.StatusCode == HttpStatusCode.OK)
             {
+                // Получаем ответ с токеном и сохраняем его
                 var json = await _client.GetStringAsync(url);
                 var token = JObject.Parse(json)["access_token"]?.ToString();
                 DataApi.Token = token;
-                return RedirectToAction("Index", "Hero");
+
+                // возвращаемся на предыдущую страницу
+                return Redirect(model.ReturnUrl ?? "/");
             }
             else
             {
-                ViewBag.Message = "Запрос не прошел валидацию";
+                ModelState.AddModelError("", "Не верный логин или пароль!");
                 return View("Index", model);
             }
         }

@@ -13,12 +13,14 @@ namespace SkillProfi.Desktop.Data
             _url += "Account/";
         }
 
-        public async Task<bool> Athorization(string login, string password)
+        public async Task<bool> Authorization(string login, string password)
         {
             try
             {
                 var url = _url + $"login={login}&password={password}";
-                Token = JObject.Parse(await _client.GetStringAsync(url))["access_token"]?.ToString();
+                var response = await _client.GetStringAsync(url);
+                var json = JObject.Parse(response);
+                Token = json["access_token"]?.ToString() ?? string.Empty;
 
                 return true;
             }

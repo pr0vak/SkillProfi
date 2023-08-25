@@ -5,6 +5,9 @@ using System.Text;
 
 namespace SkillProfi.TelegramBot.Data
 {
+    /// <summary>
+    /// Класс, описывающий подключение к Web API серверу.
+    /// </summary>
     public class DataApi
     {
         private HttpClient _client;

@@ -2,6 +2,7 @@
 using SkillProfi.DAL.Models;
 using SkillProfiWeb.Interfaces;
 using System.Net.Http.Headers;
+using System.Reflection;
 using System.Text;
 
 namespace SkillProfiWeb.Data
@@ -10,49 +11,75 @@ namespace SkillProfiWeb.Data
     {
         public RequestDataApi()
         {
-            Init();
-            url += "Requests";
-            client.DefaultRequestHeaders.Add("Authorization", $"Bearer {Token}");
+            url = baseUrl + "Requests/";
         }
 
         public async Task Add(Request request)
         {
-            await client.PostAsync(
-                requestUri: url,
-                content: new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8,
-                    "application/json")
-                );
+            using (var requestMessage = new HttpRequestMessage(HttpMethod.Post, url))
+            {
+                if (!string.IsNullOrEmpty(Token))
+                {
+                    requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", Token);
+                }
+                requestMessage.Content = new StringContent(JsonConvert.SerializeObject(request),
+                    Encoding.UTF8, "application/json");
+                await client.SendAsync(requestMessage);
+            }
         }
 
         public async Task Delete(int? id)
         {
-            var delUrl = url + $"/{id}";
-            await client.DeleteAsync(delUrl);
+            using (var requestMessage = new HttpRequestMessage(HttpMethod.Delete, url + id))
+            {
+                if (!string.IsNullOrEmpty(Token))
+                {
+                    requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", Token);
+                }
+                await client.SendAsync(requestMessage);
+            }
         }
 
         public async Task<IEnumerable<Request>> GetAll()
         {
-            string json = await client.GetStringAsync(url);
-
-            return JsonConvert.DeserializeObject<IEnumerable<Request>>(json)
-                ?? new List<Request> { Request.CreateNullRequest() };
+            using (var requestMessage = new HttpRequestMessage(HttpMethod.Get, url))
+            {
+                if (!string.IsNullOrEmpty(Token))
+                {
+                    requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", Token);
+                }
+                var response = await client.SendAsync(requestMessage);
+                var json = await response.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<IEnumerable<Request>>(json);
+            }
         }
 
         public async Task<Request> GetById(int? id)
         {
-            string json = await client.GetStringAsync(url + $"/{id}");
-
-            return JsonConvert.DeserializeObject<Request>(json) ?? Request.CreateNullRequest();
+            using (var requestMessage = new HttpRequestMessage(HttpMethod.Get, url + id))
+            {
+                if (!string.IsNullOrEmpty(Token))
+                {
+                    requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", Token);
+                }
+                var response = await client.SendAsync(requestMessage);
+                var json = await response.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<Request>(json);
+            }
         }
 
         public async Task Update(Request request)
         {
-            var putUrl = url + $"/{request.Id}";
-            await client.PutAsync(
-                    requestUri: putUrl,
-                    content: new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8,
-                        "application/json")
-                );
+            using (var requestMessage = new HttpRequestMessage(HttpMethod.Put, url + request.Id))
+            {
+                if (!string.IsNullOrEmpty(Token))
+                {
+                    requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", Token);
+                }
+                requestMessage.Content = new StringContent(JsonConvert.SerializeObject(request),
+                    Encoding.UTF8, "application/json");
+                await client.SendAsync(requestMessage);
+            }
         }
     }
 }

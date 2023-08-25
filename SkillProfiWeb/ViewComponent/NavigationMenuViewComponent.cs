@@ -2,6 +2,9 @@
 
 namespace SkillProfiWeb.Component
 {
+    /// <summary>
+    /// На странице IT Service добавляет список фильтров.
+    /// </summary>
     public class NavigationMenuViewComponent : ViewComponent
     {
         public IViewComponentResult Invoke()
