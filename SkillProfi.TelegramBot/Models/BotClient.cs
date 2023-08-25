@@ -153,10 +153,14 @@ namespace SkillProfi.TelegramBot.Models
 
         public BotClient(string token)
         {
+            Initialize(token);
+        }
+
+        private void Initialize(string token)
+        {
             _botClient = new TelegramBotClient(token);
             _dataApi = new DataApi();
         }
-
 
         public void Start()
         {

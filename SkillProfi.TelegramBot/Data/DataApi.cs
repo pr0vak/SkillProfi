@@ -30,39 +30,41 @@ namespace SkillProfi.TelegramBot.Data
 
             var json = JObject.Parse(File.ReadAllText(path));
             _url = $"http://{json["ip_address"]}:{json["port"]}/api/";
+
+            var test = _client.GetAsync(_url + "services").Result;
         }
 
-        public Service[] GetServices()
+        public async Task<Service[]> GetServices()
         {
             var url = _url + "Services";
-            var json = Task.Run(() => _client.GetStringAsync(url)).Result;
+            var json = await _client.GetStringAsync(url);
             var services = JsonConvert.DeserializeObject<Service[]>(json);
 
             return services;
         }
 
-        public Project[] GetProjects()
+        public async Task<Project[]> GetProjects()
         {
             var url = _url + "Projects";
-            var json = Task.Run(() => _client.GetStringAsync(url)).Result;
+            var json = await _client.GetStringAsync(url);
             var projects = JsonConvert.DeserializeObject<Project[]>(json);
 
             return projects;
         }
 
-        public Blog[] GetBlogs()
+        public async Task<Blog[]> GetBlogs()
         {
             var url = _url + "Blogs";
-            var json = Task.Run(() => _client.GetStringAsync(url)).Result;
+            var json = await _client.GetStringAsync(url);
             var blogs = JsonConvert.DeserializeObject<Blog[]>(json);
 
             return blogs;
         }
 
-        public SocialLinks GetSocialLinks()
+        public async Task<SocialLinks> GetSocialLinks()
         {
             var url = _url + "Config";
-            var json = Task.Run(() => _client.GetStringAsync(url)).Result;
+            var json = await _client.GetStringAsync(url);
             var config = JObject.Parse(json);
             var socialLinks = new SocialLinks()
             {
@@ -74,15 +76,12 @@ namespace SkillProfi.TelegramBot.Data
             return socialLinks;
         }
 
-        public void SendRequest(Request request)
+        public async Task SendRequest(Request request)
         {
             var url = _url + "Requests";
-            Task.Run(async () =>
-            {
-                await _client.PostAsync(url,
+            await _client.PostAsync(url,
                     new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8,
                         "application/json"));
-            });
         }
     }
 }
