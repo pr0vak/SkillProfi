@@ -9,7 +9,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="Описание заявки" 
-        Height="450" Width="400">
+        Height="550" Width="500">
     <Window.Resources>
         <col:ArrayList x:Key="statuses">
             <sys:String>Получена</sys:String>
@@ -71,9 +71,9 @@
             <StackPanel Grid.Row="1" Orientation="Horizontal"
                             Margin="60px 0">
                 <Button x:Name="btnSave" Content="Сохранить" Width="100px" Height="25px"
-                        FontSize="14px" Margin="0 0 30px 0" Click="Button_Click"/>
+                        FontSize="14px" Margin="0 0 30px 0" Click="Update"/>
                 <Button Content="Выход" Width="100px" Height="25px"
-                        FontSize="14px" Click="Button_Click_1"/>
+                        FontSize="14px" Click="CloseWindow"/>
             </StackPanel>
         </Grid>
     </GroupBox>

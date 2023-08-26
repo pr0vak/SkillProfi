@@ -34,6 +34,9 @@ namespace SkillProfi.Desktop.View
             btnSave.IsEnabled = false;
         }
 
+        /// <summary>
+        /// Инизиализирование полей данными.
+        /// </summary>
         private void InitiliizeDetails()
         {
             tbId.Text = _request.Id.ToString();
@@ -44,6 +47,9 @@ namespace SkillProfi.Desktop.View
             cbStatus.Text = _request.Status;
         }
 
+        /// <summary>
+        /// Обработка данных при изменении статуса.
+        /// </summary>
         private void CbStatus_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var selected = (sender as ComboBox).SelectedValue.ToString();
@@ -58,14 +64,20 @@ namespace SkillProfi.Desktop.View
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Обновление состояния завяки.
+        /// </summary>
+        private void Update(object sender, RoutedEventArgs e)
         {
             _request.Status = cbStatus.SelectedValue.ToString();
             Task.Run(() => _dataApi.Update(_request));
             this.Close();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Закрыть данной окно.
+        /// </summary>
+        private void CloseWindow(object sender, RoutedEventArgs e)
         {
             this.Close();
         }

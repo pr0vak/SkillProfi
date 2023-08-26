@@ -5,6 +5,9 @@ using System.Windows;
 
 namespace SkillProfi.Desktop.Data
 {
+    /// <summary>
+    /// Класс, описывающий авторизацию пользователя через Web API сервис.
+    /// </summary>
     internal class AccountDataApi : DataApi
     {
         public AccountDataApi() 

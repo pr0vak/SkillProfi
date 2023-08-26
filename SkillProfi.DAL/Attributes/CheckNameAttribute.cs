@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace SkillProfi.DAL.Attributes
 {
+    /// <summary>
+    /// Атрибут, проверяющий имя на корректность.
+    /// </summary>
     [AttributeUsage(AttributeTargets.Property)]
     public class CheckNameAttribute : ValidationAttribute
     {

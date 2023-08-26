@@ -28,10 +28,14 @@ namespace SkillProfi.Desktop
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Обработчик события изменения пароля.
+        /// </summary>
         private void Password_PasswordChanged(object sender, RoutedEventArgs e)
         {
             if (this.DataContext != null)
             { 
+                // Сохранение данных о пароле во ViewModel.
                 (DataContext as MainViewModel).Password = ((PasswordBox)sender).Password; 
             }
         }

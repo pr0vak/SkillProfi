@@ -5,6 +5,11 @@ namespace SkillProfi.DAL.Services
 {
     public class Password
     {
+        /// <summary>
+        /// Хэширование пароля.
+        /// </summary>
+        /// <param name="password">Пароль в обычном формате.</param>
+        /// <returns>Хэшированный пароль.</returns>
         public static string Hash(string password)
         {
             using (var hashAlg = MD5.Create())

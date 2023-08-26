@@ -29,8 +29,12 @@ namespace SkillProfi.Desktop.View
             _dataApi = dataApi;
         }
 
+        /// <summary>
+        /// Отправить заявку.
+        /// </summary>
         private void SendRequest(object sender, RoutedEventArgs e)
         {
+            // Если поля корректно заполнены
             if (IsChecked()) 
             {
                 var request = new Request()
@@ -52,12 +56,20 @@ namespace SkillProfi.Desktop.View
             }            
         }
 
+        /// <summary>
+        /// Проверка веденных данных в полях на корректность.
+        /// </summary>
+        /// <returns>Результат проверки.</returns>
         private bool IsChecked()
         {
-            if (tbEmail.Text.Trim().Length <= 1 ||
-                tbName.Text.Trim().Length <= 1 ||
-                tbMessage.Text.Trim().Length <= 1
-                || !tbEmail.Text.Contains("@"))
+            var emailLength = tbEmail.Text.Trim().Length;
+            var isEmail = tbEmail.Text.Contains('@');
+            var nameLength = tbName.Text.Trim().Length;
+            var isFullName = tbName.Text.Trim().Split(' ').Length == 3;
+            var messageLength = tbMessage.Text.Trim().Length;
+
+            if (emailLength <= 6 || nameLength <= 10 ||
+                messageLength <= 20 || !isEmail || !isFullName)
             {
                 return false;
             }
