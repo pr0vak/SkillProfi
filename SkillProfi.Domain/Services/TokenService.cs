@@ -22,7 +22,7 @@ namespace SkillProfi.Domain.Services
                 issuer: AuthOptions.ISSUER,
                 audience: AuthOptions.AUDIENCE,
                 claims: claims,
-                expires: DateTime.Now.AddMinutes(10),
+                expires: DateTime.Now.AddHours(48),
                 signingCredentials: signinCredentials);
 
             return new JwtSecurityTokenHandler().WriteToken(tokenOptions);

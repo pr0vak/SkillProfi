@@ -20,15 +20,10 @@ namespace SkillProfi.Web.Data
         {
             using (var requestMessage = new HttpRequestMessage(HttpMethod.Post, url))
             {
-                var token = _httpContextAccessor.HttpContext?.Request.Cookies["Authorization"].Split(' ')[^1];
-                if (!string.IsNullOrEmpty(token))
-                {
-                    requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
-                }
+                await ValidationToken(_httpContextAccessor, requestMessage);
                 requestMessage.Content = new StringContent(JsonConvert.SerializeObject(model),
                     Encoding.UTF8, "application/json");
-                var result = await client.SendAsync(requestMessage);
-                var status = result.StatusCode;
+                await client.SendAsync(requestMessage);
             }
         }
 
@@ -36,11 +31,7 @@ namespace SkillProfi.Web.Data
         {
             using (var requestMessage = new HttpRequestMessage(HttpMethod.Delete, url + id))
             {
-                var token = _httpContextAccessor.HttpContext?.Request.Cookies["Authorization"].Split(' ')[^1];
-                if (!string.IsNullOrEmpty(token))
-                {
-                    requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
-                }
+                await ValidationToken(_httpContextAccessor, requestMessage);
                 await client.SendAsync(requestMessage);
             }
         }
@@ -67,13 +58,9 @@ namespace SkillProfi.Web.Data
 
         public async Task Update(Project model)
         {
-            using (var requestMessage = new HttpRequestMessage(HttpMethod.Put, url + model.Id))
+            using (var requestMessage = new HttpRequestMessage(HttpMethod.Put, url))
             {
-                var token = _httpContextAccessor.HttpContext?.Request.Cookies["Authorization"].Split(' ')[^1];
-                if (!string.IsNullOrEmpty(token))
-                {
-                    requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
-                }
+                await ValidationToken(_httpContextAccessor, requestMessage);
                 requestMessage.Content = new StringContent(JsonConvert.SerializeObject(model),
                     Encoding.UTF8, "application/json");
                 await client.SendAsync(requestMessage);

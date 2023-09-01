@@ -6,8 +6,8 @@ using SkillProfi.Domain.Interfaces;
 
 namespace SkillProfi.Api.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class TokenController : ControllerBase
     {
         private readonly DataContext db;
@@ -33,7 +33,7 @@ namespace SkillProfi.Api.Controllers
             var username = principal.Identity.Name; //this is mapped to the Name claim by default
             var user = db.Accounts.SingleOrDefault(u => u.Login == username);
 
-            if (user is null || user.RefreshToken != refreshToken || user.RefreshTokenExpiryTime <= DateTime.Now)
+            if (user is null || user.RefreshToken != refreshToken || user.RefreshTokenExpiryTime <= DateTime.UtcNow)
                 return BadRequest("Invalid client request");
 
             var newAccessToken = tokenService.GenerateAccessToken(principal.Claims);
@@ -41,9 +41,9 @@ namespace SkillProfi.Api.Controllers
             user.RefreshToken = newRefreshToken;
             db.SaveChanges();
 
-            return Ok(new AuthenticatedResponse()
+            return Ok(new TokenApiModel()
             {
-                Token = newAccessToken,
+                AccessToken = newAccessToken,
                 RefreshToken = newRefreshToken
             });
         }

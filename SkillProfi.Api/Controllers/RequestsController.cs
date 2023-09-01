@@ -54,7 +54,6 @@ namespace SkillProfi.Api.Controllers
         /// </summary>
         /// <param name="request">Описание заявки.</param>
         [HttpPost]
-        [Authorize]
         public async Task Post([FromBody] Request request)
         {
             await db.Requests.AddAsync(request);

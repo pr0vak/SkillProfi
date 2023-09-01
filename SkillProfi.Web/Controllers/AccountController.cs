@@ -3,6 +3,10 @@ using Newtonsoft.Json.Linq;
 using SkillProfi.Web.ViewModels;
 using SkillProfi.Web.Data;
 using System.Net;
+using Newtonsoft.Json;
+using System.Text;
+using SkillProfi.Web.Configuration;
+using SkillProfi.Domain.Services;
 
 namespace SkillProfi.Web.Controllers
 {
@@ -15,12 +19,8 @@ namespace SkillProfi.Web.Controllers
         {
             // Инициализируем переменные для подключения к серверу
             // и авторизовывания
-            var path = "./connection.json";
             _client = new HttpClient();
-            var json = JObject.Parse(System.IO.File.ReadAllText(path));
-            var ip_address = json["ip_address"].ToString();
-            var port = json["port"].ToString();
-            _url = $"http://{ip_address}:{port}/api/account/";
+            _url = $"{Connection.BaseUrl}/api";
         }
 
         [HttpGet]
@@ -34,15 +34,17 @@ namespace SkillProfi.Web.Controllers
         public async Task<IActionResult> Login(UserLoginViewModel model)
         {
             // Подготовка запроса и отправление
-            var url = _url + $"login={model.UserName}&password={model.Password}";
-            var result = await _client.GetAsync(url);
+            var url = _url + "/Account/Login";
+            model.Password = PasswordService.Hash(model.Password);
+            var content = new StringContent(JsonConvert.SerializeObject(model), Encoding.UTF8, "application/json");
+            var result = await _client.PostAsync(url, content);
             // Если логин и пароль ввели корректно...
             if (result.StatusCode == HttpStatusCode.OK)
             {
                 // Получаем ответ с токеном и сохраняем его
-                var json = JObject.Parse(await _client.GetStringAsync(url));
-                var token = json["token"]?.ToString();
-                var refreshToken = json["refreshToken"].ToString();
+                var json = JObject.Parse(await result.Content.ReadAsStringAsync());
+                var token = json["accessToken"]?.ToString();
+                var refreshToken = json["refreshToken"]?.ToString();
                 HttpContext.Response.Cookies.Append("Authorization", $"Bearer {token}");
                 HttpContext.Response.Cookies.Append("RefreshToken", refreshToken);
 
@@ -57,11 +59,12 @@ namespace SkillProfi.Web.Controllers
         }
 
         [HttpPost, ValidateAntiForgeryToken]
-        public IActionResult Logout()
+        public async Task<IActionResult> Logout()
         {
             HttpContext.Response.Cookies.Delete("Authorization");
             HttpContext.Response.Cookies.Delete("RefreshToken");
-            DataApi.Token = string.Empty;
+            var url = _url + "/Token/revoke";
+            await _client.PostAsync(url, null);
             return RedirectToAction("Index", "Hero");
         }
     }

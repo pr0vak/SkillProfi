@@ -30,11 +30,7 @@ namespace SkillProfi.Web.Data
         {
             using (var requestMessage = new HttpRequestMessage(HttpMethod.Delete, url + id))
             {
-                var token = _httpContextAccessor.HttpContext?.Request.Cookies["Authorization"].Split(' ')[^1];
-                if (!string.IsNullOrEmpty(token))
-                {
-                    requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
-                }
+                await ValidationToken(_httpContextAccessor, requestMessage);
                 await client.SendAsync(requestMessage);
             }
         }
@@ -43,11 +39,7 @@ namespace SkillProfi.Web.Data
         {
             using (var requestMessage = new HttpRequestMessage(HttpMethod.Get, url))
             {
-                var token = _httpContextAccessor.HttpContext?.Request.Cookies["Authorization"].Split(' ')[^1];
-                if (!string.IsNullOrEmpty(token))
-                {
-                    requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
-                }
+                await ValidationToken(_httpContextAccessor, requestMessage);
                 var response = await client.SendAsync(requestMessage);
                 var json = await response.Content.ReadAsStringAsync();
                 return JsonConvert.DeserializeObject<IEnumerable<Request>>(json);
@@ -58,11 +50,7 @@ namespace SkillProfi.Web.Data
         {
             using (var requestMessage = new HttpRequestMessage(HttpMethod.Get, url + id))
             {
-                var token = _httpContextAccessor.HttpContext?.Request.Cookies["Authorization"].Split(' ')[^1];
-                if (!string.IsNullOrEmpty(token))
-                {
-                    requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
-                }
+                await ValidationToken(_httpContextAccessor, requestMessage);
                 var response = await client.SendAsync(requestMessage);
                 var json = await response.Content.ReadAsStringAsync();
                 return JsonConvert.DeserializeObject<Request>(json);
@@ -71,13 +59,9 @@ namespace SkillProfi.Web.Data
 
         public async Task Update(Request request)
         {
-            using (var requestMessage = new HttpRequestMessage(HttpMethod.Put, url + request.Id))
+            using (var requestMessage = new HttpRequestMessage(HttpMethod.Put, url))
             {
-                var token = _httpContextAccessor.HttpContext?.Request.Cookies["Authorization"].Split(' ')[^1];
-                if (!string.IsNullOrEmpty(token))
-                {
-                    requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
-                }
+                await ValidationToken(_httpContextAccessor, requestMessage);
                 requestMessage.Content = new StringContent(JsonConvert.SerializeObject(request),
                     Encoding.UTF8, "application/json");
                 await client.SendAsync(requestMessage);

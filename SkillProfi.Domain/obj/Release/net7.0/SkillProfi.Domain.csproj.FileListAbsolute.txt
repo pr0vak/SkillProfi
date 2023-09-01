@@ -1,0 +1,12 @@
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Domain\bin\Release\net7.0\SkillProfi.Domain.deps.json
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Domain\bin\Release\net7.0\SkillProfi.Domain.dll
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Domain\bin\Release\net7.0\SkillProfi.Domain.pdb
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Domain\obj\Release\net7.0\SkillProfi.Domain.csproj.AssemblyReference.cache
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Domain\obj\Release\net7.0\SkillProfi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Domain\obj\Release\net7.0\SkillProfi.Domain.AssemblyInfoInputs.cache
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Domain\obj\Release\net7.0\SkillProfi.Domain.AssemblyInfo.cs
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Domain\obj\Release\net7.0\SkillProfi.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Domain\obj\Release\net7.0\SkillProfi.Domain.dll
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Domain\obj\Release\net7.0\refint\SkillProfi.Domain.dll
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Domain\obj\Release\net7.0\SkillProfi.Domain.pdb
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Domain\obj\Release\net7.0\ref\SkillProfi.Domain.dll

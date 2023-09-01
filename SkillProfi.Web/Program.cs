@@ -40,12 +40,12 @@ builder.Services.AddTransient<IData<Blog>, BlogDataApi>();
 
 var app = builder.Build();
 
+app.UseMiddleware<JwtMiddleware>();
 
 app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseMiddleware<JwtMiddleware>();
 app.UseStatusCodePages(async context =>
 {
     var request = context.HttpContext.Request;
