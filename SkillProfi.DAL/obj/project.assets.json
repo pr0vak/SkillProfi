@@ -30,6 +30,19 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
+      "Microsoft.IdentityModel.Abstractions/6.21.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Microsoft.IdentityModel.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.IdentityModel.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.IdentityModel.JsonWebTokens/6.15.1": {
         "type": "package",
         "dependencies": {
@@ -46,15 +59,18 @@
           }
         }
       },
-      "Microsoft.IdentityModel.Logging/6.15.1": {
+      "Microsoft.IdentityModel.Logging/6.21.0": {
         "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Abstractions": "6.21.0"
+        },
         "compile": {
-          "lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll": {
+          "lib/net6.0/Microsoft.IdentityModel.Logging.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll": {
+          "lib/net6.0/Microsoft.IdentityModel.Logging.dll": {
             "related": ".xml"
           }
         }
@@ -93,20 +109,20 @@
           }
         }
       },
-      "Microsoft.IdentityModel.Tokens/6.15.1": {
+      "Microsoft.IdentityModel.Tokens/6.21.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.CSharp": "4.5.0",
-          "Microsoft.IdentityModel.Logging": "6.15.1",
+          "Microsoft.IdentityModel.Logging": "6.21.0",
           "System.Security.Cryptography.Cng": "4.5.0"
         },
         "compile": {
-          "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll": {
+          "lib/net6.0/Microsoft.IdentityModel.Tokens.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll": {
+          "lib/net6.0/Microsoft.IdentityModel.Tokens.dll": {
             "related": ".xml"
           }
         }
@@ -156,6 +172,20 @@
             "assetType": "runtime",
             "rid": "win"
           }
+        }
+      },
+      "SkillProfi.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.10",
+          "Microsoft.IdentityModel.Tokens": "6.21.0"
+        },
+        "compile": {
+          "bin/placeholder/SkillProfi.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SkillProfi.Domain.dll": {}
         }
       }
     }
@@ -244,6 +274,27 @@
         "version.txt"
       ]
     },
+    "Microsoft.IdentityModel.Abstractions/6.21.0": {
+      "sha512": "XeE6LQtD719Qs2IG7HDi1TSw9LIkDbJ33xFiOBoHbApVw/8GpIBCbW+t7RwOjErUDyXZvjhZliwRkkLb8Z1uzg==",
+      "type": "package",
+      "path": "microsoft.identitymodel.abstractions/6.21.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net45/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/net461/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net461/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/net472/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net472/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/net6.0/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net6.0/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.xml",
+        "microsoft.identitymodel.abstractions.6.21.0.nupkg.sha512",
+        "microsoft.identitymodel.abstractions.nuspec"
+      ]
+    },
     "Microsoft.IdentityModel.JsonWebTokens/6.15.1": {
       "sha512": "X5K/Pt02agb1V+khh5u7Q8hg02IVTshxV5owpR7UdQ9zfs0+A6qzca0F9jyv3o8SlOjEFHBabs+5cp7Noofzvg==",
       "type": "package",
@@ -263,10 +314,10 @@
         "microsoft.identitymodel.jsonwebtokens.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.Logging/6.15.1": {
-      "sha512": "PpZHL/Bt/8vQ8g/6LxweuI1EusV0ogUBYnGM+bPeL/SG89gx2n05xKNE/U5JNEkLFLL+sk7O8T7c/PXhFtUtUg==",
+    "Microsoft.IdentityModel.Logging/6.21.0": {
+      "sha512": "tuEhHIQwvBEhMf8I50hy8FHmRSUkffDFP5EdLsSDV4qRcl2wvOPkQxYqEzWkh+ytW6sbdJGEXElGhmhDfAxAKg==",
       "type": "package",
-      "path": "microsoft.identitymodel.logging/6.15.1",
+      "path": "microsoft.identitymodel.logging/6.21.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -276,9 +327,11 @@
         "lib/net461/Microsoft.IdentityModel.Logging.xml",
         "lib/net472/Microsoft.IdentityModel.Logging.dll",
         "lib/net472/Microsoft.IdentityModel.Logging.xml",
+        "lib/net6.0/Microsoft.IdentityModel.Logging.dll",
+        "lib/net6.0/Microsoft.IdentityModel.Logging.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.Logging.xml",
-        "microsoft.identitymodel.logging.6.15.1.nupkg.sha512",
+        "microsoft.identitymodel.logging.6.21.0.nupkg.sha512",
         "microsoft.identitymodel.logging.nuspec"
       ]
     },
@@ -320,10 +373,10 @@
         "microsoft.identitymodel.protocols.openidconnect.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.Tokens/6.15.1": {
-      "sha512": "0bd0ocKuNai0/GdhboIW37R6z8I0vFqlmiPeG055SJxPPJ7dfBo2tjJ3bPV9vjFCRDuusj24dldOsg4hWui6iw==",
+    "Microsoft.IdentityModel.Tokens/6.21.0": {
+      "sha512": "AAEHZvZyb597a+QJSmtxH3n2P1nIJGpZ4Q89GTenknRx6T6zyfzf592yW/jA5e8EHN4tNMjjXHQaYWEq5+L05w==",
       "type": "package",
-      "path": "microsoft.identitymodel.tokens/6.15.1",
+      "path": "microsoft.identitymodel.tokens/6.21.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -333,9 +386,11 @@
         "lib/net461/Microsoft.IdentityModel.Tokens.xml",
         "lib/net472/Microsoft.IdentityModel.Tokens.dll",
         "lib/net472/Microsoft.IdentityModel.Tokens.xml",
+        "lib/net6.0/Microsoft.IdentityModel.Tokens.dll",
+        "lib/net6.0/Microsoft.IdentityModel.Tokens.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.xml",
-        "microsoft.identitymodel.tokens.6.15.1.nupkg.sha512",
+        "microsoft.identitymodel.tokens.6.21.0.nupkg.sha512",
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
@@ -450,12 +505,18 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "SkillProfi.Domain/1.0.0": {
+      "type": "project",
+      "path": "../SkillProfi.Domain/SkillProfi.Domain.csproj",
+      "msbuildProject": "../SkillProfi.Domain/SkillProfi.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Microsoft.AspNetCore.Authentication.JwtBearer >= 7.0.10",
-      "Newtonsoft.Json >= 13.0.3"
+      "Microsoft.IdentityModel.Tokens >= 6.21.0",
+      "Newtonsoft.Json >= 13.0.3",
+      "SkillProfi.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -489,7 +550,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Domain\\SkillProfi.Domain.csproj": {
+              "projectPath": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Domain\\SkillProfi.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -502,9 +567,9 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
-          "Microsoft.AspNetCore.Authentication.JwtBearer": {
+          "Microsoft.IdentityModel.Tokens": {
             "target": "Package",
-            "version": "[7.0.10, )"
+            "version": "[6.21.0, )"
           },
           "Newtonsoft.Json": {
             "target": "Package",

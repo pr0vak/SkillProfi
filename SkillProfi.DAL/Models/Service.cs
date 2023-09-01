@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Xml.Linq;
 
 namespace SkillProfi.DAL.Models
 {
@@ -10,11 +11,11 @@ namespace SkillProfi.DAL.Models
 
         [Required]
         [Display(Name = "Название услуги")]
-        public string Title { get; set; }
+        public string? Title { get; set; }
 
         [Required]
         [Display(Name = "Описание услуги")]
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
 
         public static Service CreateNullService()

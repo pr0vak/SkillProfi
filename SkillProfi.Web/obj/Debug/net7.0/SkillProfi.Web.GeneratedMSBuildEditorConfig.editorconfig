@@ -1,0 +1,125 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SkillProfi.Web
+build_property.RootNamespace = SkillProfi.Web
+build_property.ProjectDir = C:\Users\Vyacheslav\Desktop\SkillProfi_v2\SkillProfi.Web\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = C:\Users\Vyacheslav\Desktop\SkillProfi_v2\SkillProfi.Web
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Vyacheslav/Desktop/SkillProfi_v2/SkillProfi.Web/Views/Account/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vyacheslav/Desktop/SkillProfi_v2/SkillProfi.Web/Views/Blogs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vyacheslav/Desktop/SkillProfi_v2/SkillProfi.Web/Views/Blogs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vyacheslav/Desktop/SkillProfi_v2/SkillProfi.Web/Views/Blogs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vyacheslav/Desktop/SkillProfi_v2/SkillProfi.Web/Views/Blogs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vyacheslav/Desktop/SkillProfi_v2/SkillProfi.Web/Views/Blogs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vyacheslav/Desktop/SkillProfi_v2/SkillProfi.Web/Views/Contacts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vyacheslav/Desktop/SkillProfi_v2/SkillProfi.Web/Views/Hero/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVyb1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vyacheslav/Desktop/SkillProfi_v2/SkillProfi.Web/Views/Hero/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVyb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vyacheslav/Desktop/SkillProfi_v2/SkillProfi.Web/Views/Hero/RequestSent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVyb1xSZXF1ZXN0U2VudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vyacheslav/Desktop/SkillProfi_v2/SkillProfi.Web/Views/ITService/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSVRTZXJ2aWNlXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vyacheslav/Desktop/SkillProfi_v2/SkillProfi.Web/Views/ITService/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSVRTZXJ2aWNlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vyacheslav/Desktop/SkillProfi_v2/SkillProfi.Web/Views/Projects/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vyacheslav/Desktop/SkillProfi_v2/SkillProfi.Web/Views/Projects/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vyacheslav/Desktop/SkillProfi_v2/SkillProfi.Web/Views/Projects/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vyacheslav/Desktop/SkillProfi_v2/SkillProfi.Web/Views/Projects/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vyacheslav/Desktop/SkillProfi_v2/SkillProfi.Web/Views/Projects/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vyacheslav/Desktop/SkillProfi_v2/SkillProfi.Web/Views/Services/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vyacheslav/Desktop/SkillProfi_v2/SkillProfi.Web/Views/Services/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vyacheslav/Desktop/SkillProfi_v2/SkillProfi.Web/Views/Services/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vyacheslav/Desktop/SkillProfi_v2/SkillProfi.Web/Views/Services/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vyacheslav/Desktop/SkillProfi_v2/SkillProfi.Web/Views/Shared/Components/ITServiceView/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcSVRTZXJ2aWNlVmlld1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vyacheslav/Desktop/SkillProfi_v2/SkillProfi.Web/Views/Shared/Components/LogoutView/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTG9nb3V0Vmlld1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vyacheslav/Desktop/SkillProfi_v2/SkillProfi.Web/Views/Shared/Components/NavigationMenu/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTmF2aWdhdGlvbk1lbnVcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vyacheslav/Desktop/SkillProfi_v2/SkillProfi.Web/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vyacheslav/Desktop/SkillProfi_v2/SkillProfi.Web/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Vyacheslav/Desktop/SkillProfi_v2/SkillProfi.Web/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

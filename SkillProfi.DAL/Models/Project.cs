@@ -10,13 +10,13 @@ namespace SkillProfi.DAL.Models
 
         [Required]
         [Display(Name = "Название")]
-        public string Title { get; set; }
+        public string? Title { get; set; }
 
         [Required]
         [Display(Name = "Описание")]
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
-        public string ImageUrl { get; set; }
+        public string? ImageUrl { get; set; }
 
 
         public static Project CreateNullProject()

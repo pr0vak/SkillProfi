@@ -1,4 +1,4 @@
-﻿using SkillProfi.DAL.Attributes;
+﻿using SkillProfi.Domain.Attributes;
 using System.ComponentModel.DataAnnotations;
 
 namespace SkillProfi.DAL.Models
@@ -13,18 +13,18 @@ namespace SkillProfi.DAL.Models
 
         [CheckName]
         [Required, Display(Name = "Имя")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [Required, Display(Name = "Текст заявки")]
         [MaxLength(220)]
-        public string Message { get; set; }
+        public string? Message { get; set; }
 
         [Display(Name = "Статус заявки")]
-        public string Status { get; set; } = "Получена";
+        public string? Status { get; set; } = "Получена";
 
         [DataType(DataType.EmailAddress)]
         [Required, Display(Name = "Контакты")]
-        public string Email { get; set; }
+        public string? Email { get; set; }
 
 
         public static Request CreateNullRequest()
