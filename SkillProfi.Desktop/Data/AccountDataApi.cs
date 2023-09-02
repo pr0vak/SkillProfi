@@ -31,10 +31,6 @@ namespace SkillProfi.Desktop.Data
                         Password = PasswordService.Hash(password)
                     }), Encoding.UTF8, "application/json"));
 
-                var content = await response.Content.ReadAsStringAsync();
-
-                MessageBox.Show(content);
-
                 var json = JObject.Parse(await response.Content.ReadAsStringAsync());
                 Token = json["accessToken"]?.ToString() ?? string.Empty;
 
