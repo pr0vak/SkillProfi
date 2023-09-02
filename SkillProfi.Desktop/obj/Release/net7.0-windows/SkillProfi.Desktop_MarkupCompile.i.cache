@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\obj\Release\net7.0-windows\
+C:\Users\Vyacheslav\Desktop\FInal Project\SkillProfi\SkillProfi.Desktop\obj\Release\net7.0-windows\
 SkillProfi.Desktop
 none
 false
 TRACE;RELEASE;NET;NET7_0;NETCOREAPP
-C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\App.xaml
+C:\Users\Vyacheslav\Desktop\FInal Project\SkillProfi\SkillProfi.Desktop\App.xaml
 31050796420
 
 16-248359246
-1992132065378
+199-562978155
 MainWindow.xaml;View\CreateRequestWindow.xaml;View\DetailsRequestWindow.xaml;
 
-True
+False
 

@@ -41,23 +41,19 @@ namespace SkillProfi.Web.Infrastructure
 
             if (PageModel.TotalPages <= 10)
             {
-                CreatePaginationLight(PageModel, urlHelper, pagination, PageAction, 
-                    PageUrlValues, PageClassedEnabled, PageClass, PageClassNormal, PageClassSelected);
+                CreatePaginationLight(urlHelper, pagination);
                 output.Content.AppendHtml(pagination.InnerHtml);
             }
             else
             {
-                CreatePaginationFull(PageModel, urlHelper, pagination, PageAction,
-                    PageUrlValues, PageClassedEnabled, PageClass, PageClassNormal, PageClassSelected);
+                CreatePaginationFull(urlHelper, pagination);
                 output.Content.AppendHtml(pagination.InnerHtml);
             }
 
 
         }
 
-        private void CreatePaginationLight(PagingInfo pageModel, IUrlHelper urlHelper, 
-            TagBuilder result, string pageAction, Dictionary<string, object> pageUrlValues, 
-            bool pageClassedEnabled, string pageClass, string pageClassNormal, string pageClassSelected)
+        private void CreatePaginationLight(IUrlHelper urlHelper, TagBuilder result)
         {
             var max = PageModel.TotalPages;
             for (int i = 1; i <= max; i++)
@@ -77,9 +73,7 @@ namespace SkillProfi.Web.Infrastructure
             }
         }
 
-        private void CreatePaginationFull(PagingInfo pageModel, IUrlHelper urlHelper, 
-            TagBuilder result, string pageAction, Dictionary<string, object> pageUrlValues, 
-            bool pageClassedEnabled, string pageClass, string pageClassNormal, string pageClassSelected)
+        private void CreatePaginationFull(IUrlHelper urlHelper, TagBuilder result)
         {
             var max = PageModel.TotalPages;
             var freeDots = true;

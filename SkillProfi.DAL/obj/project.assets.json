@@ -526,11 +526,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.DAL\\SkillProfi.DAL.csproj",
+      "projectUniqueName": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.DAL\\SkillProfi.DAL.csproj",
       "projectName": "SkillProfi.DAL",
-      "projectPath": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.DAL\\SkillProfi.DAL.csproj",
+      "projectPath": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.DAL\\SkillProfi.DAL.csproj",
       "packagesPath": "C:\\Users\\Vyacheslav\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.DAL\\obj\\",
+      "outputPath": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -551,8 +551,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Domain\\SkillProfi.Domain.csproj": {
-              "projectPath": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Domain\\SkillProfi.Domain.csproj"
+            "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Domain\\SkillProfi.Domain.csproj": {
+              "projectPath": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Domain\\SkillProfi.Domain.csproj"
             }
           }
         }
@@ -592,7 +592,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

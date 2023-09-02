@@ -45,7 +45,7 @@ namespace SkillProfi.Desktop {
         /// InitializeComponent
         /// </summary>
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "7.0.9.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "7.0.10.0")]
         public void InitializeComponent() {
             
             #line 5 "..\..\..\App.xaml"
@@ -60,7 +60,7 @@ namespace SkillProfi.Desktop {
         /// </summary>
         [System.STAThreadAttribute()]
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "7.0.9.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "7.0.10.0")]
         public static void Main() {
             SkillProfi.Desktop.App app = new SkillProfi.Desktop.App();
             app.InitializeComponent();

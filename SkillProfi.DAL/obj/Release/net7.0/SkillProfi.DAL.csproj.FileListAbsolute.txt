@@ -13,3 +13,18 @@ C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.DAL\obj\Release\net7.0\SkillPr
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.DAL\obj\Release\net7.0\refint\SkillProfi.DAL.dll
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.DAL\obj\Release\net7.0\SkillProfi.DAL.pdb
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.DAL\obj\Release\net7.0\ref\SkillProfi.DAL.dll
+C:\Users\Vyacheslav\Desktop\FInal Project\SkillProfi\SkillProfi.DAL\bin\Release\net7.0\SkillProfi.DAL.deps.json
+C:\Users\Vyacheslav\Desktop\FInal Project\SkillProfi\SkillProfi.DAL\bin\Release\net7.0\SkillProfi.DAL.dll
+C:\Users\Vyacheslav\Desktop\FInal Project\SkillProfi\SkillProfi.DAL\bin\Release\net7.0\SkillProfi.DAL.pdb
+C:\Users\Vyacheslav\Desktop\FInal Project\SkillProfi\SkillProfi.DAL\bin\Release\net7.0\SkillProfi.Domain.dll
+C:\Users\Vyacheslav\Desktop\FInal Project\SkillProfi\SkillProfi.DAL\bin\Release\net7.0\SkillProfi.Domain.pdb
+C:\Users\Vyacheslav\Desktop\FInal Project\SkillProfi\SkillProfi.DAL\obj\Release\net7.0\SkillProfi.DAL.csproj.AssemblyReference.cache
+C:\Users\Vyacheslav\Desktop\FInal Project\SkillProfi\SkillProfi.DAL\obj\Release\net7.0\SkillProfi.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vyacheslav\Desktop\FInal Project\SkillProfi\SkillProfi.DAL\obj\Release\net7.0\SkillProfi.DAL.AssemblyInfoInputs.cache
+C:\Users\Vyacheslav\Desktop\FInal Project\SkillProfi\SkillProfi.DAL\obj\Release\net7.0\SkillProfi.DAL.AssemblyInfo.cs
+C:\Users\Vyacheslav\Desktop\FInal Project\SkillProfi\SkillProfi.DAL\obj\Release\net7.0\SkillProfi.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Vyacheslav\Desktop\FInal Project\SkillProfi\SkillProfi.DAL\obj\Release\net7.0\SkillProfi.DAL.csproj.CopyComplete
+C:\Users\Vyacheslav\Desktop\FInal Project\SkillProfi\SkillProfi.DAL\obj\Release\net7.0\SkillProfi.DAL.dll
+C:\Users\Vyacheslav\Desktop\FInal Project\SkillProfi\SkillProfi.DAL\obj\Release\net7.0\refint\SkillProfi.DAL.dll
+C:\Users\Vyacheslav\Desktop\FInal Project\SkillProfi\SkillProfi.DAL\obj\Release\net7.0\SkillProfi.DAL.pdb
+C:\Users\Vyacheslav\Desktop\FInal Project\SkillProfi\SkillProfi.DAL\obj\Release\net7.0\ref\SkillProfi.DAL.dll
