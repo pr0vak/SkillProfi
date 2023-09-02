@@ -8,27 +8,27 @@ namespace SkillProfi.Api.Data
         /// <summary>
         /// Заявки.
         /// </summary>
-        public DbSet<Request> Requests { get; set; } = default!;
+        public DbSet<Request>? Requests { get; set; }
 
         /// <summary>
         /// Услуги.
         /// </summary>
-        public DbSet<Service> Services { get; set; } = default!;
+        public DbSet<Service>? Services { get; set; }
 
         /// <summary>
         /// Проекты.
         /// </summary>
-        public DbSet<Project> Projects { get; set; } = default!;
+        public DbSet<Project>? Projects { get; set; }
 
         /// <summary>
         /// Блоги.
         /// </summary>
-        public DbSet<Blog> Blogs { get; set; } = default!;
+        public DbSet<Blog>? Blogs { get; set; }
 
         /// <summary>
         /// Аккаунты.
         /// </summary>
-        public DbSet<Account> Accounts { get; set; } = default!;
+        public DbSet<Account>? Accounts { get; set; }
 
 
         public DataContext(DbContextOptions<DataContext> options)

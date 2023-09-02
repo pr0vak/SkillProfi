@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sOZppfwbPgq04YUMTJvPZyns8Z4nd8oGezR/bwRVD4XI0lFlLGtfSpihOdbXk+YKQOhUJwYh0i082rHeZNReJw==",
+  "dgSpecHash": "TEMK1oidDx9k7oSeveboKqFShYFXjpP0EUUHo99n43FHYMTosWCwm8Odt9k23m1XYHIZkNiO/IkftuWbm93NiQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.DAL\\SkillProfi.DAL.csproj",
+  "projectFilePath": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.DAL\\SkillProfi.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vyacheslav\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.10\\microsoft.aspnetcore.authentication.jwtbearer.7.0.10.nupkg.sha512",
     "C:\\Users\\Vyacheslav\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

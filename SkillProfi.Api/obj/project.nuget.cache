@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pY/jciAtp4+CxQJWzUceYvCMtFi8xHCIol3maRkAlZPb/EkfYLk9QUfbif+UjpkH+dyw512li974KCoSKaiCQw==",
+  "dgSpecHash": "jtNdUZNZYnJHAhiwD/2FEewxqpCRpDjiqlpNpQllxXN64u5UNM/DRbZ0SKemBdSl+vpIei6crUwP95rzJDJJrQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Api\\SkillProfi.Api.csproj",
+  "projectFilePath": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Api\\SkillProfi.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vyacheslav\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Vyacheslav\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

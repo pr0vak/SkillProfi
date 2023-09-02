@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8bm7INrrCIitkWlhisqtBVNn6jv/ArJ+x8T/+rMpXdk=",
+  "Hash": "YgHf0johy/UFIXbrk7M6VjbnBtbG9giZqGf8CLQxKy8=",
   "Source": "SkillProfi.Web",
   "BasePath": "_content/SkillProfi.Web",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "SkillProfi.Web\\wwwroot",
       "Source": "SkillProfi.Web",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\css\\bootstrap.css",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\css\\bootstrap.css",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "css/bootstrap.css",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\css\\normalize.css",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\css\\normalize.css",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "css/normalize.css",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\css\\normalize.css"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\css\\style.css",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\css\\style.css",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "css/style.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\favicon.ico",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\042129a3-8e30-43ff-b604-35e42cef0397.jpg",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\042129a3-8e30-43ff-b604-35e42cef0397.jpg",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/042129a3-8e30-43ff-b604-35e42cef0397.jpg",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\img\\042129a3-8e30-43ff-b604-35e42cef0397.jpg"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\61477d4b-732c-43c4-835a-863943b5aeea.jpg",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\61477d4b-732c-43c4-835a-863943b5aeea.jpg",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/61477d4b-732c-43c4-835a-863943b5aeea.jpg",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\img\\61477d4b-732c-43c4-835a-863943b5aeea.jpg"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\6c665e65-a430-419d-b293-13988e12891a.jpg",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\6c665e65-a430-419d-b293-13988e12891a.jpg",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/6c665e65-a430-419d-b293-13988e12891a.jpg",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\img\\6c665e65-a430-419d-b293-13988e12891a.jpg"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\8abcc028-3e83-4d0d-824e-54d16749a3c5.png",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\8abcc028-3e83-4d0d-824e-54d16749a3c5.png",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/8abcc028-3e83-4d0d-824e-54d16749a3c5.png",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\img\\8abcc028-3e83-4d0d-824e-54d16749a3c5.png"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\8b54aa58-d2b9-460a-a0c3-ef65ea466bea.jpg",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\8b54aa58-d2b9-460a-a0c3-ef65ea466bea.jpg",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/8b54aa58-d2b9-460a-a0c3-ef65ea466bea.jpg",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\img\\8b54aa58-d2b9-460a-a0c3-ef65ea466bea.jpg"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\949ec786-9c48-4fc4-a5ab-6822bd9b1334.jpg",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\949ec786-9c48-4fc4-a5ab-6822bd9b1334.jpg",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/949ec786-9c48-4fc4-a5ab-6822bd9b1334.jpg",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\img\\949ec786-9c48-4fc4-a5ab-6822bd9b1334.jpg"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\97221cc8-d3a0-497e-8ca5-2ae584521b14.png",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\97221cc8-d3a0-497e-8ca5-2ae584521b14.png",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/97221cc8-d3a0-497e-8ca5-2ae584521b14.png",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\img\\97221cc8-d3a0-497e-8ca5-2ae584521b14.png"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\b8445ffd-ea59-4641-97d5-81b18ed44a53.jpg",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\b8445ffd-ea59-4641-97d5-81b18ed44a53.jpg",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/b8445ffd-ea59-4641-97d5-81b18ed44a53.jpg",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\img\\b8445ffd-ea59-4641-97d5-81b18ed44a53.jpg"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\chitay-gorod.jpg",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\chitay-gorod.jpg",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/chitay-gorod.jpg",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\img\\chitay-gorod.jpg"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\default.jpg",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\default.jpg",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/default.jpg",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\img\\default.jpg"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\dobrynya.JPG",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\dobrynya.JPG",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/dobrynya.JPG",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\img\\dobrynya.JPG"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\dobrynya_2.JPG",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\dobrynya_2.JPG",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/dobrynya_2.JPG",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\img\\dobrynya_2.JPG"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\e156fd2e-9e84-4644-9025-440a4a27dc46.png",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\e156fd2e-9e84-4644-9025-440a4a27dc46.png",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/e156fd2e-9e84-4644-9025-440a4a27dc46.png",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\img\\e156fd2e-9e84-4644-9025-440a4a27dc46.png"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\email.png",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\email.png",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/email.png",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot\\img\\email.png"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\f8b556d3-2296-4ed8-ac77-233cec10e10d.png",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\f8b556d3-2296-4ed8-ac77-233cec10e10d.png",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/f8b556d3-2296-4ed8-ac77-233cec10e10d.png",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\img\\f8b556d3-2296-4ed8-ac77-233cec10e10d.png"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\facebook.png",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\facebook.png",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/facebook.png",
       "AssetKind": "All",
@@ -357,10 +357,10 @@
       "OriginalItemSpec": "wwwroot\\img\\facebook.png"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\fax.png",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\fax.png",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/fax.png",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\img\\fax.png"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\HERO.svg",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\HERO.svg",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/HERO.svg",
       "AssetKind": "All",
@@ -391,10 +391,10 @@
       "OriginalItemSpec": "wwwroot\\img\\HERO.svg"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\ico-del.png",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\ico-del.png",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/ico-del.png",
       "AssetKind": "All",
@@ -408,10 +408,10 @@
       "OriginalItemSpec": "wwwroot\\img\\ico-del.png"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\ico-edit.png",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\ico-edit.png",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/ico-edit.png",
       "AssetKind": "All",
@@ -425,10 +425,10 @@
       "OriginalItemSpec": "wwwroot\\img\\ico-edit.png"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\inquiry-logo.png",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\inquiry-logo.png",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/inquiry-logo.png",
       "AssetKind": "All",
@@ -442,10 +442,10 @@
       "OriginalItemSpec": "wwwroot\\img\\inquiry-logo.png"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\inst.png",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\inst.png",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/inst.png",
       "AssetKind": "All",
@@ -459,10 +459,10 @@
       "OriginalItemSpec": "wwwroot\\img\\inst.png"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\pb_1.jpg",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\pb_1.jpg",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/pb_1.jpg",
       "AssetKind": "All",
@@ -476,10 +476,10 @@
       "OriginalItemSpec": "wwwroot\\img\\pb_1.jpg"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\pb_2.jpg",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\pb_2.jpg",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/pb_2.jpg",
       "AssetKind": "All",
@@ -493,10 +493,10 @@
       "OriginalItemSpec": "wwwroot\\img\\pb_2.jpg"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\pb_3.jpg",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\pb_3.jpg",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/pb_3.jpg",
       "AssetKind": "All",
@@ -510,10 +510,10 @@
       "OriginalItemSpec": "wwwroot\\img\\pb_3.jpg"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\pb_4.jpg",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\pb_4.jpg",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/pb_4.jpg",
       "AssetKind": "All",
@@ -527,10 +527,10 @@
       "OriginalItemSpec": "wwwroot\\img\\pb_4.jpg"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\sber.jpg",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\sber.jpg",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/sber.jpg",
       "AssetKind": "All",
@@ -544,10 +544,10 @@
       "OriginalItemSpec": "wwwroot\\img\\sber.jpg"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\tel.png",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\tel.png",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/tel.png",
       "AssetKind": "All",
@@ -561,10 +561,10 @@
       "OriginalItemSpec": "wwwroot\\img\\tel.png"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\telegram.png",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\telegram.png",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/telegram.png",
       "AssetKind": "All",
@@ -578,10 +578,10 @@
       "OriginalItemSpec": "wwwroot\\img\\telegram.png"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\terra.JPG",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\terra.JPG",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/terra.JPG",
       "AssetKind": "All",
@@ -595,10 +595,10 @@
       "OriginalItemSpec": "wwwroot\\img\\terra.JPG"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\tw.png",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\tw.png",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/tw.png",
       "AssetKind": "All",
@@ -612,10 +612,10 @@
       "OriginalItemSpec": "wwwroot\\img\\tw.png"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\vk.png",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\vk.png",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/vk.png",
       "AssetKind": "All",
@@ -629,10 +629,10 @@
       "OriginalItemSpec": "wwwroot\\img\\vk.png"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\youtube.png",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\img\\youtube.png",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "img/youtube.png",
       "AssetKind": "All",
@@ -646,10 +646,10 @@
       "OriginalItemSpec": "wwwroot\\img\\youtube.png"
     },
     {
-      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\js\\script.js",
+      "Identity": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\js\\script.js",
       "SourceId": "SkillProfi.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\wwwroot\\",
       "BasePath": "_content/SkillProfi.Web",
       "RelativePath": "js/script.js",
       "AssetKind": "All",

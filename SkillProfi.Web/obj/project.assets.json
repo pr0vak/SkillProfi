@@ -10209,11 +10209,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\SkillProfi.Web.csproj",
+      "projectUniqueName": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\SkillProfi.Web.csproj",
       "projectName": "SkillProfi.Web",
-      "projectPath": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\SkillProfi.Web.csproj",
+      "projectPath": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\SkillProfi.Web.csproj",
       "packagesPath": "C:\\Users\\Vyacheslav\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Web\\obj\\",
+      "outputPath": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -10228,17 +10228,18 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.DAL\\SkillProfi.DAL.csproj": {
-              "projectPath": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.DAL\\SkillProfi.DAL.csproj"
+            "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.DAL\\SkillProfi.DAL.csproj": {
+              "projectPath": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.DAL\\SkillProfi.DAL.csproj"
             },
-            "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Domain\\SkillProfi.Domain.csproj": {
-              "projectPath": "C:\\Users\\Vyacheslav\\Desktop\\FInal Project\\SkillProfi\\SkillProfi.Domain\\SkillProfi.Domain.csproj"
+            "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Domain\\SkillProfi.Domain.csproj": {
+              "projectPath": "C:\\Users\\Vyacheslav\\Desktop\\SkillProfi\\SkillProfi.Domain\\SkillProfi.Domain.csproj"
             }
           }
         }
@@ -10289,7 +10290,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -33,7 +33,7 @@ namespace SkillProfi.Desktop.Data
 
         public async Task Update(Request request)
         {
-            using (var requestMessage = new HttpRequestMessage(HttpMethod.Put, _url + request.Id))
+            using (var requestMessage = new HttpRequestMessage(HttpMethod.Put, _url))
             {
                 requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", Token);
                 requestMessage.Content = new StringContent(JsonConvert.SerializeObject(request), 

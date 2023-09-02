@@ -1,5 +1,9 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using SkillProfi.Domain.Services;
 using System;
+using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -20,10 +24,19 @@ namespace SkillProfi.Desktop.Data
         {
             try
             {
-                var url = _url + $"login={login}&password={password}";
-                var response = await _client.GetStringAsync(url);
-                var json = JObject.Parse(response);
-                Token = json["access_token"]?.ToString() ?? string.Empty;
+                var response = await _client.PostAsync(_url + "Login",
+                    new StringContent(JsonConvert.SerializeObject(new
+                    {
+                        UserName = login,
+                        Password = PasswordService.Hash(password)
+                    }), Encoding.UTF8, "application/json"));
+
+                var content = await response.Content.ReadAsStringAsync();
+
+                MessageBox.Show(content);
+
+                var json = JObject.Parse(await response.Content.ReadAsStringAsync());
+                Token = json["accessToken"]?.ToString() ?? string.Empty;
 
                 return true;
             }

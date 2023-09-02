@@ -47,7 +47,7 @@ namespace SkillProfi.Api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Accounts");
+                    b.ToTable("Accounts", (string)null);
                 });
 
             modelBuilder.Entity("SkillProfi.DAL.Models.Blog", b =>
@@ -79,7 +79,7 @@ namespace SkillProfi.Api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Blogs");
+                    b.ToTable("Blogs", (string)null);
                 });
 
             modelBuilder.Entity("SkillProfi.DAL.Models.Project", b =>
@@ -103,7 +103,7 @@ namespace SkillProfi.Api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Projects");
+                    b.ToTable("Projects", (string)null);
                 });
 
             modelBuilder.Entity("SkillProfi.DAL.Models.Request", b =>
@@ -135,7 +135,7 @@ namespace SkillProfi.Api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Requests");
+                    b.ToTable("Requests", (string)null);
                 });
 
             modelBuilder.Entity("SkillProfi.DAL.Models.Service", b =>
@@ -156,7 +156,7 @@ namespace SkillProfi.Api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Services");
+                    b.ToTable("Services", (string)null);
                 });
 #pragma warning restore 612, 618
         }

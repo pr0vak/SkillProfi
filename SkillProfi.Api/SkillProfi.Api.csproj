@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SkillProfi.DAL\SkillProfi.DAL.csproj" />
+    <ProjectReference Include="..\SkillProfi.Domain\SkillProfi.Domain.csproj" />
   </ItemGroup>
 
 </Project>

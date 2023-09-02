@@ -18,8 +18,10 @@ namespace SkillProfi.Api.Data
 
                 // Проверяем, нет ли в списках аккаунтов есть аккаунт с логином, как прописан
                 // в файле conneciton.json.
-                if (context.Accounts.ToList()
-                .FirstOrDefault(acc => acc.Login?.ToLower() == json["user_web"]?.ToString()) is null)
+                var admin = (from adm in context.Accounts
+                            where adm.Login.ToLower() == json["user_web"].ToString()
+                            select adm).FirstOrDefault();                
+                if (admin is null)
                 {
                     // Если такого аккаунта нет, то создаем его.
                     context.Accounts.Add(new Account
