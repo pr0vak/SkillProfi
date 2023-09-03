@@ -66,7 +66,7 @@ namespace SkillProfi.TelegramBot.Data
 
         public async Task<SocialLinks> GetSocialLinks()
         {
-            var url = _url + "Config";
+            var url = _url + "SiteConfig";
             var json = await _client.GetStringAsync(url);
             var config = JObject.Parse(json);
             var socialLinks = new SocialLinks()

@@ -250,9 +250,17 @@ namespace SkillProfi.TelegramBot.Models
                 {
                     // Отправляем меню и удаляем сообщение пользователя.
                     await SendMenu(message.Chat.Id);
-                    await _botClient.DeleteMessageAsync(chatId: update.Message.Chat.Id,
-                        messageId: update.Message.MessageId,
-                        cancellationToken: cancellationToken);
+                    try
+                    {
+                        await _botClient.DeleteMessageAsync(chatId: update.Message.Chat.Id,
+                            messageId: update.Message.MessageId,
+                            cancellationToken: cancellationToken);
+                    }
+                    catch 
+                    {
+                        Console.WriteLine("Была произведена попытка удаления предыдущих сообщений перед" +
+                            " командой /start");
+                    }
                 }
 
 
@@ -361,9 +369,9 @@ namespace SkillProfi.TelegramBot.Models
         private async Task ClearMessageInCreationRequest(long chatId, 
             int messageId, CancellationToken token)
         {
-            await _botClient.DeleteMessageAsync(chatId,
-                            messageId - 1,
-                            token);
+            //await _botClient.DeleteMessageAsync(chatId,
+            //                messageId - 1,
+            //                token);
             await _botClient.DeleteMessageAsync(chatId,
                                 messageId,
                                 token);
