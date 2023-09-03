@@ -4,4 +4,14 @@ C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\bin\Release\net7.0-win
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\bin\Release\net7.0-windows\publish\SkillProfi.Desktop.deps.json
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\bin\Release\net7.0-windows\publish\SkillProfi.Desktop.runtimeconfig.json
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\bin\Release\net7.0-windows\publish\SkillProfi.Desktop.pdb
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\bin\Release\net7.0-windows\publish\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\bin\Release\net7.0-windows\publish\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\bin\Release\net7.0-windows\publish\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\bin\Release\net7.0-windows\publish\Microsoft.IdentityModel.Logging.dll
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\bin\Release\net7.0-windows\publish\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\bin\Release\net7.0-windows\publish\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\bin\Release\net7.0-windows\publish\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\bin\Release\net7.0-windows\publish\Newtonsoft.Json.dll
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\bin\Release\net7.0-windows\publish\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\bin\Release\net7.0-windows\publish\SkillProfi.Domain.dll
+C:\Users\Vyacheslav\Desktop\SkillProfi\SkillProfi.Desktop\bin\Release\net7.0-windows\publish\SkillProfi.Domain.pdb
